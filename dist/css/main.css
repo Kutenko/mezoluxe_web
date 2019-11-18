@@ -1,0 +1,4 @@
+div[class*=__left],
+img[class*=__left],
+section[class*=__left] {
+  float: left; }
