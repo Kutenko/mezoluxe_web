@@ -1,13 +1,27 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
 body {
   font-family: 'Poppins', sans-serif; }
 
+.wrapper {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden; }
+
 .container {
+  width: 100%;
   max-width: 1080px;
-  padding: 30px;
+  padding: 0 30px;
   margin: 0 auto; }
   .container[class*=padding-remove] {
     padding: 0px; }
+  @media (max-width: 980px) {
+    .container {
+      display: none; } }
 
 div[class*=__left], img[class*=__left], section[class*=__left] {
   float: left; }
@@ -15,32 +29,685 @@ div[class*=__left], img[class*=__left], section[class*=__left] {
 div[class*=__right], img[class*=__right], section[class*=__right] {
   float: right; }
 
-.fixed-gradient {
+div[class*=__primary-title] h2, section[class*=__primary-title] h2 {
+  color: #000000;
+  font-size: 74px;
+  font-weight: 900;
+  line-height: 94px;
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.16); }
+
+div[class*=__card], section[class*=__card] {
+  background: #F9F9F9;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.16);
+  padding: 60px;
+  border-radius: 15px; }
+
+div[class*=__price], section[class*=__price] {
+  text-align: right; }
+  div[class*=__price] .old-price, section[class*=__price] .old-price {
+    font-size: 34px;
+    line-height: 30px;
+    font-weight: 100;
+    color: #000000;
+    text-decoration: line-through; }
+  div[class*=__price] .new-price, section[class*=__price] .new-price {
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 30px;
+    color: #000000; }
+    div[class*=__price] .new-price span, section[class*=__price] .new-price span {
+      font-size: 74px;
+      font-weight: 700;
+      line-height: 94px; }
+
+.order-button {
+  background: #E385CA;
+  color: #FFFFFF;
+  font-size: 24px;
+  line-height: 30px;
+  text-align: center;
+  font-weight: 700;
+  border-radius: 40px;
+  width: 280px;
+  height: 60px;
+  padding: 15px;
+  margin: 30px auto 0; }
+
+.fixed {
   width: 100%;
   height: 100vh;
-  background: transparent linear-gradient(0deg, #E24BF900 0%, #FB33D97A 62%, #FF00C4 84%, #9100FF 100%) 0% 0% no-repeat padding-box;
-  opacity: 0.03;
-  position: fixed; }
+  position: fixed;
+  z-index: -1; }
+  .fixed .gradient {
+    width: 100%;
+    height: 100vh;
+    background: transparent linear-gradient(0deg, #E24BF900 0%, #FB33D97A 62%, #FF00C4 84%, #9100FF 100%) 0% 0% no-repeat padding-box;
+    opacity: 0.05; }
+  .fixed .slogan {
+    width: 100%;
+    height: 100%;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 500;
+    color: #E385CA;
+    transform: rotate(-90deg);
+    position: absolute;
+    top: 0;
+    left: -60px;
+    text-align: center; }
 
-.hero-title {
-  max-width: 840px; }
-  .hero-title h1 {
-    font-size: 98px;
-    font-weight: 900;
-    color: #000000;
-    line-height: 87px;
-    text-shadow: 5px 5px 5px #755b5b26; }
-    .hero-title h1 span {
-      font-size: 64px;
+/* 1.   Section hero */
+/* 2.   Section product */
+/* 3.   Section wrinkles and stimulate */
+/* 3.1. Section stimulate */
+/* 4.   Section nourishes */
+/* 1.   Section hero */
+.hero {
+  position: relative; }
+  .hero .hero-title {
+    width: 840px;
+    margin-top: 200px; }
+    .hero .hero-title h1 {
+      font-size: 98px;
+      font-weight: 900;
       color: #000000;
-      line-height: 87px; }
+      line-height: 87px;
+      text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.16); }
+      .hero .hero-title h1 span {
+        font-size: 64px;
+        color: #000000;
+        line-height: 87px; }
+  .hero .hero-subtitle {
+    width: 840px;
+    margin-top: 160px; }
+    .hero .hero-subtitle h2 {
+      font-size: 58px;
+      font-weight: 700;
+      color: #000000;
+      line-height: auto;
+      text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.16); }
+  .hero .hero-image__layout {
+    position: absolute;
+    right: 0;
+    top: -220px;
+    z-index: -1; }
+    .hero .hero-image__layout .woman-image {
+      position: absolute;
+      top: 0;
+      right: -300px;
+      width: 810px;
+      height: 898px;
+      background: url(../images/Hero_Image.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain; }
 
-.hero-subtitle {
-  max-width: 840px;
-  margin: 160px 0 0; }
-  .hero-subtitle h2 {
-    font-size: 58px;
-    font-weight: 700;
-    color: #000000;
-    line-height: auto;
-    text-shadow: 5px 5px 5px #755b5b26; }
+/* 2.   Section product */
+.product {
+  margin-top: 160px;
+  padding-bottom: 30px;
+  overflow: hidden; }
+  .product .product-price__left__card {
+    width: 510px;
+    text-align: center; }
+  .product .product-info__right {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 60px;
+    padding-right: 0;
+    max-width: 480px; }
+    .product .product-info__right .product-info__item {
+      margin-top: 160px; }
+      .product .product-info__right .product-info__item:first-child {
+        margin: 0; }
+      .product .product-info__right .product-info__item .title h2 {
+        font-size: 34px;
+        font-weight: 700;
+        line-height: 30px;
+        color: #000000;
+        margin-bottom: 10px; }
+      .product .product-info__right .product-info__item .title h3 {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 30px;
+        color: #E385CA; }
+      .product .product-info__right .product-info__item p {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 30px;
+        color: #000000;
+        padding: 30px;
+        padding-bottom: 0; }
+
+/* 3.   Section wrinkles and stimulate */
+.wrinkles,
+.stimulate {
+  overflow: hidden;
+  margin-top: 160px; }
+  .wrinkles .container,
+  .stimulate .container {
+    position: relative;
+    overflow: hidden; }
+  .wrinkles .title__primary-title,
+  .stimulate .title__primary-title {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    max-width: 680px; }
+  .wrinkles .desc__left,
+  .stimulate .desc__left {
+    max-width: 310px;
+    padding: 150px 0 0 0; }
+    .wrinkles .desc__left h3,
+    .stimulate .desc__left h3 {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 30px;
+      color: #000000; }
+    .wrinkles .desc__left p,
+    .stimulate .desc__left p {
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 30px;
+      color: #000000; }
+  .wrinkles .image-item__right,
+  .stimulate .image-item__right {
+    max-width: 680px;
+    height: 380px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.16); }
+    .wrinkles .image-item__right img,
+    .stimulate .image-item__right img {
+      width: 100%;
+      height: auto; }
+  .wrinkles .content-item__left,
+  .stimulate .content-item__left {
+    width: 33.333%;
+    position: relative;
+    margin-top: 90px; }
+    .wrinkles .content-item__left .content-item__image,
+    .stimulate .content-item__left .content-item__image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 280px;
+      text-align: center;
+      z-index: -1; }
+      .wrinkles .content-item__left .content-item__image img,
+      .stimulate .content-item__left .content-item__image img {
+        width: 100%;
+        height: auto; }
+    .wrinkles .content-item__left .content-item__text,
+    .stimulate .content-item__left .content-item__text {
+      padding: 30px;
+      margin-top: 140px; }
+      .wrinkles .content-item__left .content-item__text p,
+      .stimulate .content-item__left .content-item__text p {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 26px;
+        color: #000000; }
+
+/* 3.1. Section stimulate */
+.stimulate .content-item__left .content-item__image img[src*='skin_image_4.png'] {
+  margin-top: 55px; }
+
+/* 4.   Section nourishes */
+.nourishes {
+  margin-top: 90px; }
+  .nourishes .nourishes-items {
+    padding-top: 60px; }
+    .nourishes .nourishes-items > div {
+      width: 33.333%;
+      padding-left: 30px; }
+      .nourishes .nourishes-items > div:first-child {
+        padding-left: 0; }
+    .nourishes .nourishes-items .nourishes-desc p {
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 30px;
+      color: #000000; }
+    .nourishes .nourishes-items .skin-image {
+      position: relative; }
+      .nourishes .nourishes-items .skin-image img {
+        max-width: 100%;
+        margin-top: -45px; }
+      .nourishes .nourishes-items .skin-image .desc {
+        font-size: 24px;
+        font-weight: 300;
+        line-height: 30px;
+        text-align: center;
+        color: #000000; }
+        .nourishes .nourishes-items .skin-image .desc ._1.uk-active > .dot {
+          transform: rotate(0deg); }
+    .nourishes .nourishes-items .switcher {
+      list-style: none; }
+      .nourishes .nourishes-items .switcher li {
+        padding-bottom: 30px; }
+        .nourishes .nourishes-items .switcher li a {
+          color: #000000;
+          text-decoration: none; }
+        .nourishes .nourishes-items .switcher li .item-title h3 {
+          font-size: 24px;
+          font-weight: 700;
+          line-height: 30px;
+          color: #000000; }
+        .nourishes .nourishes-items .switcher li .item-title .pin {
+          position: absolute;
+          top: 0;
+          left: -245px;
+          width: 180px;
+          height: 100%; }
+          .nourishes .nourishes-items .switcher li .item-title .pin.__1 {
+            top: 150px; }
+            .nourishes .nourishes-items .switcher li .item-title .pin.__1 .dot {
+              transform: rotate(-29deg); }
+              .nourishes .nourishes-items .switcher li .item-title .pin.__1 .dot::before {
+                width: 275px; }
+          .nourishes .nourishes-items .switcher li .item-title .pin.__2 {
+            top: -80px; }
+            .nourishes .nourishes-items .switcher li .item-title .pin.__2 .dot {
+              transform: rotate(22.8deg); }
+              .nourishes .nourishes-items .switcher li .item-title .pin.__2 .dot::before {
+                width: 260px; }
+          .nourishes .nourishes-items .switcher li .item-title .pin.__3 {
+            top: -86px; }
+            .nourishes .nourishes-items .switcher li .item-title .pin.__3 .dot {
+              transform: rotate(24deg); }
+              .nourishes .nourishes-items .switcher li .item-title .pin.__3 .dot::before {
+                width: 260px; }
+          .nourishes .nourishes-items .switcher li .item-title .pin .dot {
+            position: relative;
+            width: 18px;
+            height: 18px;
+            background: #50DEF6;
+            border-radius: 100%; }
+            .nourishes .nourishes-items .switcher li .item-title .pin .dot::before {
+              content: '';
+              position: absolute;
+              top: 8px;
+              left: 8px;
+              width: 240px;
+              height: 2px;
+              background: #50DEF6; }
+        .nourishes .nourishes-items .switcher li p {
+          clear: both;
+          font-size: 18px;
+          font-weight: 500;
+          line-height: 26px;
+          color: #000000; }
+        .nourishes .nourishes-items .switcher li[class*=active] .item-title {
+          position: relative;
+          float: left; }
+          .nourishes .nourishes-items .switcher li[class*=active] .item-title h3::before {
+            content: '';
+            width: 100%;
+            height: 15px;
+            z-index: -1;
+            position: absolute;
+            left: 0;
+            top: 15px;
+            background: #50DEF6; }
+
+/* ========================================================================
+   Component: Switcher
+ ========================================================================== */
+/*
+ * Reset list
+ */
+.uk-switcher {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+/* Items
+ ========================================================================== */
+/*
+ * Hide not active items
+ */
+.uk-switcher > :not(.uk-active) {
+  display: none; }
+
+/*
+ * Remove margin from the last-child
+ */
+.uk-switcher > * > :last-child {
+  margin-bottom: 0; }
+
+/* ========================================================================
+   Component: Animation
+ ========================================================================== */
+[class*='uk-animation-'] {
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both; }
+
+/* Animations
+ ========================================================================== */
+/*
+ * Fade
+ */
+.uk-animation-fade {
+  animation-name: uk-fade;
+  animation-duration: 0.8s;
+  animation-timing-function: linear; }
+
+/*
+ * Scale
+ */
+.uk-animation-scale-up {
+  animation-name: uk-fade-scale-02; }
+
+.uk-animation-scale-down {
+  animation-name: uk-fade-scale-18; }
+
+/*
+ * Slide
+ */
+.uk-animation-slide-top {
+  animation-name: uk-fade-top; }
+
+.uk-animation-slide-bottom {
+  animation-name: uk-fade-bottom; }
+
+.uk-animation-slide-left {
+  animation-name: uk-fade-left; }
+
+.uk-animation-slide-right {
+  animation-name: uk-fade-right; }
+
+/*
+ * Slide Small
+ */
+.uk-animation-slide-top-small {
+  animation-name: uk-fade-top-small; }
+
+.uk-animation-slide-bottom-small {
+  animation-name: uk-fade-bottom-small; }
+
+.uk-animation-slide-left-small {
+  animation-name: uk-fade-left-small; }
+
+.uk-animation-slide-right-small {
+  animation-name: uk-fade-right-small; }
+
+/*
+ * Slide Medium
+ */
+.uk-animation-slide-top-medium {
+  animation-name: uk-fade-top-medium; }
+
+.uk-animation-slide-bottom-medium {
+  animation-name: uk-fade-bottom-medium; }
+
+.uk-animation-slide-left-medium {
+  animation-name: uk-fade-left-medium; }
+
+.uk-animation-slide-right-medium {
+  animation-name: uk-fade-right-medium; }
+
+/*
+ * Kenburns
+ */
+.uk-animation-kenburns {
+  animation-name: uk-scale-kenburns;
+  animation-duration: 15s; }
+
+/*
+ * Shake
+ */
+.uk-animation-shake {
+  animation-name: uk-shake; }
+
+/*
+ * SVG Stroke
+ * The `--uk-animation-stroke` custom property contains the longest path length.
+ * Set it manually or use `uk-svg="stroke-animation: true"` to set it automatically.
+ * All strokes are animated by the same pace and doesn't end simultaneously.
+ * To end simultaneously, `pathLength="1"` could be used, but it's not working in Safari yet.
+ */
+.uk-animation-stroke {
+  animation-name: uk-stroke;
+  stroke-dasharray: var(--uk-animation-stroke);
+  animation-duration: 2s; }
+
+/* Direction modifier
+ ========================================================================== */
+.uk-animation-reverse {
+  animation-direction: reverse;
+  animation-timing-function: ease-in; }
+
+/* Duration modifier
+ ========================================================================== */
+.uk-animation-fast {
+  animation-duration: 0.1s; }
+
+/* Toggle (Hover + Focus)
+========================================================================== */
+/*
+ * The toggle is triggered on touch devices using `:focus` and tabindex
+ */
+.uk-animation-toggle:not(:hover):not(:focus) [class*='uk-animation-'] {
+  animation-name: none; }
+
+/*
+ * 1. Prevent tab highlighting on iOS.
+ */
+.uk-animation-toggle {
+  /* 1 */
+  -webkit-tap-highlight-color: transparent; }
+
+/*
+ * Remove outline for `tabindex`
+ */
+.uk-animation-toggle:focus {
+  outline: none; }
+
+/* Keyframes used by animation classes
+ ========================================================================== */
+/*
+ * Fade
+ */
+@keyframes uk-fade {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+/*
+ * Slide Top
+ */
+@keyframes uk-fade-top {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+/*
+ * Slide Bottom
+ */
+@keyframes uk-fade-bottom {
+  0% {
+    opacity: 0;
+    transform: translateY(100%); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+/*
+ * Slide Left
+ */
+@keyframes uk-fade-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+/*
+ * Slide Right
+ */
+@keyframes uk-fade-right {
+  0% {
+    opacity: 0;
+    transform: translateX(100%); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+/*
+ * Slide Top Small
+ */
+@keyframes uk-fade-top-small {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+/*
+ * Slide Bottom Small
+ */
+@keyframes uk-fade-bottom-small {
+  0% {
+    opacity: 0;
+    transform: translateY(10px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+/*
+ * Slide Left Small
+ */
+@keyframes uk-fade-left-small {
+  0% {
+    opacity: 0;
+    transform: translateX(-10px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+/*
+ * Slide Right Small
+ */
+@keyframes uk-fade-right-small {
+  0% {
+    opacity: 0;
+    transform: translateX(10px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+/*
+ * Slide Top Medium
+ */
+@keyframes uk-fade-top-medium {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+/*
+ * Slide Bottom Medium
+ */
+@keyframes uk-fade-bottom-medium {
+  0% {
+    opacity: 0;
+    transform: translateY(50px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+/*
+ * Slide Left Medium
+ */
+@keyframes uk-fade-left-medium {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+/*
+ * Slide Right Medium
+ */
+@keyframes uk-fade-right-medium {
+  0% {
+    opacity: 0;
+    transform: translateX(50px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+/*
+ * Scale Up
+ */
+@keyframes uk-fade-scale-02 {
+  0% {
+    opacity: 0;
+    transform: scale(0.2); }
+  100% {
+    opacity: 1;
+    transform: scale(1); } }
+
+/*
+ * Scale Down
+ */
+@keyframes uk-fade-scale-18 {
+  0% {
+    opacity: 0;
+    transform: scale(1.8); }
+  100% {
+    opacity: 1;
+    transform: scale(1); } }
+
+/*
+ * Kenburns
+ */
+@keyframes uk-scale-kenburns {
+  0% {
+    transform: scale(1); }
+  100% {
+    transform: scale(1.2); } }
+
+/*
+ * Shake
+ */
+@keyframes uk-shake {
+  0%, 100% {
+    transform: translateX(0); }
+  10% {
+    transform: translateX(-9px); }
+  20% {
+    transform: translateX(8px); }
+  30% {
+    transform: translateX(-7px); }
+  40% {
+    transform: translateX(6px); }
+  50% {
+    transform: translateX(-5px); }
+  60% {
+    transform: translateX(4px); }
+  70% {
+    transform: translateX(-3px); }
+  80% {
+    transform: translateX(2px); }
+  90% {
+    transform: translateX(-1px); } }
+
+/*
+ * Stroke
+ */
+@keyframes uk-stroke {
+  0% {
+    stroke-dashoffset: var(--uk-animation-stroke); }
+  100% {
+    stroke-dashoffset: 0; } }

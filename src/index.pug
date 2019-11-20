@@ -6,27 +6,164 @@ html(lang="en")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
         title Document
 
+        script(src="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/js/uikit.min.js")
+
         link(rel="stylesheet", href="css/main.css")
     body
-        .fixed-gradient
-        section.hero
-            .hero-image__layout
-                .m-latter
-                .eclipcse
-                    .woman-image
+        .wrapper
+            .fixed
+                .gradient
+                .slogan
+                    p Mezoluxe microneedling regeneration home-kit
+            .container
+                section.hero
+                    .hero-image__layout
+                            .woman-image
+                    .container    
+                        .top-panel
+                            .logo
+                                img.logo-img__left(src="images/logo.png", alt="")
+                        .hero-title
+                                h1
+                                    |Real 
+                                    br
+                                    span microneedling 
+                                    |results
+                        .hero-subtitle
+                                h2.
+                                    Fast. Home use.
+            section.product
+                .container
+                    .product-price__left__card
+                        .product-image
+                            img(src="images/pack.png", alt="")
+                        .product-price__price
+                            .old-price 80$
+                            .new-price
+                                |new price 
+                                span 45$
+                            .order-button
+                                span Order now
+                    .product-info__right
+                        .product-info__item
+                            .title
+                                h2 MEZOLUXE ROLLER
+                                h3 540 titanium microneedles 
+                            p 
+                                |stimulate skincare
+                                br 
+                                |renewal
+                        .product-info__item
+                            .title
+                                h2 ANTI-AGEING SERUM
+                                h3 Lecithin, Nicotinamide, Hyaluronic acid
+                            p 
+                                |Boosts collagen 
+                                br 
+                                |production
+            section.wrinkles
+                .container
+                    .title__primary-title
+                        h2 Wrinkles...
+                    .desc__left
+                        p Millions of women have them, hate them, and want to get rid of them.
+                    .image-item__right
+                        img(src="images/Wrinkles.jpg", alt="")
+                .container
+                    .content-item__left
+                        .content-item__image
+                            img(src="images/skin_image_1.png", alt="")
+                        .content-item__text
+                            p.
+                                Wrinkles appear when skin loses elasticity. To get rid of them, it’s necessary to increase collagen production.
+                    .content-item__left
+                        .content-item__image
+                            img(src="images/skin_image_2.png", alt="")
+                        .content-item__text
+                            p.
+                                Skin care products can’t independently influence collagen levels. They don’t penetrate deep layers of skin - they only moisturise from outside.
+                    .content-item__left
+                        .content-item__image
+                            img(src="images/skin_image_3.png", alt="")
+                        .content-item__text
+                            p.
+                                Mezoroller makes cosmetics 40 times more effective by allowing them to penetrate deeper and work from the inside.
+            section.stimulate
+                .container
+                    .title__primary-title
+                        h2 Stimulate
+                    .desc__left
+                        p.
+                            Mezoluxe works towards results instead of making empty promises
+                .container
+                    .content-item__left
+                        .content-item__image
+                            img(src="images/skin_image_4.png", alt="")
+                        .content-item__text
+                            h3 Penetrates
+                            p.
+                                540 titanium 0.05 mm microneedles long - as thick as a human hair - pierce the outer layer of skin (epidermis), the traumatic impact is mimimised..
+                    .content-item__left
+                        .content-item__image
+                            img(src="images/skin_image_5.png", alt="")
+                        .content-item__text
+                            h3 Nourishes
+                            p.
+                                540 titanium 0.05 mm microneedles long - as thick as a human hair - pierce the outer layer of skin (epidermis), the traumatic impact is mimimised..
+                    .content-item__left
+                        .content-item__image
+                            img(src="images/skin_image_5.png", alt="")
+                        .content-item__text
+                            h3 Renews
+                            p.
+                                Cells start to produce 200% more collagen after just first use. In a week, wrinkles flatten, pigmentation spots lighten.. 
+            section.nourishes
+                .container
+                    .title__primary-title
+                        h2 Nourishes
+                    .nourishes-items
+                        div.__left
+                            .nourishes-desc
+                                p.
+                                    ANTIAGE serum immediately gets into deep layers of the skin through holes made by a mezoroller. It acts directly in cells, stimulating collagen synthesis and smoothing wrinkles from inside.
+                        div.__left
+                            .skin-image
+                                img(src="images/skin-image.png", alt="")
+                                .desc
+                                    ul.uk-switcher.switcher-container
+                                        li._1
+                                            p.
+                                                Restores damaged cells, helps nutrients and vitamins to penetrate the skin better.
+                                        li._2
+                                            p.
+                                                Text item 2. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est blanditiis nihil illum porro eum optio eos earum aliquam nam id?
+                                        li
+                                            p.
+                                                Text item 3, dolor sit amet consectetur adipisicing elit. Est blanditiis nihil illum porro eum optio eos earum aliquam nam id?
 
-            .container    
-                .top-panel
-                    .logo
-                        img.logo-img__left(src="images/logo.png", alt="")
-                .hero-title
-                    .__left
-                        h1
-                            |Real 
-                            br
-                            span microneedling 
-                            |results
-                .hero-subtitle
-                    .__left
-                        h2.
-                            Fast. Home use.
+                        div.__left
+                            ul.switcher(uk-switcher="connect: .switcher-container; animation: uk-animation-fade;")
+                                li.switcher-item
+                                    a(href="#")
+                                        .item-title
+                                            h3 Lecithin
+                                            .pin.__1
+                                                .dot
+                                        p.
+                                            Functions: building and transportation
+                                li.switcher-item
+                                    a(href="#")
+                                        .item-title
+                                            h3 Nicotinamide
+                                            .pin.__2
+                                                .dot                                           
+                                        p.
+                                            Functions: synthesis, protection
+                                li.switcher-item
+                                    a(href="#")
+                                        .item-title
+                                            h3 Hyaluronic acid
+                                            .pin.__3
+                                                .dot
+                                        p.
+                                            Functions: moisturising, nourishing
