@@ -40,7 +40,8 @@ div[class*=__card], section[class*=__card] {
   background: #F9F9F9;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.16);
   padding: 60px;
-  border-radius: 15px; }
+  border-radius: 15px;
+  overflow: hidden; }
 
 div[class*=__price], section[class*=__price] {
   text-align: right; }
@@ -255,7 +256,8 @@ div[class*=__price], section[class*=__price] {
 
 /* 4.   Section nourishes */
 .nourishes {
-  margin-top: 90px; }
+  margin-top: 90px;
+  overflow: hidden; }
   .nourishes .nourishes-items {
     padding-top: 60px; }
     .nourishes .nourishes-items > div {
@@ -274,9 +276,9 @@ div[class*=__price], section[class*=__price] {
         max-width: 100%;
         margin-top: -45px; }
       .nourishes .nourishes-items .skin-image .desc {
-        font-size: 24px;
-        font-weight: 300;
-        line-height: 30px;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 24px;
         text-align: center;
         color: #000000; }
         .nourishes .nourishes-items .skin-image .desc ._1.uk-active > .dot {
@@ -293,44 +295,14 @@ div[class*=__price], section[class*=__price] {
           font-weight: 700;
           line-height: 30px;
           color: #000000; }
+        .nourishes .nourishes-items .switcher li .item-title .mark {
+          display: block;
+          width: 0%;
+          overflow: hidden;
+          transition: ease-in-out .5s; }
         .nourishes .nourishes-items .switcher li .item-title .pin {
-          position: absolute;
-          top: 0;
-          left: -245px;
-          width: 180px;
-          height: 100%; }
-          .nourishes .nourishes-items .switcher li .item-title .pin.__1 {
-            top: 150px; }
-            .nourishes .nourishes-items .switcher li .item-title .pin.__1 .dot {
-              transform: rotate(-29deg); }
-              .nourishes .nourishes-items .switcher li .item-title .pin.__1 .dot::before {
-                width: 275px; }
-          .nourishes .nourishes-items .switcher li .item-title .pin.__2 {
-            top: -80px; }
-            .nourishes .nourishes-items .switcher li .item-title .pin.__2 .dot {
-              transform: rotate(22.8deg); }
-              .nourishes .nourishes-items .switcher li .item-title .pin.__2 .dot::before {
-                width: 260px; }
-          .nourishes .nourishes-items .switcher li .item-title .pin.__3 {
-            top: -86px; }
-            .nourishes .nourishes-items .switcher li .item-title .pin.__3 .dot {
-              transform: rotate(24deg); }
-              .nourishes .nourishes-items .switcher li .item-title .pin.__3 .dot::before {
-                width: 260px; }
-          .nourishes .nourishes-items .switcher li .item-title .pin .dot {
-            position: relative;
-            width: 18px;
-            height: 18px;
-            background: #50DEF6;
-            border-radius: 100%; }
-            .nourishes .nourishes-items .switcher li .item-title .pin .dot::before {
-              content: '';
-              position: absolute;
-              top: 8px;
-              left: 8px;
-              width: 240px;
-              height: 2px;
-              background: #50DEF6; }
+          display: none;
+          transition: ease-in-out .5s; }
         .nourishes .nourishes-items .switcher li p {
           clear: both;
           font-size: 18px;
@@ -340,8 +312,8 @@ div[class*=__price], section[class*=__price] {
         .nourishes .nourishes-items .switcher li[class*=active] .item-title {
           position: relative;
           float: left; }
-          .nourishes .nourishes-items .switcher li[class*=active] .item-title h3::before {
-            content: '';
+          .nourishes .nourishes-items .switcher li[class*=active] .item-title .mark {
+            display: block;
             width: 100%;
             height: 15px;
             z-index: -1;
@@ -349,6 +321,246 @@ div[class*=__price], section[class*=__price] {
             left: 0;
             top: 15px;
             background: #50DEF6; }
+          .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: -245px;
+            width: 180px;
+            height: 100%; }
+            .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin.__1 {
+              top: 150px; }
+              .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin.__1 .dot {
+                transform: rotate(-29deg); }
+                .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin.__1 .dot::before {
+                  width: 275px; }
+            .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin.__2 {
+              top: -80px; }
+              .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin.__2 .dot {
+                transform: rotate(22.8deg); }
+                .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin.__2 .dot::before {
+                  width: 260px; }
+            .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin.__3 {
+              top: -86px; }
+              .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin.__3 .dot {
+                transform: rotate(24deg); }
+                .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin.__3 .dot::before {
+                  width: 260px; }
+            .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin .dot {
+              position: relative;
+              width: 18px;
+              height: 18px;
+              background: #50DEF6;
+              border-radius: 100%; }
+              .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin .dot::before {
+                content: '';
+                position: absolute;
+                top: 8px;
+                left: 8px;
+                width: 240px;
+                height: 2px;
+                background: #50DEF6; }
+
+/* 5.   Section Effect */
+section.effect {
+  margin-top: 160px;
+  clear: both; }
+  section.effect .title__primary-title {
+    margin-bottom: 30px; }
+    section.effect .title__primary-title h2 {
+      line-height: 54px; }
+    section.effect .title__primary-title span {
+      font-weight: 100;
+      font-size: 42px; }
+  section.effect .__card {
+    padding-top: 30px;
+    padding-bottom: 30px; }
+  section.effect .product-image__left {
+    width: 33.333%;
+    overflow: hidden; }
+    section.effect .product-image__left .product-image__title {
+      font-size: 34px;
+      font-weight: 700;
+      line-height: 44px;
+      color: #06045D; }
+    section.effect .product-image__left .product-image__img {
+      margin-top: 90px; }
+      section.effect .product-image__left .product-image__img img {
+        width: 340px;
+        margin-left: -32px; }
+  section.effect .slideshow-effect__right {
+    width: 66.666%;
+    padding: 0 30px;
+    padding-right: 0; }
+    section.effect .slideshow-effect__right .uk-slideshow-items {
+      position: relative;
+      min-height: 400px !important; }
+      section.effect .slideshow-effect__right .uk-slideshow-items > div .slide__title {
+        color: #E385CA; }
+        section.effect .slideshow-effect__right .uk-slideshow-items > div .slide__title h4 {
+          font-size: 28px;
+          font-weight: 700;
+          line-height: 38px;
+          text-align: right; }
+      section.effect .slideshow-effect__right .uk-slideshow-items > div .item {
+        width: 33.333%;
+        overflow: hidden;
+        float: left;
+        height: 367px;
+        padding: 20px 20px 20px 0; }
+        section.effect .slideshow-effect__right .uk-slideshow-items > div .item:last-child {
+          padding-right: 0; }
+        section.effect .slideshow-effect__right .uk-slideshow-items > div .item img {
+          width: 100%;
+          height: 267px; }
+    section.effect .slideshow-effect__right .slideshow-nav > div {
+      width: 108px;
+      height: 108px;
+      border-radius: 100%;
+      overflow: hidden;
+      margin: 21px 15px; }
+      section.effect .slideshow-effect__right .slideshow-nav > div.uk-active {
+        width: 115px;
+        height: 115px;
+        border: 4px solid #E385CA;
+        padding: 2px;
+        margin: 15px 9px;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.16); }
+      section.effect .slideshow-effect__right .slideshow-nav > div img {
+        width: 103px;
+        border-radius: 100%; }
+
+/* end Section Effect */
+section.go_ahead {
+  margin-top: 90px;
+  overflow: hidden; }
+  section.go_ahead .sub_title h3 {
+    font-size: 24px;
+    color: #000000;
+    line-height: 30px;
+    font-weight: 700; }
+  section.go_ahead .step-item {
+    width: 33%;
+    float: left;
+    padding: 30px;
+    margin-top: 50px;
+    position: relative; }
+    section.go_ahead .step-item .step-1,
+    section.go_ahead .step-item .step-3 {
+      padding-top: 200px; }
+    section.go_ahead .step-item .step-1 .image {
+      position: absolute;
+      top: 0;
+      left: 50px; }
+    section.go_ahead .step-item .step-2 {
+      padding-bottom: 170px; }
+      section.go_ahead .step-item .step-2 .image {
+        position: absolute;
+        bottom: 0px;
+        right: 20px; }
+    section.go_ahead .step-item .step-3 .image {
+      position: absolute;
+      top: -100px;
+      right: 50px; }
+    section.go_ahead .step-item .title {
+      text-align: center;
+      font-size: 38px;
+      font-weight: 900;
+      line-height: 48px;
+      color: #E385CA;
+      position: relative; }
+      section.go_ahead .step-item .title .number {
+        position: absolute;
+        font-size: 196px;
+        font-weight: 900;
+        color: #50DEF6;
+        opacity: 0.5;
+        z-index: -1;
+        top: 0;
+        left: 0; }
+    section.go_ahead .step-item .text p {
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 26px; }
+
+section.the_result {
+  margin-top: 160px;
+  clear: both; }
+  section.the_result .title__primary-title {
+    margin-bottom: 30px; }
+    section.the_result .title__primary-title h2 {
+      line-height: 54px; }
+    section.the_result .title__primary-title span {
+      font-weight: 100;
+      font-size: 42px;
+      text-transform: uppercase; }
+  section.the_result .box__card {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-top: 44px;
+    position: relative;
+    min-height: 755px; }
+  section.the_result .slideshow-image {
+    width: 680px;
+    height: 755px;
+    position: absolute;
+    top: -40px;
+    right: 10px;
+    background: url(../images/result_slideshow_image.svg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat; }
+  section.the_result .uk-slideshow-items {
+    min-height: 600px !important; }
+    section.the_result .uk-slideshow-items .info-block__left {
+      position: relative;
+      width: 33.333%;
+      padding-top: 30px; }
+      section.the_result .uk-slideshow-items .info-block__left .title {
+        color: #E385CA; }
+        section.the_result .uk-slideshow-items .info-block__left .title h2 {
+          font-size: 38px;
+          font-weight: 900;
+          line-height: 94px; }
+      section.the_result .uk-slideshow-items .info-block__left .text {
+        color: #000000;
+        margin-top: 10px; }
+        section.the_result .uk-slideshow-items .info-block__left .text p {
+          font-size: 18px;
+          font-weight: 500;
+          line-height: 26px; }
+    section.the_result .uk-slideshow-items .info-image__left {
+      clear: both;
+      width: 420px;
+      height: 285px;
+      border: 5px solid #FFFFFF;
+      margin-top: 90px;
+      overflow: hidden; }
+      section.the_result .uk-slideshow-items .info-image__left img {
+        width: 100%;
+        height: auto; }
+  section.the_result .slideshow-nav {
+    position: absolute;
+    top: 150px;
+    right: 160px;
+    width: 320px;
+    height: 480px;
+    z-index: 9; }
+    section.the_result .slideshow-nav .image-navigation {
+      width: 33px;
+      height: 33px;
+      background: transparent;
+      border-radius: 100%;
+      border: 1px dashed #FFFFFF;
+      position: absolute; }
+      section.the_result .slideshow-nav .image-navigation.uk-active {
+        background: #FFFFFF; }
+      section.the_result .slideshow-nav .image-navigation.__1 {
+        right: 50px;
+        top: 300px; }
+      section.the_result .slideshow-nav .image-navigation.__2 {
+        right: 60px;
+        top: 100px; }
 
 /* ========================================================================
    Component: Switcher
@@ -711,3 +923,69 @@ div[class*=__price], section[class*=__price] {
     stroke-dashoffset: var(--uk-animation-stroke); }
   100% {
     stroke-dashoffset: 0; } }
+
+/* ========================================================================
+   Component: Slideshow
+ ========================================================================== */
+/*
+ * 1. Prevent tab highlighting on iOS.
+ */
+.uk-slideshow {
+  /* 1 */
+  -webkit-tap-highlight-color: transparent; }
+
+/* Items
+ ========================================================================== */
+/*
+ * 1. Create position and stacking context
+ * 2. Reset list
+ * 3. Clip child elements
+ * 4. Prevent displaying the callout information on iOS.
+ */
+.uk-slideshow-items {
+  /* 1 */
+  position: relative;
+  z-index: 0;
+  /* 2 */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  /* 3 */
+  overflow: hidden;
+  /* 4 */
+  -webkit-touch-callout: none; }
+
+/* Item
+ ========================================================================== */
+/*
+ * 1. Position items above each other
+ * 2. Take the full width
+ * 3. Clip child elements, e.g. for `uk-cover`
+ * 4. Optimize animation
+ * 5. Disable horizontal panning gestures in IE11 and Edge
+ * 6. Suppress outline on focus
+ */
+.uk-slideshow-items > * {
+  /* 1 */
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* 2 */
+  right: 0;
+  bottom: 0;
+  /* 3 */
+  overflow: hidden;
+  /* 4 */
+  will-change: transform, opacity;
+  /* 5 */
+  touch-action: pan-y; }
+
+/* 6 */
+.uk-slideshow-items > :focus {
+  outline: none; }
+
+/*
+ * Hide not active items
+ */
+.uk-slideshow-items > :not(.uk-active) {
+  display: none; }
