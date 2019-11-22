@@ -23,6 +23,22 @@ body {
     .container {
       display: none; } }
 
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0; }
+
+* html .clearfix {
+  zoom: 1; }
+
+/* IE6 */
+*:first-child + html .clearfix {
+  zoom: 1; }
+
+/* IE7 */
 div[class*=__left], img[class*=__left], section[class*=__left] {
   float: left; }
 
@@ -72,7 +88,8 @@ div[class*=__price], section[class*=__price] {
   width: 280px;
   height: 60px;
   padding: 15px;
-  margin: 30px auto 0; }
+  margin: 30px auto 0;
+  cursor: pointer; }
 
 .fixed {
   width: 100%;
@@ -184,7 +201,7 @@ div[class*=__price], section[class*=__price] {
 .wrinkles,
 .stimulate {
   overflow: hidden;
-  margin-top: 160px; }
+  margin-top: 90px; }
   .wrinkles .container,
   .stimulate .container {
     position: relative;
@@ -286,7 +303,13 @@ div[class*=__price], section[class*=__price] {
     .nourishes .nourishes-items .switcher {
       list-style: none; }
       .nourishes .nourishes-items .switcher li {
-        padding-bottom: 30px; }
+        padding-bottom: 30px;
+        opacity: 0.35;
+        transition: ease-in-out .5s; }
+        .nourishes .nourishes-items .switcher li.uk-active {
+          opacity: 1; }
+        .nourishes .nourishes-items .switcher li:hover {
+          opacity: 1; }
         .nourishes .nourishes-items .switcher li a {
           color: #000000;
           text-decoration: none; }
@@ -434,7 +457,7 @@ section.effect {
 section.go_ahead {
   margin-top: 90px;
   overflow: hidden; }
-  section.go_ahead .sub_title h3 {
+  section.go_ahead .subtitle h3 {
     font-size: 24px;
     color: #000000;
     line-height: 30px;
@@ -453,7 +476,7 @@ section.go_ahead {
       top: 0;
       left: 50px; }
     section.go_ahead .step-item .step-2 {
-      padding-bottom: 170px; }
+      padding-bottom: 110px; }
       section.go_ahead .step-item .step-2 .image {
         position: absolute;
         bottom: 0px;
@@ -486,14 +509,19 @@ section.go_ahead {
 section.the_result {
   margin-top: 160px;
   clear: both; }
+  section.the_result .container {
+    padding: 0; }
   section.the_result .title__primary-title {
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    padding: 0 30px; }
     section.the_result .title__primary-title h2 {
       line-height: 54px; }
     section.the_result .title__primary-title span {
       font-weight: 100;
       font-size: 42px;
       text-transform: uppercase; }
+  section.the_result .subtitle {
+    padding: 0 30px; }
   section.the_result .box__card {
     padding-top: 30px;
     padding-bottom: 30px;
@@ -551,7 +579,7 @@ section.the_result {
       height: 33px;
       background: transparent;
       border-radius: 100%;
-      border: 1px dashed #FFFFFF;
+      border: 2px dashed #FFFFFF;
       position: absolute; }
       section.the_result .slideshow-nav .image-navigation.uk-active {
         background: #FFFFFF; }
@@ -559,8 +587,260 @@ section.the_result {
         right: 50px;
         top: 300px; }
       section.the_result .slideshow-nav .image-navigation.__2 {
-        right: 60px;
-        top: 100px; }
+        right: 20px;
+        top: 175px; }
+  section.the_result .slideshow-text-nav {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0 60px 45px;
+    width: 100%; }
+    section.the_result .slideshow-text-nav > div {
+      float: left;
+      margin-right: 80px;
+      cursor: pointer; }
+      section.the_result .slideshow-text-nav > div:last-child {
+        margin-right: 0; }
+      section.the_result .slideshow-text-nav > div.uk-active span {
+        color: #E385CA; }
+      section.the_result .slideshow-text-nav > div span {
+        font-size: 24px;
+        font-weight: 900;
+        color: #000000; }
+
+section.statistics {
+  margin-top: 90px;
+  overflow: hidden; }
+  section.statistics > div > div {
+    width: 33.333%;
+    position: relative;
+    float: left;
+    padding-right: 30px; }
+  section.statistics .percent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 104px;
+    font-weight: 900;
+    color: #50DEF6;
+    z-index: -1; }
+  section.statistics .title {
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 30px;
+    color: #E385CA;
+    margin-top: 90px;
+    text-align: center; }
+  section.statistics .text {
+    padding-top: 10px; }
+    section.statistics .text p {
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 26px;
+      color: #000000; }
+
+section.inspire {
+  margin-top: 90px;
+  overflow: hidden; }
+  section.inspire .subtitle h3 {
+    font-size: 24px;
+    color: #000000;
+    line-height: 30px;
+    font-weight: 700; }
+  section.inspire .desc {
+    max-width: 310px;
+    padding: 23px 0 90px 0; }
+    section.inspire .desc p {
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 30px;
+      color: #000000; }
+  section.inspire .review {
+    max-width: 1640px;
+    margin: 0 auto; }
+    section.inspire .review > div {
+      width: 33.333%;
+      float: left; }
+    section.inspire .review .item__left {
+      max-width: 481px;
+      padding-right: 30px;
+      margin-top: 90px; }
+      section.inspire .review .item__left:last-child {
+        padding-right: 0; }
+      section.inspire .review .item__left .avatar {
+        width: 85px;
+        height: 85px;
+        overflow: hidden;
+        border-radius: 100%; }
+        section.inspire .review .item__left .avatar img {
+          width: 100%;
+          height: auto; }
+      section.inspire .review .item__left .__right {
+        max-width: 365px;
+        padding-left: 20px; }
+      section.inspire .review .item__left .name {
+        font-size: 22px;
+        font-weight: 700; }
+      section.inspire .review .item__left .__card {
+        max-width: 365px;
+        padding: 30px;
+        margin-top: 20px;
+        border-top-left-radius: 0;
+        border: 1px solid rgba(0, 0, 0, 0.15); }
+
+section.its_easy {
+  margin-top: 90px;
+  overflow: hidden; }
+  section.its_easy .subtitle h3 {
+    font-size: 24px;
+    color: #000000;
+    line-height: 30px;
+    font-weight: 700; }
+  section.its_easy .steps {
+    clear: both;
+    overflow: hidden; }
+    section.its_easy .steps > div {
+      width: 33.333%;
+      float: left;
+      position: relative;
+      padding-top: 120px;
+      padding-right: 30px; }
+      section.its_easy .steps > div:last-child {
+        padding-right: 0; }
+      section.its_easy .steps > div .number {
+        font-size: 196px;
+        font-weight: 900;
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: #50DEF6;
+        opacity: 0.5;
+        z-index: -1; }
+      section.its_easy .steps > div .title {
+        font-size: 38px;
+        font-weight: 900;
+        line-height: 48px;
+        color: #E385CA;
+        text-align: center; }
+      section.its_easy .steps > div .text p {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 26px;
+        color: #000000; }
+  section.its_easy .steps-images {
+    clear: both;
+    overflow: hidden;
+    margin-top: 50px;
+    padding: 50px 0 0; }
+    section.its_easy .steps-images > div {
+      float: left;
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.16); }
+      section.its_easy .steps-images > div img {
+        width: 100%;
+        height: auto; }
+    section.its_easy .steps-images .__1 {
+      width: 362px;
+      height: 240px;
+      z-index: 4; }
+    section.its_easy .steps-images .__2 {
+      width: 318px;
+      height: 212px;
+      margin: -50px 0 0 -100px;
+      z-index: 3; }
+    section.its_easy .steps-images .__3 {
+      width: 308px;
+      height: 205px;
+      margin: 30px 0 0 -130px;
+      z-index: 2; }
+    section.its_easy .steps-images .__4 {
+      width: 312px;
+      height: 207px;
+      margin: -25px 0 0 -100px; }
+
+section.order {
+  position: relative;
+  margin-top: 160px; }
+  section.order .order-image__layout {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1; }
+    section.order .order-image__layout .woman-image {
+      position: absolute;
+      top: 0;
+      right: -300px;
+      width: 810px;
+      height: 898px;
+      background: url(../images/order_image.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain; }
+  section.order .desc {
+    max-width: 310px;
+    padding: 23px 0 90px 0; }
+    section.order .desc p {
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 30px;
+      color: #000000; }
+  section.order .order__card {
+    max-width: 710px;
+    margin-bottom: 220px;
+    position: relative; }
+    section.order .order__card .product-image {
+      width: 360px;
+      height: 270px;
+      position: absolute;
+      bottom: 115px;
+      right: 20px; }
+      section.order .order__card .product-image img {
+        width: 100%;
+        height: auto; }
+    section.order .order__card .product-price__price {
+      position: absolute;
+      bottom: 60px;
+      right: 40px; }
+      section.order .order__card .product-price__price .old-price {
+        font-size: 24px;
+        font-weight: 300;
+        text-decoration: line-through;
+        color: #000000; }
+      section.order .order__card .product-price__price .new-price {
+        font-size: 24px;
+        font-weight: 900; }
+        section.order .order__card .product-price__price .new-price span {
+          font-size: 44px;
+          line-height: 44px;
+          padding-left: 70px; }
+    section.order .order__card .title {
+      text-transform: uppercase;
+      max-width: 310px; }
+      section.order .order__card .title h3 {
+        font-size: 28px;
+        font-weight: 900;
+        text-align: center;
+        color: #E385CA; }
+    section.order .order__card form {
+      margin-top: 45px;
+      max-width: 310px; }
+      section.order .order__card form select,
+      section.order .order__card form input {
+        display: block;
+        border: none;
+        background: rgba(0, 0, 0, 0.15);
+        border-radius: 35px;
+        padding: 15px 30px;
+        width: 100%;
+        font-size: 18px;
+        margin-bottom: 10px; }
+      section.order .order__card form ::placeholder {
+        color: #000000;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 30px; }
 
 /* ========================================================================
    Component: Switcher
