@@ -9,12 +9,36 @@
 		<link rel="stylesheet" href="css/main.css"/>
 	</head>
 	<body>
-		<div class="wrapper">
+		<div class="wrapper" id="wrapper">
+			<div class="background-image" uk-parallax="target: #wrapper; y:-200, -1000; hue: 320;"></div>
+			<div class="bubbles">
+				<div class="container">
+					<div class="bubble__1" uk-parallax="target: #wrapper;y: 200px, -1300px">
+						<div class="__1 scale-in-center"></div>
+						<div class="__2 scale-in-center"></div>
+						<div class="__3 scale-in-center"></div>
+					</div>
+					<div class="bubble__2" uk-parallax="target: #wrapper;y: 200px, -2300px">
+						<div class="__1 scale-in-center"></div>
+						<div class="__2 scale-in-center"></div>
+						<div class="__3 scale-in-center"></div>
+					</div>
+					<div class="bubble__3" uk-parallax="target: #wrapper;y: 200px, -1300px">
+						<div class="__1 scale-in-center"></div>
+						<div class="__2 scale-in-center"></div>
+						<div class="__3 scale-in-center"></div>
+						<div class="__4 scale-in-center"></div>
+					</div>
+					<div class="bubble__4" uk-parallax="target: #wrapper;y: 200px, -2300px">
+						<div class="__1 scale-in-center"></div>
+						<div class="__2 scale-in-center"></div>
+						<div class="__3 scale-in-center"></div>
+						<div class="__4 scale-in-center"></div>
+					</div>
+				</div>
+			</div>
 			<div class="fixed">
 				<div class="gradient"></div>
-				<div class="slogan">
-					<p>Mezoluxe microneedling regeneration home-kit</p>
-				</div>
 			</div>
 			<div class="container">
 				<section class="hero">
@@ -34,18 +58,17 @@
 					</div>
 				</section>
 			</div>
-			<section class="product">
+			<section class="product" uk-scrollspy="cls: uk-animation-fade; target: .scroll-spy; delay: 300; repeat: false">
 				<div class="container">
-					<div class="product-price__left__card">
+					<div class="product-price__left__card scroll-spy">
 						<div class="product-image"><img src="images/pack.png" alt=""/></div>
 						<div class="product-price__price">
 							<div class="old-price">80$</div>
-							<div class="new-price">new price <span>45$</span></div>
-							<div class="order-button"><span>Order now</span></div>
+							<div class="new-price">new price <span>45$</span></div><a class="order-button" href="#order-form" uk-scroll="uk-scroll"><span>Order now</span></a>
 						</div>
 					</div>
 					<div class="product-info__right">
-						<div class="product-info__item">
+						<div class="product-info__item scroll-spy">
 							<div class="title">
 								<h2>MEZOLUXE ROLLER</h2>
 								<h3>540 titanium microneedles </h3>
@@ -53,7 +76,7 @@
 							<p>
 								 stimulate skincare<br/>renewal</p>
 						</div>
-						<div class="product-info__item">
+						<div class="product-info__item scroll-spy">
 							<div class="title">
 								<h2>ANTI-AGEING SERUM</h2>
 								<h3>Lecithin, Nicotinamide, Hyaluronic acid</h3>
@@ -64,30 +87,30 @@
 					</div>
 				</div>
 			</section>
-			<section class="wrinkles">
+			<section class="wrinkles" uk-scrollspy="cls: uk-animation-fade; target: .scroll-spy; delay: 300; repeat: false">
 				<div class="container">
-					<div class="title__primary-title">
+					<div class="title__primary-title scroll-spy">
 						<h2>Wrinkles...</h2>
 					</div>
-					<div class="desc__left">
+					<div class="desc__left scroll-spy">
 						<p>Millions of women have them, hate them, and want to get rid of them.</p>
 					</div>
-					<div class="image-item__right"><img src="images/Wrinkles.jpg" alt=""/></div>
+					<div class="image-item__right scroll-spy"><img src="images/Wrinkles.jpg" alt=""/></div>
 				</div>
 				<div class="container">
-					<div class="content-item__left">
+					<div class="content-item__left scroll-spy">
 						<div class="content-item__image"><img src="images/skin_image_1.png" alt=""/></div>
 						<div class="content-item__text">
 							<p>Wrinkles appear when skin loses elasticity. To get rid of them, it’s necessary to increase collagen production.</p>
 						</div>
 					</div>
-					<div class="content-item__left">
+					<div class="content-item__left scroll-spy">
 						<div class="content-item__image"><img src="images/skin_image_2.png" alt=""/></div>
 						<div class="content-item__text">
 							<p>Skin care products can’t independently influence collagen levels. They don’t penetrate deep layers of skin - they only moisturise from outside.</p>
 						</div>
 					</div>
-					<div class="content-item__left">
+					<div class="content-item__left scroll-spy">
 						<div class="content-item__image"><img src="images/skin_image_3.png" alt=""/></div>
 						<div class="content-item__text">
 							<p>Mezoroller makes cosmetics 40 times more effective by allowing them to penetrate deeper and work from the inside.</p>
@@ -95,51 +118,51 @@
 					</div>
 				</div>
 			</section>
-			<section class="stimulate">
+			<section class="stimulate" uk-scrollspy="cls: uk-animation-fade; target: .scroll-spy; delay: 300; repeat: false">
 				<div class="container">
-					<div class="title__primary-title">
+					<div class="title__primary-title scroll-spy">
 						<h2>Stimulate</h2>
 					</div>
-					<div class="desc__left">
+					<div class="desc__left scroll-spy">
 						<p>Mezoluxe works towards results instead of making empty promises</p>
 					</div>
 				</div>
 				<div class="container">
 					<div class="content-item__left">
-						<div class="content-item__image"><img src="images/skin_image_4.png" alt=""/></div>
-						<div class="content-item__text">
+						<div class="content-item__image scroll-spy"><img src="images/skin_image_4.png" alt=""/></div>
+						<div class="content-item__text scroll-spy">
 							<h3>Penetrates</h3>
 							<p>540 titanium 0.05 mm microneedles long - as thick as a human hair - pierce the outer layer of skin (epidermis), the traumatic impact is mimimised..</p>
 						</div>
 					</div>
 					<div class="content-item__left">
-						<div class="content-item__image"><img src="images/skin_image_5.png" alt=""/></div>
-						<div class="content-item__text">
+						<div class="content-item__image scroll-spy"><img src="images/skin_image_5.png" alt=""/></div>
+						<div class="content-item__text scroll-spy">
 							<h3>Nourishes</h3>
 							<p>540 titanium 0.05 mm microneedles long - as thick as a human hair - pierce the outer layer of skin (epidermis), the traumatic impact is mimimised..</p>
 						</div>
 					</div>
 					<div class="content-item__left">
-						<div class="content-item__image"><img src="images/skin_image_5.png" alt=""/></div>
-						<div class="content-item__text">
+						<div class="content-item__image scroll-spy"><img src="images/skin_image_5.png" alt=""/></div>
+						<div class="content-item__text scroll-spy">
 							<h3>Renews</h3>
 							<p>Cells start to produce 200% more collagen after just first use. In a week, wrinkles flatten, pigmentation spots lighten.. </p>
 						</div>
 					</div>
 				</div>
 			</section>
-			<section class="nourishes">
+			<section class="nourishes" uk-scrollspy="cls: uk-animation-fade; target: .scroll-spy; delay: 300; repeat: false">
 				<div class="container">
-					<div class="title__primary-title">
+					<div class="title__primary-title scroll-spy">
 						<h2>Nourishes</h2>
 					</div>
 					<div class="nourishes-items">
-						<div class="__left">
+						<div class="__left scroll-spy">
 							<div class="nourishes-desc">
 								<p>ANTIAGE serum immediately gets into deep layers of the skin through holes made by a mezoroller. It acts directly in cells, stimulating collagen synthesis and smoothing wrinkles from inside.</p>
 							</div>
 						</div>
-						<div class="__left">
+						<div class="__left scroll-spy">
 							<div class="skin-image"><img src="images/skin-image.png" alt=""/>
 								<div class="desc">
 									<ul class="uk-switcher switcher-container">
@@ -159,7 +182,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="__left">
+						<div class="__left scroll-spy">
 							<ul class="switcher" uk-switcher="connect: .switcher-container; animation: uk-animation-fade;">
 								<li class="switcher-item"><a href="#">
 										<div class="item-title">
@@ -194,20 +217,20 @@
 				</div>
 			</section>
 			<!-- end section nourishes-->
-			<section class="effect">
+			<section class="effect" uk-scrollspy="cls: uk-animation-fade; target: .scroll-spy; delay: 300; repeat: false">
 				<div class="container">
-					<div class="title__primary-title">
+					<div class="title__primary-title scroll-spy">
 						<h2> <span>wow </span><br/>Effect</h2>
 					</div>
 				</div>
 				<div class="container __card">
 					<div class="product-image__left">
-						<div class="product-image__title">
+						<div class="product-image__title scroll-spy">
 							<h3>Mezoroller + ANTIAGE serum</h3>
 						</div>
-						<div class="product-image__img"><img src="images/pack.png" alt=""/></div>
+						<div class="product-image__img scroll-spy"><img src="images/pack.png" alt=""/></div>
 					</div>
-					<div class="slideshow-effect__right">
+					<div class="slideshow-effect__right scroll-spy">
 						<div uk-slideshow="animation: fade">
 							<div class="uk-slideshow-items">
 								<div>
@@ -226,7 +249,63 @@
 								</div>
 								<div>
 									<div class="slide__title">
-										<h4>2 pam pam</h4>
+										<h4>Eye Area</h4>
+									</div>
+									<div class="item"><img src="images/slide_img_1.jpg" alt=""/>
+										<p>2 Before using Mezoluxe</p>
+									</div>
+									<div class="item"><img src="images/slide_img_2.jpg" alt=""/>
+										<p>2 After 1 week using Mezoluxe</p>
+									</div>
+									<div class="item"><img src="images/slide_img_3.jpg" alt=""/>
+										<p>2 WOW. Serum + Mezoroller</p>
+									</div>
+								</div>
+								<div>
+									<div class="slide__title">
+										<h4>Neck & Decollete</h4>
+									</div>
+									<div class="item"><img src="images/slide_img_1.jpg" alt=""/>
+										<p>2 Before using Mezoluxe</p>
+									</div>
+									<div class="item"><img src="images/slide_img_2.jpg" alt=""/>
+										<p>2 After 1 week using Mezoluxe</p>
+									</div>
+									<div class="item"><img src="images/slide_img_3.jpg" alt=""/>
+										<p>2 WOW. Serum + Mezoroller</p>
+									</div>
+								</div>
+								<div>
+									<div class="slide__title">
+										<h4>Enlarged Pores</h4>
+									</div>
+									<div class="item"><img src="images/slide_img_1.jpg" alt=""/>
+										<p>2 Before using Mezoluxe</p>
+									</div>
+									<div class="item"><img src="images/slide_img_2.jpg" alt=""/>
+										<p>2 After 1 week using Mezoluxe</p>
+									</div>
+									<div class="item"><img src="images/slide_img_3.jpg" alt=""/>
+										<p>2 WOW. Serum + Mezoroller</p>
+									</div>
+								</div>
+								<div>
+									<div class="slide__title">
+										<h4>Acne Scars</h4>
+									</div>
+									<div class="item"><img src="images/slide_img_1.jpg" alt=""/>
+										<p>2 Before using Mezoluxe</p>
+									</div>
+									<div class="item"><img src="images/slide_img_2.jpg" alt=""/>
+										<p>2 After 1 week using Mezoluxe</p>
+									</div>
+									<div class="item"><img src="images/slide_img_3.jpg" alt=""/>
+										<p>2 WOW. Serum + Mezoroller</p>
+									</div>
+								</div>
+								<div>
+									<div class="slide__title">
+										<h4>Nasolabial folds</h4>
 									</div>
 									<div class="item"><img src="images/slide_img_1.jpg" alt=""/>
 										<p>2 Before using Mezoluxe</p>
@@ -242,20 +321,24 @@
 							<div class="slideshow-nav">
 								<div class="block__left" uk-slideshow-item="0"><img src="images/slideshow-item-0.jpg" alt=""/></div>
 								<div class="block__left" uk-slideshow-item="1"><img src="images/slideshow-item-1.jpg" alt=""/></div>
+								<div class="block__left" uk-slideshow-item="2"><img src="images/slideshow-item-1.jpg" alt=""/></div>
+								<div class="block__left" uk-slideshow-item="3"><img src="images/slideshow-item-1.jpg" alt=""/></div>
+								<div class="block__left" uk-slideshow-item="4"><img src="images/slideshow-item-1.jpg" alt=""/></div>
+								<div class="block__left" uk-slideshow-item="5"><img src="images/slideshow-item-1.jpg" alt=""/></div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
-			<section class="go_ahead">
+			<section class="go_ahead" uk-scrollspy="cls: uk-animation-slide-bottom; target: .scroll-spy; delay: 300; repeat: false">
 				<div class="container">
-					<div class="title__primary-title">
+					<div class="title__primary-title scroll-spy">
 						<h2>Go Ahead!</h2>
 					</div>
-					<div class="subtitle">
+					<div class="subtitle scroll-spy">
 						<h3> 60 seconds 3 times a week</h3>
 					</div>
-					<div class="step-item">
+					<div class="step-item scroll-spy">
 						<div class="step-1">
 							<div class="image"><img src="images/step_img_1.png" alt=""/></div>
 							<div class="title">step
@@ -266,7 +349,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="step-item">
+					<div class="step-item scroll-spy">
 						<div class="step-2">
 							<div class="image"><img src="images/step_img_2.png" alt=""/></div>
 							<div class="title">step
@@ -277,7 +360,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="step-item">
+					<div class="step-item scroll-spy">
 						<div class="step-3">
 							<div class="image"><img src="images/step_img_3.png" alt=""/></div>
 							<div class="title">step
@@ -290,15 +373,15 @@
 					</div>
 				</div>
 			</section>
-			<section class="the_result">
+			<section class="the_result" uk-scrollspy="cls: uk-animation-fade; target: .scroll-spy; delay: 300; repeat: false">
 				<div class="container">
-					<div class="title__primary-title">
+					<div class="title__primary-title scroll-spy">
 						<h2><span>get</span><br/>The Result</h2>
 					</div>
-					<div class="subtitle">
+					<div class="subtitle scroll-spy">
 						<h3>Effect after first use</h3>
 					</div>
-					<div class="box__card">
+					<div class="box__card scroll-spy">
 						<div uk-slideshow="animation: fade">
 							<div class="slideshow-image"></div>
 							<div class="uk-slideshow-items">
@@ -324,36 +407,62 @@
 									</div>
 									<div class="info-image__left uk-animation-slide-bottom"><img src="images/image_after_wrinkles.jpg" alt=""/></div>
 								</div>
+								<div>
+									<div class="info-block__left">
+										<div class="title uk-animation-slide-top">
+											<h2>Enlarged pores</h2>
+										</div>
+										<div class="text uk-animation-slide-top">
+											<p>With regular use, Mezoluxe helps shrink pores and make skin smoother and more resilient.</p>
+										</div>
+									</div>
+									<div class="info-image__left uk-animation-slide-bottom"><img src="images/image_after_wrinkles.jpg" alt=""/></div>
+								</div>
+								<div>
+									<div class="info-block__left">
+										<div class="title uk-animation-slide-top">
+											<h2>Acne Scars</h2>
+										</div>
+										<div class="text uk-animation-slide-top">
+											<p>Red marks and pimple scars fade after the third use.</p>
+										</div>
+									</div>
+									<div class="info-image__left uk-animation-slide-bottom"><img src="images/image_after_wrinkles.jpg" alt=""/></div>
+								</div>
 							</div>
 							<div class="slideshow-nav">
 								<div class="image-navigation __1" uk-slideshow-item="0"></div>
 								<div class="image-navigation __2" uk-slideshow-item="1"></div>
+								<div class="image-navigation __3" uk-slideshow-item="2"></div>
+								<div class="image-navigation __3" uk-slideshow-item="3"></div>
 							</div>
 							<div class="slideshow-text-nav">
 								<div class="text-navigation" uk-slideshow-item="0"><span>Pigmentation</span></div>
 								<div class="text-navigation" uk-slideshow-item="1"><span>Wrinkles</span></div>
+								<div class="text-navigation" uk-slideshow-item="2"><span>Enlarged pores</span></div>
+								<div class="text-navigation" uk-slideshow-item="3"><span>Acne Scars</span></div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
-			<section class="statistics">
+			<section class="statistics" uk-scrollspy="cls: uk-animation-fade; target: .scroll-spy; delay: 300; repeat: false">
 				<div class="container">
-					<div>
+					<div class="scroll-spy">
 						<div class="percent">75%</div>
 						<div class="title">of woman</div>
 						<div class="text">
 							<p>felt skin looks younger in the second week of use.</p>
 						</div>
 					</div>
-					<div>
+					<div class="scroll-spy">
 						<div class="percent">82%</div>
 						<div class="title">of woman</div>
 						<div class="text">
 							<p>felt skin looks younger in the second week of use.</p>
 						</div>
 					</div>
-					<div>
+					<div class="scroll-spy">
 						<div class="percent">83%</div>
 						<div class="title">of woman</div>
 						<div class="text">
@@ -362,21 +471,21 @@
 					</div>
 				</div>
 			</section>
-			<section class="inspire">
+			<section class="inspire" uk-scrollspy="cls: uk-animation-fade; target: .scroll-spy; delay: 300; repeat: false">
 				<div class="container">
-					<div class="title__primary-title">
+					<div class="title__primary-title scroll-spy">
 						<h2>Inspire</h2>
 					</div>
-					<div class="subtitle">
+					<div class="subtitle scroll-spy">
 						<h3>Leave your review on Mezoluxe*</h3>
 					</div>
-					<div class="desc">
+					<div class="desc scroll-spy">
 						<p>You can leave a review after you have bought the product</p>
 					</div>
 				</div>
 				<div class="review">
 					<div>
-						<div class="item__left">
+						<div class="item__left scroll-spy">
 							<div class="__left">
 								<div class="avatar"><img src="images/avatar_1.jpg" alt=""/></div>
 							</div>
@@ -390,7 +499,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="item__left">
+						<div class="item__left scroll-spy">
 							<div class="__left">
 								<div class="avatar"><img src="images/avatar_2.jpg" alt=""/></div>
 							</div>
@@ -406,7 +515,7 @@
 						</div>
 					</div>
 					<div>
-						<div class="item__left">
+						<div class="item__left scroll-spy">
 							<div class="__left">
 								<div class="avatar"><img src="images/avatar_3.jpg" alt=""/></div>
 							</div>
@@ -420,7 +529,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="item__left">
+						<div class="item__left scroll-spy">
 							<div class="__left">
 								<div class="avatar"><img src="images/avatar_4.jpg" alt=""/></div>
 							</div>
@@ -436,7 +545,7 @@
 						</div>
 					</div>
 					<div>
-						<div class="item__left">
+						<div class="item__left scroll-spy">
 							<div class="__left">
 								<div class="avatar"><img src="images/avatar_5.jpg" alt=""/></div>
 							</div>
@@ -454,7 +563,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="item__left">
+						<div class="item__left scroll-spy">
 							<div class="__left">
 								<div class="avatar"><img src="images/avatar_6.jpg" alt=""/></div>
 							</div>
@@ -471,30 +580,30 @@
 					</div>
 				</div>
 			</section>
-			<section class="its_easy">
+			<section class="its_easy" uk-scrollspy="cls: uk-animation-fade; target: .scroll-spy; delay: 300; repeat: false">
 				<div class="container">
-					<div class="title__primary-title">
+					<div class="title__primary-title scroll-spy">
 						<h2>It’s easy</h2>
 					</div>
-					<div class="subtitle">
+					<div class="subtitle scroll-spy">
 						<h3>3 steps on the path to perfection</h3>
 					</div>
 					<div class="steps">
-						<div>
+						<div class="scroll-spy">
 							<div class="number">1</div>
 							<div class="title">step</div>
 							<div class="text">
 								<p>Complete order form on our website</p>
 							</div>
 						</div>
-						<div>
+						<div class="scroll-spy">
 							<div class="number">2</div>
 							<div class="title">step</div>
 							<div class="text">
 								<p>Wait until our operator calls back to confirm details</p>
 							</div>
 						</div>
-						<div>
+						<div class="scroll-spy">
 							<div class="number">3</div>
 							<div class="title">step</div>
 							<div class="text">
@@ -503,25 +612,25 @@
 						</div>
 					</div>
 					<div class="steps-images">
-						<div class="__1"><img src="images/order-step-img-1.jpg" alt=""/></div>
-						<div class="__2"><img src="images/order-step-img-2.jpg" alt=""/></div>
-						<div class="__3"><img src="images/order-step-img-3.jpg" alt=""/></div>
-						<div class="__4"><img src="images/order-step-img-4.jpg" alt=""/></div>
+						<div class="__1 scroll-spy"><img src="images/order-step-img-1.jpg" alt=""/></div>
+						<div class="__2 scroll-spy"><img src="images/order-step-img-2.jpg" alt=""/></div>
+						<div class="__3 scroll-spy"><img src="images/order-step-img-3.jpg" alt=""/></div>
+						<div class="__4 scroll-spy"><img src="images/order-step-img-4.jpg" alt=""/></div>
 					</div>
 				</div>
 			</section>
 			<div class="container">
-				<section class="order">
+				<section class="order" uk-scrollspy="cls: uk-animation-fade; target: .scroll-spy; delay: 300; repeat: false">
 					<div class="order-image__layout">
 						<div class="woman-image"></div>
 					</div>
-					<div class="title__primary-title">
+					<div class="title__primary-title scroll-spy">
 						<h2>Mezoluxe</h2>
 					</div>
-					<div class="desc">
+					<div class="desc scroll-spy">
 						<p>Would you love to look incredibly younger ?</p>
 					</div>
-					<div class="order__card">
+					<div class="order__card scroll-spy">
 						<div class="product-image"><img src="images/pack.png" alt=""/></div>
 						<div class="product-price__price">
 							<div class="old-price">80$</div>
@@ -530,7 +639,7 @@
 						<div class="title">
 							<h3>place an order</h3>
 						</div>
-						<form action="">
+						<form id="order-form" action="">
 							<select name="country">
 								<option value="RU">Russia</option>
 							</select>

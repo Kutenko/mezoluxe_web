@@ -10,11 +10,32 @@ html(lang="en")
 
         link(rel="stylesheet", href="css/main.css")
     body
-        .wrapper
+        .wrapper#wrapper
+            .background-image(uk-parallax="target: #wrapper; y:-200, -1000; hue: 320;")
+            .bubbles
+                .container
+                    .bubble__1(uk-parallax="target: #wrapper;y: 200px, -1300px")
+                        .__1.scale-in-center
+                        .__2.scale-in-center
+                        .__3.scale-in-center
+                    .bubble__2(uk-parallax="target: #wrapper;y: 200px, -2300px")
+                        .__1.scale-in-center
+                        .__2.scale-in-center
+                        .__3.scale-in-center
+                    .bubble__3(uk-parallax="target: #wrapper;y: 200px, -1300px")
+                        .__1.scale-in-center
+                        .__2.scale-in-center
+                        .__3.scale-in-center
+                        .__4.scale-in-center
+                    .bubble__4(uk-parallax="target: #wrapper;y: 200px, -2300px")
+                        .__1.scale-in-center
+                        .__2.scale-in-center
+                        .__3.scale-in-center
+                        .__4.scale-in-center
             .fixed
                 .gradient
-                .slogan
-                    p Mezoluxe microneedling regeneration home-kit
+                //- .slogan
+                //-     p Mezoluxe microneedling regeneration home-kit
             .container
                 section.hero
                     .hero-image__layout
@@ -32,9 +53,9 @@ html(lang="en")
                         .hero-subtitle
                                 h2.
                                     Fast. Home use.
-            section.product
+            section.product(uk-scrollspy="cls: uk-animation-fade; target: .scroll-spy; delay: 300; repeat: false")
                 .container
-                    .product-price__left__card
+                    .product-price__left__card.scroll-spy
                         .product-image
                             img(src="images/pack.png", alt="")
                         .product-price__price
@@ -42,10 +63,10 @@ html(lang="en")
                             .new-price
                                 |new price 
                                 span 45$
-                            .order-button
+                            a.order-button(href="#order-form" uk-scroll)
                                 span Order now
                     .product-info__right
-                        .product-info__item
+                        .product-info__item.scroll-spy
                             .title
                                 h2 MEZOLUXE ROLLER
                                 h3 540 titanium microneedles 
@@ -53,7 +74,7 @@ html(lang="en")
                                 |stimulate skincare
                                 br 
                                 |renewal
-                        .product-info__item
+                        .product-info__item.scroll-spy
                             .title
                                 h2 ANTI-AGEING SERUM
                                 h3 Lecithin, Nicotinamide, Hyaluronic acid
@@ -61,72 +82,72 @@ html(lang="en")
                                 |Boosts collagen 
                                 br 
                                 |production
-            section.wrinkles
+            section.wrinkles(uk-scrollspy="cls: uk-animation-fade; target: .scroll-spy; delay: 300; repeat: false")
                 .container
-                    .title__primary-title
+                    .title__primary-title.scroll-spy
                         h2 Wrinkles...
-                    .desc__left
+                    .desc__left.scroll-spy
                         p Millions of women have them, hate them, and want to get rid of them.
-                    .image-item__right
+                    .image-item__right.scroll-spy
                         img(src="images/Wrinkles.jpg", alt="")
                 .container
-                    .content-item__left
+                    .content-item__left.scroll-spy
                         .content-item__image
                             img(src="images/skin_image_1.png", alt="")
                         .content-item__text
                             p.
                                 Wrinkles appear when skin loses elasticity. To get rid of them, it’s necessary to increase collagen production.
-                    .content-item__left
+                    .content-item__left.scroll-spy
                         .content-item__image
                             img(src="images/skin_image_2.png", alt="")
                         .content-item__text
                             p.
                                 Skin care products can’t independently influence collagen levels. They don’t penetrate deep layers of skin - they only moisturise from outside.
-                    .content-item__left
+                    .content-item__left.scroll-spy
                         .content-item__image
                             img(src="images/skin_image_3.png", alt="")
                         .content-item__text
                             p.
                                 Mezoroller makes cosmetics 40 times more effective by allowing them to penetrate deeper and work from the inside.
-            section.stimulate
+            section.stimulate(uk-scrollspy="cls: uk-animation-fade; target: .scroll-spy; delay: 300; repeat: false")
                 .container
-                    .title__primary-title
+                    .title__primary-title.scroll-spy
                         h2 Stimulate
-                    .desc__left
+                    .desc__left.scroll-spy
                         p.
                             Mezoluxe works towards results instead of making empty promises
                 .container
                     .content-item__left
-                        .content-item__image
+                        .content-item__image.scroll-spy
                             img(src="images/skin_image_4.png", alt="")
-                        .content-item__text
+                        .content-item__text.scroll-spy
                             h3 Penetrates
                             p.
                                 540 titanium 0.05 mm microneedles long - as thick as a human hair - pierce the outer layer of skin (epidermis), the traumatic impact is mimimised..
                     .content-item__left
-                        .content-item__image
+                        .content-item__image.scroll-spy
                             img(src="images/skin_image_5.png", alt="")
-                        .content-item__text
+                        .content-item__text.scroll-spy
                             h3 Nourishes
                             p.
                                 540 titanium 0.05 mm microneedles long - as thick as a human hair - pierce the outer layer of skin (epidermis), the traumatic impact is mimimised..
                     .content-item__left
-                        .content-item__image
+                        .content-item__image.scroll-spy
                             img(src="images/skin_image_5.png", alt="")
-                        .content-item__text
+                        .content-item__text.scroll-spy
                             h3 Renews
                             p.
                                 Cells start to produce 200% more collagen after just first use. In a week, wrinkles flatten, pigmentation spots lighten.. 
-            section.nourishes
+            section.nourishes(uk-scrollspy="cls: uk-animation-fade; target: .scroll-spy; delay: 300; repeat: false")
                 .container
-                    .title__primary-title
+                    .title__primary-title.scroll-spy
                         h2 Nourishes
                     .nourishes-items
-                        div.__left
+                        div.__left.scroll-spy
                             .nourishes-desc
                                 p.
                                     ANTIAGE serum immediately gets into deep layers of the skin through holes made by a mezoroller. It acts directly in cells, stimulating collagen synthesis and smoothing wrinkles from inside.
-                        div.__left
+                        div.__left.scroll-spy
                             .skin-image
                                 img(src="images/skin-image.png", alt="")
                                 .desc
@@ -141,7 +162,7 @@ html(lang="en")
                                             p.
                                                 Text item 3, dolor sit amet consectetur adipisicing elit. Est blanditiis nihil illum porro eum optio eos earum aliquam nam id?
 
-                        div.__left
+                        div.__left.scroll-spy
                             ul.switcher(uk-switcher="connect: .switcher-container; animation: uk-animation-fade;")
                                 li.switcher-item
                                     a(href="#")
@@ -171,20 +192,20 @@ html(lang="en")
                                         p.
                                             Functions: moisturising, nourishing
             // end section nourishes
-            section.effect
+            section.effect(uk-scrollspy="cls: uk-animation-fade; target: .scroll-spy; delay: 300; repeat: false")
                 .container
-                    .title__primary-title
+                    .title__primary-title.scroll-spy
                         h2 
                             span wow 
                             br
                             |Effect
                 .container.__card
                     .product-image__left
-                        .product-image__title
+                        .product-image__title.scroll-spy
                             h3 Mezoroller + ANTIAGE serum
-                        .product-image__img
+                        .product-image__img.scroll-spy
                             img(src="images/pack.png", alt="")
-                    .slideshow-effect__right
+                    .slideshow-effect__right.scroll-spy
                         div(uk-slideshow="animation: fade")
                             .uk-slideshow-items
                                 div
@@ -201,7 +222,55 @@ html(lang="en")
                                         p WOW. Serum + Mezoroller
                                 div
                                     .slide__title
-                                        h4 2 pam pam
+                                        h4 Eye Area
+                                    div.item
+                                        img(src="images/slide_img_1.jpg", alt="")
+                                        p 2 Before using Mezoluxe
+                                    div.item
+                                        img(src="images/slide_img_2.jpg", alt="")
+                                        p 2 After 1 week using Mezoluxe
+                                    div.item
+                                        img(src="images/slide_img_3.jpg", alt="")
+                                        p 2 WOW. Serum + Mezoroller
+                                div
+                                    .slide__title
+                                        h4 Neck & Decollete
+                                    div.item
+                                        img(src="images/slide_img_1.jpg", alt="")
+                                        p 2 Before using Mezoluxe
+                                    div.item
+                                        img(src="images/slide_img_2.jpg", alt="")
+                                        p 2 After 1 week using Mezoluxe
+                                    div.item
+                                        img(src="images/slide_img_3.jpg", alt="")
+                                        p 2 WOW. Serum + Mezoroller
+                                div
+                                    .slide__title
+                                        h4 Enlarged Pores
+                                    div.item
+                                        img(src="images/slide_img_1.jpg", alt="")
+                                        p 2 Before using Mezoluxe
+                                    div.item
+                                        img(src="images/slide_img_2.jpg", alt="")
+                                        p 2 After 1 week using Mezoluxe
+                                    div.item
+                                        img(src="images/slide_img_3.jpg", alt="")
+                                        p 2 WOW. Serum + Mezoroller
+                                div
+                                    .slide__title
+                                        h4 Acne Scars
+                                    div.item
+                                        img(src="images/slide_img_1.jpg", alt="")
+                                        p 2 Before using Mezoluxe
+                                    div.item
+                                        img(src="images/slide_img_2.jpg", alt="")
+                                        p 2 After 1 week using Mezoluxe
+                                    div.item
+                                        img(src="images/slide_img_3.jpg", alt="")
+                                        p 2 WOW. Serum + Mezoroller
+                                div
+                                    .slide__title
+                                        h4 Nasolabial folds
                                     div.item
                                         img(src="images/slide_img_1.jpg", alt="")
                                         p 2 Before using Mezoluxe
@@ -215,14 +284,22 @@ html(lang="en")
                                 div.block__left(uk-slideshow-item="0")
                                     img(src="images/slideshow-item-0.jpg", alt="")
                                 div.block__left(uk-slideshow-item="1")
-                                    img(src="images/slideshow-item-1.jpg", alt="")                                    
-            section.go_ahead
+                                    img(src="images/slideshow-item-1.jpg", alt="")
+                                div.block__left(uk-slideshow-item="2")
+                                    img(src="images/slideshow-item-1.jpg", alt="")
+                                div.block__left(uk-slideshow-item="3")
+                                    img(src="images/slideshow-item-1.jpg", alt="")
+                                div.block__left(uk-slideshow-item="4")
+                                    img(src="images/slideshow-item-1.jpg", alt="")
+                                div.block__left(uk-slideshow-item="5")
+                                    img(src="images/slideshow-item-1.jpg", alt="")
+            section.go_ahead(uk-scrollspy="cls: uk-animation-slide-bottom; target: .scroll-spy; delay: 300; repeat: false")
                 .container
-                    .title__primary-title
+                    .title__primary-title.scroll-spy
                         h2 Go Ahead!
-                    .subtitle
+                    .subtitle.scroll-spy
                         h3  60 seconds 3 times a week
-                    div.step-item
+                    div.step-item.scroll-spy
                         .step-1
                             .image
                                 img(src="images/step_img_1.png", alt="")
@@ -230,7 +307,7 @@ html(lang="en")
                                 .number 1
                             .text
                                 p Cleanse skin with your normal facial cleanser
-                    div.step-item
+                    div.step-item.scroll-spy
                         .step-2
                             .image
                                 img(src="images/step_img_2.png", alt="")
@@ -238,7 +315,7 @@ html(lang="en")
                                 .number 2
                             .text
                                 p Using mild pressure, gently roll back and forth at the same intensity on the treatment area 5-10 times in each of the four directions – horizontally, vertically and diagonally. Roll over each side of face, chin, lips, forehead and neck. Do not force the roller into your skin
-                    div.step-item
+                    div.step-item.scroll-spy
                         .step-3
                             .image
                                 img(src="images/step_img_3.png", alt="")
@@ -246,16 +323,16 @@ html(lang="en")
                                 .number 3
                             .text
                                 p Following treatment, apply ANTIAGE serum
-            section.the_result
+            section.the_result(uk-scrollspy="cls: uk-animation-fade; target: .scroll-spy; delay: 300; repeat: false")
                 .container
-                    .title__primary-title
+                    .title__primary-title.scroll-spy
                         h2
                             span get
                             br
                             | The Result
-                    .subtitle
+                    .subtitle.scroll-spy
                         h3 Effect after first use
-                    .box__card
+                    .box__card.scroll-spy
                         div(uk-slideshow="animation: fade")
                             .slideshow-image
                             .uk-slideshow-items
@@ -275,48 +352,70 @@ html(lang="en")
                                             p Mezoluxe affects all face wrinkles, smoothes forehead wrinkles, nasolabial folds, and crow’s feet.
                                     .info-image__left.uk-animation-slide-bottom
                                         img(src="images/image_after_wrinkles.jpg", alt="")
+                                div
+                                    .info-block__left
+                                        .title.uk-animation-slide-top
+                                            h2 Enlarged pores
+                                        .text.uk-animation-slide-top
+                                            p With regular use, Mezoluxe helps shrink pores and make skin smoother and more resilient.
+                                    .info-image__left.uk-animation-slide-bottom
+                                        img(src="images/image_after_wrinkles.jpg", alt="")
+                                div
+                                    .info-block__left
+                                        .title.uk-animation-slide-top
+                                            h2 Acne Scars
+                                        .text.uk-animation-slide-top
+                                            p Red marks and pimple scars fade after the third use.
+                                    .info-image__left.uk-animation-slide-bottom
+                                        img(src="images/image_after_wrinkles.jpg", alt="")
                             .slideshow-nav
                                 .image-navigation.__1(uk-slideshow-item="0")
                                 .image-navigation.__2(uk-slideshow-item="1")
+                                .image-navigation.__3(uk-slideshow-item="2")
+                                .image-navigation.__3(uk-slideshow-item="3")
                             .slideshow-text-nav
                                 .text-navigation(uk-slideshow-item="0")
                                     span Pigmentation
                                 .text-navigation(uk-slideshow-item="1")
                                     span Wrinkles
-            section.statistics
+                                .text-navigation(uk-slideshow-item="2")
+                                    span Enlarged pores
+                                .text-navigation(uk-slideshow-item="3")
+                                    span Acne Scars
+            section.statistics(uk-scrollspy="cls: uk-animation-fade; target: .scroll-spy; delay: 300; repeat: false")
                 .container
-                    div
+                    div.scroll-spy
                         .percent
                             |75%
                         .title
                             |of woman
                         .text
                             p felt skin looks younger in the second week of use.
-                    div
+                    div.scroll-spy
                         .percent
                             |82%
                         .title
                             |of woman
                         .text
                             p felt skin looks younger in the second week of use.
-                    div
+                    div.scroll-spy
                         .percent
                             |83%
                         .title
                             |of woman
                         .text
                             p felt skin looks younger in the second week of use.
-            section.inspire
+            section.inspire(uk-scrollspy="cls: uk-animation-fade; target: .scroll-spy; delay: 300; repeat: false")
                 .container
-                    .title__primary-title
+                    .title__primary-title.scroll-spy
                         h2 Inspire
-                    .subtitle
+                    .subtitle.scroll-spy
                         h3 Leave your review on Mezoluxe*
-                    .desc
+                    .desc.scroll-spy
                         p You can leave a review after you have bought the product
                 .review
                     div
-                        .item__left
+                        .item__left.scroll-spy
                             .__left
                                 .avatar
                                     img(src="images/avatar_1.jpg", alt="")
@@ -328,7 +427,7 @@ html(lang="en")
                                         p.
                                             This is the best mesotherapy set that I’ve ever used. Facial skin doesn’t bleed. You can see the effect the next day – skin becomes radiant and resilient.”
                                         img.review-image(src="images/review_img_1.jpg", alt="")
-                        .item__left
+                        .item__left.scroll-spy
                             .__left
                                 .avatar
                                     img(src="images/avatar_2.jpg", alt="")
@@ -340,7 +439,7 @@ html(lang="en")
                                         p.
                                             “Mezoluxe is perfect against wrinkles. No injections could produce such an effect. And perfect for home use.”                         
                     div
-                        .item__left
+                        .item__left.scroll-spy
                             .__left
                                 .avatar
                                     img(src="images/avatar_3.jpg", alt="")
@@ -352,7 +451,7 @@ html(lang="en")
                                         p.
                                             “5 stars. Completely painless and completely effective. My husband says I look much better now.”
                                         img.review-image(src="images/review_img_2.jpg", alt="")
-                        .item__left
+                        .item__left.scroll-spy
                             .__left
                                 .avatar
                                     img(src="images/avatar_4.jpg", alt="")
@@ -365,7 +464,7 @@ html(lang="en")
                                             “My beautician advised Mezoluxe and I’m absolutely satisfied. It works like botox: no wrinkles at all!”
                                         img.review-image(src="images/review_img_3.jpg", alt="")
                     div
-                        .item__left
+                        .item__left.scroll-spy
                             .__left
                                 .avatar
                                     img(src="images/avatar_5.jpg", alt="")
@@ -378,7 +477,7 @@ html(lang="en")
                                             “This is my first experience with a mezoroller, and now I won't use anything else. It worked miracles even though my skin condition was poor.”
                         
                         
-                        .item__left
+                        .item__left.scroll-spy
                             .__left
                                 .avatar
                                     img(src="images/avatar_6.jpg", alt="")
@@ -390,28 +489,28 @@ html(lang="en")
                                         p.
                                             “I’ve been using it for 3 months, not regularly, but I’m satisfied with the result. Frown lines disappeared, and nasolabial folds have retracted”
                                         img.review-image(src="images/review_img_4.jpg", alt="")
-            section.its_easy
+            section.its_easy(uk-scrollspy="cls: uk-animation-fade; target: .scroll-spy; delay: 300; repeat: false")
                 .container
-                    .title__primary-title
+                    .title__primary-title.scroll-spy
                         h2 It’s easy
-                    .subtitle
+                    .subtitle.scroll-spy
                         h3 3 steps on the path to perfection
                     .steps
-                        div
+                        div.scroll-spy
                             .number
                                 |1
                             .title
                                 |step
                             .text
                                 p Complete order form on our website
-                        div
+                        div.scroll-spy
                             .number
                                 |2
                             .title
                                 |step
                             .text
                                 p Wait until our operator calls back to confirm details
-                        div
+                        div.scroll-spy
                             .number
                                 |3
                             .title
@@ -419,23 +518,23 @@ html(lang="en")
                             .text
                                 p Receive delivery and start your skin's transformation
                     .steps-images
-                        .__1
+                        .__1.scroll-spy
                             img(src="images/order-step-img-1.jpg", alt="")
-                        .__2
+                        .__2.scroll-spy
                             img(src="images/order-step-img-2.jpg", alt="")   
-                        .__3
+                        .__3.scroll-spy
                             img(src="images/order-step-img-3.jpg", alt="")
-                        .__4
+                        .__4.scroll-spy
                             img(src="images/order-step-img-4.jpg", alt="")
             .container
-                section.order
+                section.order(uk-scrollspy="cls: uk-animation-fade; target: .scroll-spy; delay: 300; repeat: false")
                     .order-image__layout
                         .woman-image
-                    .title__primary-title
+                    .title__primary-title.scroll-spy
                         h2 Mezoluxe
-                    .desc
+                    .desc.scroll-spy
                         p Would you love to look incredibly younger ?
-                    .order__card
+                    .order__card.scroll-spy
                         .product-image
                             img(src="images/pack.png", alt="")
                         .product-price__price
@@ -446,7 +545,7 @@ html(lang="en")
 
                         .title
                             h3 place an order
-                        form(action="")
+                        form#order-form(action="")
                             select(name="country")
                                 option(value="RU") Russia
                             input(type="text" placeholder="Your name")
