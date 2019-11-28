@@ -58,7 +58,7 @@
 					</div>
 				</section>
 			</div>
-			<section class="product" uk-scrollspy="cls: uk-animation-fade; target: .scroll-spy; delay: 300; repeat: false">
+			<section class="product" uk-scrollspy="cls: uk-animation-fade; target: .scroll-spy; delay: 150; repeat: false">
 				<div class="container">
 					<div class="product-price__left__card scroll-spy">
 						<div class="product-image"><img src="images/pack.png" alt=""/></div>
@@ -87,7 +87,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="wrinkles" uk-scrollspy="cls: uk-animation-fade; target: .scroll-spy; delay: 300; repeat: false">
+			<section class="wrinkles" uk-scrollspy="cls: uk-animation-fade; target: .scroll-spy; delay: 150; repeat: false">
 				<div class="container">
 					<div class="title__primary-title scroll-spy">
 						<h2>Wrinkles...</h2>
@@ -95,7 +95,7 @@
 					<div class="desc__left scroll-spy">
 						<p>Millions of women have them, hate them, and want to get rid of them.</p>
 					</div>
-					<div class="image-item__right scroll-spy"><img src="images/Wrinkles.jpg" alt=""/></div>
+					<div class="image-item__right scroll-spy"><img src="images/wrinkles.jpg" alt=""/></div>
 				</div>
 				<div class="container">
 					<div class="content-item__left scroll-spy">
@@ -118,7 +118,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="stimulate" uk-scrollspy="cls: uk-animation-fade; target: .scroll-spy; delay: 300; repeat: false">
+			<section class="stimulate" uk-scrollspy="cls: uk-animation-fade; target: .scroll-spy; delay: 150; repeat: false">
 				<div class="container">
 					<div class="title__primary-title scroll-spy">
 						<h2>Stimulate</h2>
@@ -151,7 +151,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="nourishes" uk-scrollspy="cls: uk-animation-fade; target: .scroll-spy; delay: 300; repeat: false">
+			<section class="nourishes" uk-scrollspy="cls: uk-animation-fade; target: .scroll-spy; delay: 150; repeat: false">
 				<div class="container">
 					<div class="title__primary-title scroll-spy">
 						<h2>Nourishes</h2>
@@ -258,7 +258,7 @@
 				</div>
 			</section>
 			<!-- end section nourishes-->
-			<section class="effect" uk-scrollspy="cls: uk-animation-fade; target: .scroll-spy; delay: 300; repeat: false">
+			<section class="effect" uk-scrollspy="cls: uk-animation-fade; target: .scroll-spy; delay: 150; repeat: false">
 				<div class="container">
 					<div class="title__primary-title scroll-spy">
 						<h2> <span>wow </span><br/>Effect</h2>
@@ -371,7 +371,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="go_ahead" uk-scrollspy="cls: uk-animation-slide-bottom; target: .scroll-spy; delay: 300; repeat: false">
+			<section class="go_ahead" uk-scrollspy="cls: uk-animation-fade; target: .scroll-spy; delay: 150; repeat: false">
 				<div class="container">
 					<div class="title__primary-title scroll-spy">
 						<h2>Go Ahead!</h2>
@@ -414,7 +414,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="the_result" uk-scrollspy="cls: uk-animation-fade; target: .scroll-spy; delay: 300; repeat: false">
+			<section class="the_result" uk-scrollspy="cls: uk-animation-fade; target: .scroll-spy; delay: 150; repeat: false">
 				<div class="container">
 					<div class="title__primary-title scroll-spy">
 						<h2><span>get</span><br/>The Result</h2>
@@ -423,71 +423,73 @@
 						<h3>Effect after first use</h3>
 					</div>
 					<div class="box__card scroll-spy">
-						<div uk-slideshow="animation: fade">
+						<div uk-slider="clsActivated: uk-transition-active;" tabindex="-1">
 							<div class="slideshow-image"></div>
-							<div class="uk-slideshow-items">
+							<div class="uk-slider-items">
 								<div>
 									<div class="info-block__left">
-										<div class="title uk-animation-slide-top">
+										<div class="title uk-transition-slide-top" uk-slider-parallax="x: 100,-100">
 											<h2>Pigmentation</h2>
 										</div>
-										<div class="text uk-animation-slide-top">
+										<div class="text uk-transition-fade">
 											<p>Complexion evens out, skin becomes radiant, pigmentation spots gradually fade.</p>
 										</div>
 									</div>
-									<div class="info-image__left uk-animation-slide-bottom"><img src="images/image_after_1.jpg" alt=""/></div>
+									<div class="info-image__left uk-transition-slide-bottom" uk-slider-parallax="x: 200,-200"><img src="images/image_after_1.jpg" alt=""/></div>
 								</div>
-								<div>
+								<div> 
 									<div class="info-block__left">
-										<div class="title uk-animation-slide-top">
+										<div class="title uk-transition-slide-top" uk-slider-parallax="x: 100,-100">
 											<h2>Wrinkles</h2>
 										</div>
-										<div class="text uk-animation-slide-top">
+										<div class="text uk-transition-fade">
 											<p>Mezoluxe affects all face wrinkles, smoothes forehead wrinkles, nasolabial folds, and crow’s feet.</p>
 										</div>
 									</div>
-									<div class="info-image__left uk-animation-slide-bottom"><img src="images/image_after_wrinkles.jpg" alt=""/></div>
+									<div class="info-image__left uk-transition-slide-bottom" uk-slider-parallax="x: 200,-200"><img src="images/image_after_wrinkles.jpg" alt=""/></div>
 								</div>
-								<div>
+								<div> 
 									<div class="info-block__left">
-										<div class="title uk-animation-slide-top">
+										<div class="title uk-transition-slide-top" uk-slider-parallax="x: 100,-100">
 											<h2>Enlarged pores</h2>
 										</div>
-										<div class="text uk-animation-slide-top">
+										<div class="text uk-transition-fade">
 											<p>With regular use, Mezoluxe helps shrink pores and make skin smoother and more resilient.</p>
 										</div>
 									</div>
-									<div class="info-image__left uk-animation-slide-bottom"><img src="images/image_after_wrinkles.jpg" alt=""/></div>
+									<div class="info-image__left uk-transition-slide-bottom" uk-slider-parallax="x: 200,-200"><img src="images/image_after_wrinkles.jpg" alt=""/></div>
 								</div>
-								<div>
+								<div> 
 									<div class="info-block__left">
-										<div class="title uk-animation-slide-top">
+										<div class="title uk-transition-slide-top" uk-slider-parallax="x: 100,-100">
 											<h2>Acne Scars</h2>
 										</div>
-										<div class="text uk-animation-slide-top">
-											<p>Red marks and pimple scars fade after the third use.</p>
+										<div class="text uk-transition-fade">
+											<p>Red marks and pimple scars fade after the third use. Red marks and pimple scars fade after the third use. Red marks and pimple scars fade after the third use. Red marks and pimple scars fade after the third use.</p>
 										</div>
 									</div>
-									<div class="info-image__left uk-animation-slide-bottom"><img src="images/image_after_wrinkles.jpg" alt=""/></div>
+									<div class="info-image__left uk-transition-slide-bottom" uk-slider-parallax="x: 200,-200"><img src="images/image_after_wrinkles.jpg" alt=""/></div>
 								</div>
 							</div>
-							<div class="slideshow-nav">
-								<div class="image-navigation __1" uk-slideshow-item="0"></div>
-								<div class="image-navigation __2" uk-slideshow-item="1"></div>
-								<div class="image-navigation __3" uk-slideshow-item="2"></div>
-								<div class="image-navigation __3" uk-slideshow-item="3"></div>
+							<div class="slider-nav">
+								<div class="image-navigation __1" uk-slider-item="0"></div>
+								<div class="image-navigation __2" uk-slider-item="1"></div>
+								<div class="image-navigation __3" uk-slider-item="2"></div>
+								<div class="image-navigation __3" uk-slider-item="3"></div>
 							</div>
-							<div class="slideshow-text-nav">
-								<div class="text-navigation" uk-slideshow-item="0"><span>Pigmentation</span></div>
-								<div class="text-navigation" uk-slideshow-item="1"><span>Wrinkles</span></div>
-								<div class="text-navigation" uk-slideshow-item="2"><span>Enlarged pores</span></div>
-								<div class="text-navigation" uk-slideshow-item="3"><span>Acne Scars</span></div>
+							<div class="slider-text-nav">
+								<div>
+									<div class="text-navigation" uk-slider-item="0"><span>Pigmentation</span></div>
+									<div class="text-navigation" uk-slider-item="1"><span>Wrinkles</span></div>
+									<div class="text-navigation" uk-slider-item="2"><span>Enlarged pores</span></div>
+									<div class="text-navigation" uk-slider-item="3"><span>Acne Scars</span></div>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
-			<section class="statistics" uk-scrollspy="cls: uk-animation-fade; target: .scroll-spy; delay: 300; repeat: false">
+			<section class="statistics" uk-scrollspy="cls: uk-animation-fade; target: .scroll-spy; delay: 150; repeat: false">
 				<div class="container">
 					<div class="scroll-spy">
 						<div class="percent">75%</div>
@@ -512,7 +514,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="inspire" uk-scrollspy="cls: uk-animation-fade; target: .scroll-spy; delay: 300; repeat: false">
+			<section class="inspire" uk-scrollspy="cls: uk-animation-fade; target: .scroll-spy; delay: 150; repeat: false">
 				<div class="container">
 					<div class="title__primary-title scroll-spy">
 						<h2>Inspire</h2>
@@ -621,7 +623,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="its_easy" uk-scrollspy="cls: uk-animation-fade; target: .scroll-spy; delay: 300; repeat: false">
+			<section class="its_easy" uk-scrollspy="cls: uk-animation-fade; target: .scroll-spy; delay: 150; repeat: false">
 				<div class="container">
 					<div class="title__primary-title scroll-spy">
 						<h2>It’s easy</h2>
@@ -652,7 +654,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="steps-images">
+					<div class="steps-images desktop">
 						<div class="__1 scroll-spy"><img src="images/order-step-img-1.jpg" alt=""/></div>
 						<div class="__2 scroll-spy"><img src="images/order-step-img-2.jpg" alt=""/></div>
 						<div class="__3 scroll-spy"><img src="images/order-step-img-3.jpg" alt=""/></div>
@@ -661,7 +663,7 @@
 				</div>
 			</section>
 			<div class="container">
-				<section class="order" uk-scrollspy="cls: uk-animation-fade; target: .scroll-spy; delay: 300; repeat: false">
+				<section class="order" uk-scrollspy="cls: uk-animation-fade; target: .scroll-spy; delay: 150; repeat: false">
 					<div class="order-image__layout">
 						<div class="woman-image"></div>
 					</div>

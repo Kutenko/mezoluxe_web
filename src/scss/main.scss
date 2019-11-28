@@ -36,12 +36,12 @@ $margin-horizontal-medium: 0 30px;
     }
 }
 .desktop{
-    @media screen and (max-width: 640px){
-        display: none;
-    }
     @media screen and (min-width: 640px) {
         display: block;
     }    
+    @media screen and (max-width: 640px){
+        display: none;
+    }
 }
 
 
@@ -70,7 +70,10 @@ body{
     }
     @media (max-width: 980px) {
         // display: none;
-    }    
+    }
+    @media screen and (max-width: 640px) {
+        padding: 0 15px;
+    } 
 }
 
 .scale-in-center {
@@ -237,7 +240,7 @@ div,section{
     width: 100%;
     height: 100vh;
     min-height: 1921px;
-    background: url(../images/Background_image.jpg);
+    background: url(../images/background_image.jpg);
     background-position: center;
     background-repeat: no-repeat ;
     background-size: 100%;
@@ -505,7 +508,7 @@ div,section{
                 text-shadow: $text-shadow;
                 @media screen and (max-width: 800px){
                     font-size: 68px;
-                    line-height: 78px;
+                    line-height: 50px;
                 }
                 span{
                     font-size: 64px;
@@ -523,7 +526,7 @@ div,section{
             margin-top: $margin-top-large;
             @media screen and (max-width: 800px){
                 margin-top: 60px;
-                margin-bottom: 380px;
+                margin-bottom: 280px;
             }
             h2{
                 font-size: 58px;
@@ -545,7 +548,7 @@ div,section{
                 width: 100%;
                 max-height: 450px;
                 top: auto;
-                bottom: -380px;
+                bottom: -310px;
             }
             .woman-image{
                 position: relative;
@@ -553,10 +556,10 @@ div,section{
                 right: -300px;
                 width: 810px;
                 height: 898px;
-                background: url(../images/Hero_Image.svg);
+                background: url(../images/hero_image.svg);
                 background-position: center;
-                background-repeat: no-repeat ;
-                background-size: contain; 
+                background-repeat: no-repeat;
+                background-size: contain;
                 // overflow: hidden;
                 @media screen and (max-width: 800px){
                     width: 600px;
@@ -625,7 +628,8 @@ div,section{
         @media screen and (max-width: 800px){
             max-width: 100%;
             width: 100%;
-            padding-right: $padding-large;
+            padding-left: 30px;
+            padding-right: 30px;
         }         
         .product-info__item{
             margin-top: $margin-top-large;
@@ -666,6 +670,9 @@ div,section{
 .stimulate{
     overflow: hidden;
     margin-top: $margin-top-medium;
+    @media screen and (max-width:640px) {
+        margin-top: 60px;
+    }
     .container{
         position: relative;
         overflow: hidden;
@@ -701,13 +708,19 @@ div,section{
         box-shadow: $card-shadow;
         z-index: -1;
         img{
-            width: 100%;
-            height: auto;
+            width: auto;
+            height: 100%;
+        }
+        @media screen and (max-width: 1080px) {
+            clear: both;
+            float: left;
+            margin-top: -45px;
         }
         @media screen and (max-width:800px) {
-            float: left;
             clear: both;
-            margin: 40px auto;
+            float: left;
+            margin-top: -45px;
+            max-width: 100%;
         }
         @media screen and (max-width: 480px){
             height: 235px;
@@ -1141,7 +1154,7 @@ section.go_ahead{
         @media screen and (max-width: 640px) {
             width: 100%;
         }
-        @media screen and (min-width:640px) and (max-width: 800px) {
+        @media screen and (min-width:481px) and (max-width: 800px) {
             width: 60%;
             float: right;
             clear: both;
@@ -1156,6 +1169,7 @@ section.go_ahead{
             padding-top: 200px;
             @media screen and (max-width:800px){
                 padding-top: 50px;
+                padding-bottom: 80px;
             }
         }
         .step-1{
@@ -1169,12 +1183,21 @@ section.go_ahead{
                     top: 0;
                     z-index: -1;
                 }
+                @media screen and (max-width: 480px) {
+                    left: 45px;
+                    right: auto;
+                    top: auto;
+                    bottom: -95px;
+                }
             }
         }
         .step-2{
             padding-bottom: 110px;
             @media screen and (max-width: 800px) {
                 padding-bottom: 0;
+            }
+            @media screen and (max-width:480px){
+                padding-bottom: 110px;
             }
             .image{
                 position: absolute;
@@ -1185,7 +1208,14 @@ section.go_ahead{
                     right: auto;
                     top: 0;
                     transform: rotate(-34deg);
-                }                
+                }   
+                @media screen and (max-width: 480px) {
+                    left: 45px;
+                    right: auto;
+                    top: auto;
+                    bottom: 20px;
+                    transform: rotate(0deg);
+                }             
             }            
         }
         .step-3{
@@ -1193,12 +1223,15 @@ section.go_ahead{
                 position: absolute;
                 top: -100px;
                 right:50px;
+                z-index: -1;
                 @media screen and (min-width:480px) and (max-width: 800px) {
                     left: -50%;
                     right: auto;
                     top: 0;
                 }                
                 @media screen and (max-width: 480px) {
+                    left: 0px;
+                    right: auto;
                     top: auto;
                     bottom: 0px;
                 }                
@@ -1238,8 +1271,14 @@ section.go_ahead{
 section.the_result{
     margin-top: $margin-top-large;
     clear: both;
+    @media screen and (max-width:640px) {
+        margin-top: 90px;
+    }
     .container{
         padding: 0;
+        @media screen and (max-width: 640px) {
+            padding: 0 15px;
+        }
     }
     .title__primary-title{
         margin-bottom:30px;
@@ -1261,7 +1300,10 @@ section.the_result{
         padding-bottom: 30px;
         margin-top: 44px;
         position: relative;
-        min-height: 755px;
+        // min-height: 755px;
+        .uk-slider-container{
+            outline: none;
+        }
     }
     .slideshow-image{
         width: 680px;
@@ -1273,20 +1315,42 @@ section.the_result{
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
+        @media screen and (max-width: 840px) {
+            max-width: 100%;
+            max-height: 380px;
+            top: auto;
+            bottom: 270px;            
+        }
     }
-
-    .uk-slideshow-items{
-        min-height: 600px !important;
+    .uk-slider{
+        width: 450px;
+        max-width: 50%;
+        @media screen and (max-width: 840px) {
+            max-width: 100%;
+        }
+    }
+    .uk-slider-items{
+        > div{
+            width: 100%;
+        }
         .info-block__left{
             position: relative;
-            width: 33.333%;
+            width: 100%;
             padding-top: 30px;
+            @media screen and (max-width: 840px) {
+               padding-top: 0;
+                float: none;
+            }
             .title{
                 color: $light-pink;
                 h2{
                     font-size: 38px;
+                    line-height: 46px;
                     font-weight: 900;
-                    line-height: 94px;
+                    @media screen and (max-width: 720px){
+                        font-size: 25px;
+                        line-height: 32px;
+                    }
                 }
             }
             .text{
@@ -1303,22 +1367,33 @@ section.the_result{
             clear: both;
             width: 420px;
             height: 285px;
-            border: 5px solid $white;
-            margin-top: $margin-top-medium;
+            margin-top: 30px;
+            margin-bottom: 90px;
             overflow: hidden;
-            img{
+            @media screen and (max-width:840px) {
                 width: 100%;
-                height: auto;
+                height: 220px;
+                text-align: center;
+                margin-top: 250px;
+                margin-bottom: 0;                
+            }
+            img{
+                width: auto;
+                height: 100%;
+                border: 5px solid $white;
             }
         }
     }
-    .slideshow-nav{
+    .slider-nav{
         position: absolute;
         top: 150px;
         right: 160px;
         width: 320px;
         height: 480px;
-        z-index: 9;        
+        z-index: 9;      
+        @media screen and (max-width: 850px){
+            display: none;
+        }  
         .image-navigation{
             width: 33px;
             height: 33px;
@@ -1339,28 +1414,37 @@ section.the_result{
             }                
         }
     }
-    .slideshow-text-nav{
+    .slider-text-nav{
         position: absolute;
         bottom: 0;
         left: 0;
         padding: 0 60px 45px;
         width: 100%;
-        > div {
-            float: left;
-            margin-right: 80px;
-            cursor: pointer;
-            &:last-child{
-                margin-right: 0;
+        @media screen and (max-width: 840px){
+            overflow-x: scroll;
+            padding-bottom: 25px;
+        }
+        > div{
+            @media screen and (max-width:840px) {
+                width: 1000px;
             }
-            &.uk-active{
-                span{
-                    color: $light-pink;
+            > div {
+                float: left;
+                margin-right: 80px;
+                cursor: pointer;
+                &:last-child{
+                    margin-right: 0;
                 }
-            }
-            span{
-                font-size: 24px;
-                font-weight: 900;
-                color: $dark-black;
+                &.uk-active{
+                    span{
+                        color: $light-pink;
+                    }
+                }
+                span{
+                    font-size: 24px;
+                    font-weight: 900;
+                    color: $dark-black;
+                }
             }
         }
 
@@ -1370,12 +1454,21 @@ section.the_result{
 section.statistics{
     margin-top: $margin-top-medium;
     overflow: hidden;
+    @media screen and (max-width: 640px) {
+        margin-top: 60px;
+    }
     > div{
         > div{
             width: 33.333%;
             position: relative;
             float: left;
             padding-right: 30px;
+            @media screen and (max-width:640px) {
+                width: 100%;
+                margin: 0 auto;
+                max-width: 320px;
+                float: none;
+            }
         }
     }
     .percent{
@@ -1386,6 +1479,9 @@ section.statistics{
         font-weight: 900;
         color: $light-blue;
         z-index: -1;
+        @media screen and (max-width:640px) {
+            top: -60px;
+        }        
     }
     .title{
         font-size: 24px;
@@ -1429,10 +1525,47 @@ section.inspire{
     }
     .review{
         max-width: 1640px;
+        padding: 0 15px;
         margin: 0 auto;
+        @media screen {
+            
+        }
         > div{
             width: 33.333%;
             float: left;
+            @media screen and (max-width: 800px) {
+                width: 50%;
+                &:last-child{
+                    width: 100%;
+                    .item__left{
+                        max-width: 50%;
+                    }
+                }
+            }
+            @media screen and (max-width: 640px) {
+                width: 100%;
+                margin: 0 auto;
+                float: none;
+                position: relative;
+                overflow: hidden;
+                width: 100%;
+                max-width: 320px;
+                &:last-child{
+                    width: 100%;
+                    .item__left{
+                        max-width: 100%;
+                    }
+                }
+            }
+            @media screen and (max-width: 640px) {
+                width: 100%;
+                margin: 0 auto;
+                float: none;
+                position: relative;
+                overflow: hidden;
+                width: 100%;
+                max-width: 320px;
+            }
         }
         .item__left{
             max-width: 481px;
@@ -1441,11 +1574,19 @@ section.inspire{
             &:last-child{
             padding-right: 0;
             }
+            @media screen and (max-width: 480px) {
+
+            }
             .avatar{
                 width: 85px;
                 height: 85px;
                 overflow: hidden;
                 border-radius: 100%;
+                @media screen and (max-width:640px) {
+                    position: absolute;
+                    width: 60px;
+                    height: 60px;
+                }
                 img{
                     width: 100%;
                     height: auto;
@@ -1458,8 +1599,15 @@ section.inspire{
             .name{
                 font-size: 22px;
                 font-weight: 700;
+                @media screen and (max-width: 640px) {
+                    padding-left: 60px;
+                }
             }
-
+            .job{
+                @media screen and (max-width: 640px) {
+                    padding-left: 60px;
+                }
+            }
             .__card{
                 max-width: 365px;
                 padding: $padding-medium;
@@ -1492,6 +1640,12 @@ section.its_easy{
             padding-right: 30px;
             &:last-child{
                 padding-right: 0;
+            }
+            @media screen and (max-width: 480px){
+                width: 100%;
+                max-width: 420px;
+                float: none;
+                margin: 0 auto;
             }
             .number{
                 font-size: 196px;
@@ -1531,6 +1685,9 @@ section.its_easy{
             position: relative;
             z-index: 1;
             box-shadow: $card-shadow;
+            @media screen and (max-width: 1100px) {
+                display: none;
+            }
             img{
                 width: 100%;
                 height: auto;
@@ -1568,6 +1725,10 @@ section.order{
         right: 0;
         top: 0;
         z-index: -1;
+        @media screen and (max-width:640px) {
+            width: 100%;
+            height: 220px;
+        }
         .woman-image{
             position: absolute;
             top: 0;
@@ -1579,12 +1740,23 @@ section.order{
             background-repeat: no-repeat ;
             background-size: contain; 
             // overflow: hidden;
-    
+            @media screen and (max-width: 640px) {
+                position: relative;
+                max-width: 100%;
+                max-height: 480px;
+                margin: 0 auto;
+                left: auto;
+                right: auto;
+                top: 135px;
+            }
         }
     }
     .desc{
         max-width: 310px;
         padding: 23px 0 90px 0;
+        @media screen and (max-width:640px) {
+            padding-bottom: 260px;
+        }
         p{
             font-size: 24px;
             font-weight: 500;
@@ -1596,40 +1768,78 @@ section.order{
         max-width: 710px;
         margin-bottom: 220px;
         position: relative;
+        @media screen and (max-width: 640px) {
+            padding: 15px;
+        }
         .product-image{
             width: 360px;
             height: 270px;
             position: absolute;
             bottom: 115px;
             right: 20px;
-            img{
+            z-index: -1;
+            @media screen and (max-width: 640px) {
                 width: 100%;
-                height: auto;
+                left: 0;
+                top: 70px;
+                height: 200px;
+            }
+            img{
+                width: auto;
+                height: 100%;
+                @media screen and (max-width: 640px) {
+                    margin: 0 auto;
+                    display: block;
+                }
             }
         }
         .product-price__price{
             position: absolute;
             bottom: 60px;
             right: 40px;
+            @media screen and (max-width:640px) {
+                top: 265px;
+                width: 100%;
+                bottom: 0;
+                left: 0;
+                right: 0;                
+                z-index: -1;
+            }
             .old-price{
                 font-size: 24px;
                 font-weight: 300;
                 text-decoration: line-through;
                 color: $dark-black;
+                @media screen and (max-width:640px) {
+                    max-width: 235px;
+                    margin: 0 auto;
+                }
             }
             .new-price{
                 font-size: 24px;
                 font-weight: 900;
+                @media screen and (max-width: 640px) {
+                    width: 235px;
+                    margin: 0 auto;
+                }
                 span{
                     font-size: 44px;
                     line-height: 44px;
                     padding-left: 70px;
+                    @media screen and (max-width:640px) {
+                        padding-left: 20px;
+                    }
                 }
             }
         }
         .title{
             text-transform: uppercase;
             max-width: 310px;
+            @media screen and (max-width:640px) {
+                margin-bottom: 285px;
+                margin-left: auto;
+                margin-right: auto;                
+            }
             h3{
                 font-size: 28px;
                 font-weight: 900;
@@ -1640,6 +1850,9 @@ section.order{
         form{
             margin-top: 45px;
             max-width: 310px;
+            @media screen and (max-width: 640px) {
+                margin: 0 auto;
+            }
             select,
             input{
                 display: block;
@@ -1664,8 +1877,10 @@ section.order{
 @import "./components/switcher.scss";
 @import "./components/animation.scss";
 @import "./theme/animation.scss";
+@import "./components/slider.scss";
 @import "./components/slideshow.scss";
-
+@import "./components/transition.scss";
+@import "./theme/transition.scss"
 // @import "./components/slidenav.scss";
 // @import "./theme/slidenav.scss"
 

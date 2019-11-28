@@ -7,13 +7,13 @@
   .mobile {
     display: block; } }
 
-@media screen and (max-width: 640px) {
-  .desktop {
-    display: none; } }
-
 @media screen and (min-width: 640px) {
   .desktop {
     display: block; } }
+
+@media screen and (max-width: 640px) {
+  .desktop {
+    display: none; } }
 
 * {
   box-sizing: border-box;
@@ -35,6 +35,9 @@ body {
   margin: 0 auto; }
   .container[class*=padding-remove] {
     padding: 0px; }
+  @media screen and (max-width: 640px) {
+    .container {
+      padding: 0 15px; } }
 
 .scale-in-center {
   -webkit-animation: bounce-in-top 4.1s infinite both;
@@ -177,7 +180,7 @@ div[class*=__price], section[class*=__price] {
   width: 100%;
   height: 100vh;
   min-height: 1921px;
-  background: url(../images/Background_image.jpg);
+  background: url(../images/background_image.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -419,7 +422,7 @@ div[class*=__price], section[class*=__price] {
       @media screen and (max-width: 800px) {
         .hero .hero-title h1 {
           font-size: 68px;
-          line-height: 78px; } }
+          line-height: 50px; } }
       .hero .hero-title h1 span {
         font-size: 64px;
         color: #000000;
@@ -434,7 +437,7 @@ div[class*=__price], section[class*=__price] {
     @media screen and (max-width: 800px) {
       .hero .hero-subtitle {
         margin-top: 60px;
-        margin-bottom: 380px; } }
+        margin-bottom: 280px; } }
     .hero .hero-subtitle h2 {
       font-size: 58px;
       font-weight: 700;
@@ -454,14 +457,14 @@ div[class*=__price], section[class*=__price] {
         width: 100%;
         max-height: 450px;
         top: auto;
-        bottom: -380px; } }
+        bottom: -310px; } }
     .hero .hero-image__layout .woman-image {
       position: relative;
       top: 0;
       right: -300px;
       width: 810px;
       height: 898px;
-      background: url(../images/Hero_Image.svg);
+      background: url(../images/hero_image.svg);
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain; }
@@ -525,7 +528,8 @@ div[class*=__price], section[class*=__price] {
       .product .product-info__right {
         max-width: 100%;
         width: 100%;
-        padding-right: 60px; } }
+        padding-left: 30px;
+        padding-right: 30px; } }
     .product .product-info__right .product-info__item {
       margin-top: 160px; }
       @media screen and (max-width: 800px) {
@@ -557,6 +561,10 @@ div[class*=__price], section[class*=__price] {
 .stimulate {
   overflow: hidden;
   margin-top: 90px; }
+  @media screen and (max-width: 640px) {
+    .wrinkles,
+    .stimulate {
+      margin-top: 60px; } }
   .wrinkles .container,
   .stimulate .container {
     position: relative;
@@ -594,14 +602,21 @@ div[class*=__price], section[class*=__price] {
     z-index: -1; }
     .wrinkles .image-item__right img,
     .stimulate .image-item__right img {
-      width: 100%;
-      height: auto; }
+      width: auto;
+      height: 100%; }
+    @media screen and (max-width: 1080px) {
+      .wrinkles .image-item__right,
+      .stimulate .image-item__right {
+        clear: both;
+        float: left;
+        margin-top: -45px; } }
     @media screen and (max-width: 800px) {
       .wrinkles .image-item__right,
       .stimulate .image-item__right {
-        float: left;
         clear: both;
-        margin: 40px auto; } }
+        float: left;
+        margin-top: -45px;
+        max-width: 100%; } }
     @media screen and (max-width: 480px) {
       .wrinkles .image-item__right,
       .stimulate .image-item__right {
@@ -936,7 +951,7 @@ section.go_ahead {
     @media screen and (max-width: 640px) {
       section.go_ahead .step-item {
         width: 100%; } }
-    @media screen and (min-width: 640px) and (max-width: 800px) {
+    @media screen and (min-width: 481px) and (max-width: 800px) {
       section.go_ahead .step-item {
         width: 60%;
         float: right;
@@ -950,7 +965,8 @@ section.go_ahead {
       @media screen and (max-width: 800px) {
         section.go_ahead .step-item .step-1,
         section.go_ahead .step-item .step-3 {
-          padding-top: 50px; } }
+          padding-top: 50px;
+          padding-bottom: 80px; } }
     section.go_ahead .step-item .step-1 .image {
       position: absolute;
       top: 0;
@@ -961,11 +977,20 @@ section.go_ahead {
           right: auto;
           top: 0;
           z-index: -1; } }
+      @media screen and (max-width: 480px) {
+        section.go_ahead .step-item .step-1 .image {
+          left: 45px;
+          right: auto;
+          top: auto;
+          bottom: -95px; } }
     section.go_ahead .step-item .step-2 {
       padding-bottom: 110px; }
       @media screen and (max-width: 800px) {
         section.go_ahead .step-item .step-2 {
           padding-bottom: 0; } }
+      @media screen and (max-width: 480px) {
+        section.go_ahead .step-item .step-2 {
+          padding-bottom: 110px; } }
       section.go_ahead .step-item .step-2 .image {
         position: absolute;
         bottom: 0px;
@@ -976,10 +1001,18 @@ section.go_ahead {
             right: auto;
             top: 0;
             transform: rotate(-34deg); } }
+        @media screen and (max-width: 480px) {
+          section.go_ahead .step-item .step-2 .image {
+            left: 45px;
+            right: auto;
+            top: auto;
+            bottom: 20px;
+            transform: rotate(0deg); } }
     section.go_ahead .step-item .step-3 .image {
       position: absolute;
       top: -100px;
-      right: 50px; }
+      right: 50px;
+      z-index: -1; }
       @media screen and (min-width: 480px) and (max-width: 800px) {
         section.go_ahead .step-item .step-3 .image {
           left: -50%;
@@ -987,6 +1020,8 @@ section.go_ahead {
           top: 0; } }
       @media screen and (max-width: 480px) {
         section.go_ahead .step-item .step-3 .image {
+          left: 0px;
+          right: auto;
           top: auto;
           bottom: 0px; } }
     @media screen and (max-width: 480px) {
@@ -1017,8 +1052,14 @@ section.go_ahead {
 section.the_result {
   margin-top: 160px;
   clear: both; }
+  @media screen and (max-width: 640px) {
+    section.the_result {
+      margin-top: 90px; } }
   section.the_result .container {
     padding: 0; }
+    @media screen and (max-width: 640px) {
+      section.the_result .container {
+        padding: 0 15px; } }
   section.the_result .title__primary-title {
     margin-bottom: 30px;
     padding: 0 30px; }
@@ -1034,8 +1075,9 @@ section.the_result {
     padding-top: 30px;
     padding-bottom: 30px;
     margin-top: 44px;
-    position: relative;
-    min-height: 755px; }
+    position: relative; }
+    section.the_result .box__card .uk-slider-container {
+      outline: none; }
   section.the_result .slideshow-image {
     width: 680px;
     height: 755px;
@@ -1046,72 +1088,110 @@ section.the_result {
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat; }
-  section.the_result .uk-slideshow-items {
-    min-height: 600px !important; }
-    section.the_result .uk-slideshow-items .info-block__left {
-      position: relative;
-      width: 33.333%;
-      padding-top: 30px; }
-      section.the_result .uk-slideshow-items .info-block__left .title {
-        color: #E385CA; }
-        section.the_result .uk-slideshow-items .info-block__left .title h2 {
-          font-size: 38px;
-          font-weight: 900;
-          line-height: 94px; }
-      section.the_result .uk-slideshow-items .info-block__left .text {
-        color: #000000;
-        margin-top: 10px; }
-        section.the_result .uk-slideshow-items .info-block__left .text p {
-          font-size: 18px;
-          font-weight: 500;
-          line-height: 26px; }
-    section.the_result .uk-slideshow-items .info-image__left {
-      clear: both;
-      width: 420px;
-      height: 285px;
-      border: 5px solid #FFFFFF;
-      margin-top: 90px;
-      overflow: hidden; }
-      section.the_result .uk-slideshow-items .info-image__left img {
+    @media screen and (max-width: 840px) {
+      section.the_result .slideshow-image {
+        max-width: 100%;
+        max-height: 380px;
+        top: auto;
+        bottom: 270px; } }
+  section.the_result .uk-slider {
+    width: 450px;
+    max-width: 50%; }
+    @media screen and (max-width: 840px) {
+      section.the_result .uk-slider {
+        max-width: 100%; } }
+  section.the_result .uk-slider-items > div {
+    width: 100%; }
+  section.the_result .uk-slider-items .info-block__left {
+    position: relative;
+    width: 100%;
+    padding-top: 30px; }
+    @media screen and (max-width: 840px) {
+      section.the_result .uk-slider-items .info-block__left {
+        padding-top: 0;
+        float: none; } }
+    section.the_result .uk-slider-items .info-block__left .title {
+      color: #E385CA; }
+      section.the_result .uk-slider-items .info-block__left .title h2 {
+        font-size: 38px;
+        line-height: 46px;
+        font-weight: 900; }
+        @media screen and (max-width: 720px) {
+          section.the_result .uk-slider-items .info-block__left .title h2 {
+            font-size: 25px;
+            line-height: 32px; } }
+    section.the_result .uk-slider-items .info-block__left .text {
+      color: #000000;
+      margin-top: 10px; }
+      section.the_result .uk-slider-items .info-block__left .text p {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 26px; }
+  section.the_result .uk-slider-items .info-image__left {
+    clear: both;
+    width: 420px;
+    height: 285px;
+    margin-top: 30px;
+    margin-bottom: 90px;
+    overflow: hidden; }
+    @media screen and (max-width: 840px) {
+      section.the_result .uk-slider-items .info-image__left {
         width: 100%;
-        height: auto; }
-  section.the_result .slideshow-nav {
+        height: 220px;
+        text-align: center;
+        margin-top: 250px;
+        margin-bottom: 0; } }
+    section.the_result .uk-slider-items .info-image__left img {
+      width: auto;
+      height: 100%;
+      border: 5px solid #FFFFFF; }
+  section.the_result .slider-nav {
     position: absolute;
     top: 150px;
     right: 160px;
     width: 320px;
     height: 480px;
     z-index: 9; }
-    section.the_result .slideshow-nav .image-navigation {
+    @media screen and (max-width: 850px) {
+      section.the_result .slider-nav {
+        display: none; } }
+    section.the_result .slider-nav .image-navigation {
       width: 33px;
       height: 33px;
       background: transparent;
       border-radius: 100%;
       border: 2px dashed #FFFFFF;
       position: absolute; }
-      section.the_result .slideshow-nav .image-navigation.uk-active {
+      section.the_result .slider-nav .image-navigation.uk-active {
         background: #FFFFFF; }
-      section.the_result .slideshow-nav .image-navigation.__1 {
+      section.the_result .slider-nav .image-navigation.__1 {
         right: 50px;
         top: 300px; }
-      section.the_result .slideshow-nav .image-navigation.__2 {
+      section.the_result .slider-nav .image-navigation.__2 {
         right: 20px;
         top: 175px; }
-  section.the_result .slideshow-text-nav {
+  section.the_result .slider-text-nav {
     position: absolute;
     bottom: 0;
     left: 0;
     padding: 0 60px 45px;
     width: 100%; }
-    section.the_result .slideshow-text-nav > div {
+    @media screen and (max-width: 840px) {
+      section.the_result .slider-text-nav {
+        overflow-x: scroll;
+        padding-bottom: 25px; } }
+    @media screen and (max-width: 840px) {
+      section.the_result .slider-text-nav > div {
+        width: 1000px; } }
+    section.the_result .slider-text-nav > div > div {
       float: left;
       margin-right: 80px;
       cursor: pointer; }
-      section.the_result .slideshow-text-nav > div:last-child {
+      section.the_result .slider-text-nav > div > div:last-child {
         margin-right: 0; }
-      section.the_result .slideshow-text-nav > div.uk-active span {
+      section.the_result .slider-text-nav > div > div.uk-active span {
         color: #E385CA; }
-      section.the_result .slideshow-text-nav > div span {
+      section.the_result .slider-text-nav > div > div span {
         font-size: 24px;
         font-weight: 900;
         color: #000000; }
@@ -1119,11 +1199,20 @@ section.the_result {
 section.statistics {
   margin-top: 90px;
   overflow: hidden; }
+  @media screen and (max-width: 640px) {
+    section.statistics {
+      margin-top: 60px; } }
   section.statistics > div > div {
     width: 33.333%;
     position: relative;
     float: left;
     padding-right: 30px; }
+    @media screen and (max-width: 640px) {
+      section.statistics > div > div {
+        width: 100%;
+        margin: 0 auto;
+        max-width: 320px;
+        float: none; } }
   section.statistics .percent {
     position: absolute;
     top: 0;
@@ -1132,6 +1221,9 @@ section.statistics {
     font-weight: 900;
     color: #50DEF6;
     z-index: -1; }
+    @media screen and (max-width: 640px) {
+      section.statistics .percent {
+        top: -60px; } }
   section.statistics .title {
     font-size: 24px;
     font-weight: 900;
@@ -1165,10 +1257,40 @@ section.inspire {
       color: #000000; }
   section.inspire .review {
     max-width: 1640px;
+    padding: 0 15px;
     margin: 0 auto; }
     section.inspire .review > div {
       width: 33.333%;
       float: left; }
+      @media screen and (max-width: 800px) {
+        section.inspire .review > div {
+          width: 50%; }
+          section.inspire .review > div:last-child {
+            width: 100%; }
+            section.inspire .review > div:last-child .item__left {
+              max-width: 50%; } }
+      @media screen and (max-width: 640px) {
+        section.inspire .review > div {
+          width: 100%;
+          margin: 0 auto;
+          float: none;
+          position: relative;
+          overflow: hidden;
+          width: 100%;
+          max-width: 320px; }
+          section.inspire .review > div:last-child {
+            width: 100%; }
+            section.inspire .review > div:last-child .item__left {
+              max-width: 100%; } }
+      @media screen and (max-width: 640px) {
+        section.inspire .review > div {
+          width: 100%;
+          margin: 0 auto;
+          float: none;
+          position: relative;
+          overflow: hidden;
+          width: 100%;
+          max-width: 320px; } }
     section.inspire .review .item__left {
       max-width: 481px;
       padding-right: 30px;
@@ -1180,6 +1302,11 @@ section.inspire {
         height: 85px;
         overflow: hidden;
         border-radius: 100%; }
+        @media screen and (max-width: 640px) {
+          section.inspire .review .item__left .avatar {
+            position: absolute;
+            width: 60px;
+            height: 60px; } }
         section.inspire .review .item__left .avatar img {
           width: 100%;
           height: auto; }
@@ -1189,6 +1316,12 @@ section.inspire {
       section.inspire .review .item__left .name {
         font-size: 22px;
         font-weight: 700; }
+        @media screen and (max-width: 640px) {
+          section.inspire .review .item__left .name {
+            padding-left: 60px; } }
+      @media screen and (max-width: 640px) {
+        section.inspire .review .item__left .job {
+          padding-left: 60px; } }
       section.inspire .review .item__left .__card {
         max-width: 365px;
         padding: 30px;
@@ -1215,6 +1348,12 @@ section.its_easy {
       padding-right: 30px; }
       section.its_easy .steps > div:last-child {
         padding-right: 0; }
+      @media screen and (max-width: 480px) {
+        section.its_easy .steps > div {
+          width: 100%;
+          max-width: 420px;
+          float: none;
+          margin: 0 auto; } }
       section.its_easy .steps > div .number {
         font-size: 196px;
         font-weight: 900;
@@ -1246,6 +1385,9 @@ section.its_easy {
       position: relative;
       z-index: 1;
       box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.16); }
+      @media screen and (max-width: 1100px) {
+        section.its_easy .steps-images > div {
+          display: none; } }
       section.its_easy .steps-images > div img {
         width: 100%;
         height: auto; }
@@ -1276,6 +1418,10 @@ section.order {
     right: 0;
     top: 0;
     z-index: -1; }
+    @media screen and (max-width: 640px) {
+      section.order .order-image__layout {
+        width: 100%;
+        height: 220px; } }
     section.order .order-image__layout .woman-image {
       position: absolute;
       top: 0;
@@ -1286,9 +1432,21 @@ section.order {
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain; }
+      @media screen and (max-width: 640px) {
+        section.order .order-image__layout .woman-image {
+          position: relative;
+          max-width: 100%;
+          max-height: 480px;
+          margin: 0 auto;
+          left: auto;
+          right: auto;
+          top: 135px; } }
   section.order .desc {
     max-width: 310px;
     padding: 23px 0 90px 0; }
+    @media screen and (max-width: 640px) {
+      section.order .desc {
+        padding-bottom: 260px; } }
     section.order .desc p {
       font-size: 24px;
       font-weight: 500;
@@ -1298,34 +1456,72 @@ section.order {
     max-width: 710px;
     margin-bottom: 220px;
     position: relative; }
+    @media screen and (max-width: 640px) {
+      section.order .order__card {
+        padding: 15px; } }
     section.order .order__card .product-image {
       width: 360px;
       height: 270px;
       position: absolute;
       bottom: 115px;
-      right: 20px; }
+      right: 20px;
+      z-index: -1; }
+      @media screen and (max-width: 640px) {
+        section.order .order__card .product-image {
+          width: 100%;
+          left: 0;
+          top: 70px;
+          height: 200px; } }
       section.order .order__card .product-image img {
-        width: 100%;
-        height: auto; }
+        width: auto;
+        height: 100%; }
+        @media screen and (max-width: 640px) {
+          section.order .order__card .product-image img {
+            margin: 0 auto;
+            display: block; } }
     section.order .order__card .product-price__price {
       position: absolute;
       bottom: 60px;
       right: 40px; }
+      @media screen and (max-width: 640px) {
+        section.order .order__card .product-price__price {
+          top: 265px;
+          width: 100%;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          z-index: -1; } }
       section.order .order__card .product-price__price .old-price {
         font-size: 24px;
         font-weight: 300;
         text-decoration: line-through;
         color: #000000; }
+        @media screen and (max-width: 640px) {
+          section.order .order__card .product-price__price .old-price {
+            max-width: 235px;
+            margin: 0 auto; } }
       section.order .order__card .product-price__price .new-price {
         font-size: 24px;
         font-weight: 900; }
+        @media screen and (max-width: 640px) {
+          section.order .order__card .product-price__price .new-price {
+            width: 235px;
+            margin: 0 auto; } }
         section.order .order__card .product-price__price .new-price span {
           font-size: 44px;
           line-height: 44px;
           padding-left: 70px; }
+          @media screen and (max-width: 640px) {
+            section.order .order__card .product-price__price .new-price span {
+              padding-left: 20px; } }
     section.order .order__card .title {
       text-transform: uppercase;
       max-width: 310px; }
+      @media screen and (max-width: 640px) {
+        section.order .order__card .title {
+          margin-bottom: 285px;
+          margin-left: auto;
+          margin-right: auto; } }
       section.order .order__card .title h3 {
         font-size: 28px;
         font-weight: 900;
@@ -1334,6 +1530,9 @@ section.order {
     section.order .order__card form {
       margin-top: 45px;
       max-width: 310px; }
+      @media screen and (max-width: 640px) {
+        section.order .order__card form {
+          margin: 0 auto; } }
       section.order .order__card form select,
       section.order .order__card form input {
         display: block;
@@ -1713,6 +1912,73 @@ section.order {
     stroke-dashoffset: 0; } }
 
 /* ========================================================================
+   Component: Slider
+ ========================================================================== */
+/*
+ * 1. Prevent tab highlighting on iOS.
+ */
+.uk-slider {
+  /* 1 */
+  -webkit-tap-highlight-color: transparent; }
+
+/* Container
+ ========================================================================== */
+/*
+ * 1. Clip child elements
+ */
+.uk-slider-container {
+  /* 1 */
+  overflow: hidden; }
+
+/* Items
+ ========================================================================== */
+/*
+ * 1. Optimize animation
+ * 2. Create a containing block. In Safari it's neither created by `transform` nor `will-change`.
+ */
+.uk-slider-items {
+  /* 1 */
+  will-change: transform;
+  /* 2 */
+  position: relative; }
+
+/*
+ * 1. Reset list style without interfering with grid
+ * 2. Prevent displaying the callout information on iOS.
+ */
+.uk-slider-items:not(.uk-grid) {
+  display: flex;
+  /* 1 */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  /* 2 */
+  -webkit-touch-callout: none; }
+
+.uk-slider-items.uk-grid {
+  flex-wrap: nowrap; }
+
+/* Item
+ ========================================================================== */
+/*
+ * 1. Let items take content dimensions (0 0 auto)
+ * 2. Create position context
+ * 3. Disable horizontal panning gestures in IE11 and Edge
+ * 4. Suppress outline on focus
+ */
+.uk-slider-items > * {
+  /* 1 */
+  flex: none;
+  /* 2 */
+  position: relative;
+  /* 3 */
+  touch-action: pan-y; }
+
+/* 4 */
+.uk-slider-items > :focus {
+  outline: none; }
+
+/* ========================================================================
    Component: Slideshow
  ========================================================================== */
 /*
@@ -1777,3 +2043,125 @@ section.order {
  */
 .uk-slideshow-items > :not(.uk-active) {
   display: none; }
+
+/* ========================================================================
+   Component: Transition
+ ========================================================================== */
+/* Toggle (Hover + Focus)
+ ========================================================================== */
+/*
+ * 1. Prevent tab highlighting on iOS.
+ */
+.uk-transition-toggle {
+  /* 1 */
+  -webkit-tap-highlight-color: transparent; }
+
+/*
+ * Remove outline for `tabindex`
+ */
+.uk-transition-toggle:focus {
+  outline: none; }
+
+/* Transitions
+ ========================================================================== */
+/*
+ * The toggle is triggered on touch devices by two methods:
+ * 1. Using `:focus` and tabindex
+ * 2. Using `:hover` and a `touchstart` event listener registered on the document
+ *    (Doesn't work on Surface touch devices)
+ *
+ * Note: Transitions don't work with `uk-postion-center-*` classes because they also use `transform`,
+ *       therefore it's recommended to use an extra `div` for the transition.
+ */
+.uk-transition-fade,
+[class*='uk-transition-scale'],
+[class*='uk-transition-slide'] {
+  transition: 0.3s ease-out;
+  transition-property: opacity, transform, filter;
+  opacity: 0; }
+
+/*
+ * Fade
+ */
+.uk-transition-toggle:hover .uk-transition-fade,
+.uk-transition-toggle:focus .uk-transition-fade,
+.uk-transition-active.uk-active .uk-transition-fade {
+  opacity: 1; }
+
+/*
+ * Scale
+ */
+.uk-transition-scale-up {
+  transform: scale(1, 1); }
+
+.uk-transition-scale-down {
+  transform: scale(1.1, 1.1); }
+
+/* Show */
+.uk-transition-toggle:hover .uk-transition-scale-up,
+.uk-transition-toggle:focus .uk-transition-scale-up,
+.uk-transition-active.uk-active .uk-transition-scale-up {
+  opacity: 1;
+  transform: scale(1.1, 1.1); }
+
+.uk-transition-toggle:hover .uk-transition-scale-down,
+.uk-transition-toggle:focus .uk-transition-scale-down,
+.uk-transition-active.uk-active .uk-transition-scale-down {
+  opacity: 1;
+  transform: scale(1, 1); }
+
+/*
+ * Slide
+ */
+.uk-transition-slide-top {
+  transform: translateY(-100%); }
+
+.uk-transition-slide-bottom {
+  transform: translateY(100%); }
+
+.uk-transition-slide-left {
+  transform: translateX(-100%); }
+
+.uk-transition-slide-right {
+  transform: translateX(100%); }
+
+.uk-transition-slide-top-small {
+  transform: translateY(-10px); }
+
+.uk-transition-slide-bottom-small {
+  transform: translateY(10px); }
+
+.uk-transition-slide-left-small {
+  transform: translateX(-10px); }
+
+.uk-transition-slide-right-small {
+  transform: translateX(10px); }
+
+.uk-transition-slide-top-medium {
+  transform: translateY(-50px); }
+
+.uk-transition-slide-bottom-medium {
+  transform: translateY(50px); }
+
+.uk-transition-slide-left-medium {
+  transform: translateX(-50px); }
+
+.uk-transition-slide-right-medium {
+  transform: translateX(50px); }
+
+/* Show */
+.uk-transition-toggle:hover [class*='uk-transition-slide'],
+.uk-transition-toggle:focus [class*='uk-transition-slide'],
+.uk-transition-active.uk-active [class*='uk-transition-slide'] {
+  opacity: 1;
+  transform: translate(0, 0); }
+
+/* Opacity modifier
+ ========================================================================== */
+.uk-transition-opaque {
+  opacity: 1; }
+
+/* Duration modifiers
+ ========================================================================== */
+.uk-transition-slow {
+  transition-duration: 0.7s; }

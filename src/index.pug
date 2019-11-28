@@ -54,7 +54,7 @@ html(lang="en")
                         .hero-subtitle
                                 h2.
                                     Fast. Home use.
-            section.product(uk-scrollspy="cls: uk-animation-fade; target: .scroll-spy; delay: 300; repeat: false")
+            section.product(uk-scrollspy="cls: uk-animation-fade; target: .scroll-spy; delay: 150; repeat: false")
                 .container
                     .product-price__left__card.scroll-spy
                         .product-image
@@ -83,14 +83,14 @@ html(lang="en")
                                 |Boosts collagen 
                                 br 
                                 |production
-            section.wrinkles(uk-scrollspy="cls: uk-animation-fade; target: .scroll-spy; delay: 300; repeat: false")
+            section.wrinkles(uk-scrollspy="cls: uk-animation-fade; target: .scroll-spy; delay: 150; repeat: false")
                 .container
                     .title__primary-title.scroll-spy
                         h2 Wrinkles...
                     .desc__left.scroll-spy
                         p Millions of women have them, hate them, and want to get rid of them.
                     .image-item__right.scroll-spy
-                        img(src="images/Wrinkles.jpg", alt="")
+                        img(src="images/wrinkles.jpg", alt="")
                 .container
                     .content-item__left.scroll-spy
                         .content-item__image
@@ -110,7 +110,7 @@ html(lang="en")
                         .content-item__text
                             p.
                                 Mezoroller makes cosmetics 40 times more effective by allowing them to penetrate deeper and work from the inside.
-            section.stimulate(uk-scrollspy="cls: uk-animation-fade; target: .scroll-spy; delay: 300; repeat: false")
+            section.stimulate(uk-scrollspy="cls: uk-animation-fade; target: .scroll-spy; delay: 150; repeat: false")
                 .container
                     .title__primary-title.scroll-spy
                         h2 Stimulate
@@ -139,7 +139,7 @@ html(lang="en")
                             h3 Renews
                             p.
                                 Cells start to produce 200% more collagen after just first use. In a week, wrinkles flatten, pigmentation spots lighten.. 
-            section.nourishes(uk-scrollspy="cls: uk-animation-fade; target: .scroll-spy; delay: 300; repeat: false")
+            section.nourishes(uk-scrollspy="cls: uk-animation-fade; target: .scroll-spy; delay: 150; repeat: false")
                 .container
                     .title__primary-title.scroll-spy
                         h2 Nourishes
@@ -223,7 +223,7 @@ html(lang="en")
                                         p.
                                             Functions: moisturising, nourishing
             // end section nourishes
-            section.effect(uk-scrollspy="cls: uk-animation-fade; target: .scroll-spy; delay: 300; repeat: false")
+            section.effect(uk-scrollspy="cls: uk-animation-fade; target: .scroll-spy; delay: 150; repeat: false")
                 .container
                     .title__primary-title.scroll-spy
                         h2 
@@ -324,7 +324,7 @@ html(lang="en")
                                     img(src="images/slideshow-item-1.jpg", alt="")
                                 div.block__left(uk-slideshow-item="5")
                                     img(src="images/slideshow-item-1.jpg", alt="")
-            section.go_ahead(uk-scrollspy="cls: uk-animation-slide-bottom; target: .scroll-spy; delay: 300; repeat: false")
+            section.go_ahead(uk-scrollspy="cls: uk-animation-fade; target: .scroll-spy; delay: 150; repeat: false")
                 .container
                     .title__primary-title.scroll-spy
                         h2 Go Ahead!
@@ -354,7 +354,7 @@ html(lang="en")
                                 .number 3
                             .text
                                 p Following treatment, apply ANTIAGE serum
-            section.the_result(uk-scrollspy="cls: uk-animation-fade; target: .scroll-spy; delay: 300; repeat: false")
+            section.the_result(uk-scrollspy="cls: uk-animation-fade; target: .scroll-spy; delay: 150; repeat: false")
                 .container
                     .title__primary-title.scroll-spy
                         h2
@@ -364,56 +364,57 @@ html(lang="en")
                     .subtitle.scroll-spy
                         h3 Effect after first use
                     .box__card.scroll-spy
-                        div(uk-slideshow="animation: fade")
+                        div(uk-slider="clsActivated: uk-transition-active;"  tabindex="-1" )
                             .slideshow-image
-                            .uk-slideshow-items
+                            .uk-slider-items
                                 div
                                     .info-block__left
-                                        .title.uk-animation-slide-top
+                                        .title.uk-transition-slide-top(uk-slider-parallax="x: 100,-100")
                                             h2 Pigmentation
-                                        .text.uk-animation-slide-top
+                                        .text.uk-transition-fade
                                             p Complexion evens out, skin becomes radiant, pigmentation spots gradually fade.
-                                    .info-image__left.uk-animation-slide-bottom
+                                    .info-image__left.uk-transition-slide-bottom(uk-slider-parallax="x: 200,-200")
                                         img(src="images/image_after_1.jpg", alt="")
-                                div
+                                div 
                                     .info-block__left
-                                        .title.uk-animation-slide-top
+                                        .title.uk-transition-slide-top(uk-slider-parallax="x: 100,-100")
                                             h2 Wrinkles
-                                        .text.uk-animation-slide-top
+                                        .text.uk-transition-fade
                                             p Mezoluxe affects all face wrinkles, smoothes forehead wrinkles, nasolabial folds, and crow’s feet.
-                                    .info-image__left.uk-animation-slide-bottom
+                                    .info-image__left.uk-transition-slide-bottom(uk-slider-parallax="x: 200,-200")
                                         img(src="images/image_after_wrinkles.jpg", alt="")
-                                div
+                                div 
                                     .info-block__left
-                                        .title.uk-animation-slide-top
+                                        .title.uk-transition-slide-top(uk-slider-parallax="x: 100,-100")
                                             h2 Enlarged pores
-                                        .text.uk-animation-slide-top
+                                        .text.uk-transition-fade
                                             p With regular use, Mezoluxe helps shrink pores and make skin smoother and more resilient.
-                                    .info-image__left.uk-animation-slide-bottom
+                                    .info-image__left.uk-transition-slide-bottom(uk-slider-parallax="x: 200,-200")
                                         img(src="images/image_after_wrinkles.jpg", alt="")
-                                div
+                                div 
                                     .info-block__left
-                                        .title.uk-animation-slide-top
+                                        .title.uk-transition-slide-top(uk-slider-parallax="x: 100,-100")
                                             h2 Acne Scars
-                                        .text.uk-animation-slide-top
-                                            p Red marks and pimple scars fade after the third use.
-                                    .info-image__left.uk-animation-slide-bottom
+                                        .text.uk-transition-fade
+                                            p Red marks and pimple scars fade after the third use. Red marks and pimple scars fade after the third use. Red marks and pimple scars fade after the third use. Red marks and pimple scars fade after the third use.
+                                    .info-image__left.uk-transition-slide-bottom(uk-slider-parallax="x: 200,-200")
                                         img(src="images/image_after_wrinkles.jpg", alt="")
-                            .slideshow-nav
-                                .image-navigation.__1(uk-slideshow-item="0")
-                                .image-navigation.__2(uk-slideshow-item="1")
-                                .image-navigation.__3(uk-slideshow-item="2")
-                                .image-navigation.__3(uk-slideshow-item="3")
-                            .slideshow-text-nav
-                                .text-navigation(uk-slideshow-item="0")
-                                    span Pigmentation
-                                .text-navigation(uk-slideshow-item="1")
-                                    span Wrinkles
-                                .text-navigation(uk-slideshow-item="2")
-                                    span Enlarged pores
-                                .text-navigation(uk-slideshow-item="3")
-                                    span Acne Scars
-            section.statistics(uk-scrollspy="cls: uk-animation-fade; target: .scroll-spy; delay: 300; repeat: false")
+                            .slider-nav
+                                .image-navigation.__1(uk-slider-item="0")
+                                .image-navigation.__2(uk-slider-item="1")
+                                .image-navigation.__3(uk-slider-item="2")
+                                .image-navigation.__3(uk-slider-item="3")
+                            .slider-text-nav
+                                div
+                                    .text-navigation(uk-slider-item="0")
+                                        span Pigmentation
+                                    .text-navigation(uk-slider-item="1")
+                                        span Wrinkles
+                                    .text-navigation(uk-slider-item="2")
+                                        span Enlarged pores
+                                    .text-navigation(uk-slider-item="3")
+                                        span Acne Scars
+            section.statistics(uk-scrollspy="cls: uk-animation-fade; target: .scroll-spy; delay: 150; repeat: false")
                 .container
                     div.scroll-spy
                         .percent
@@ -436,7 +437,7 @@ html(lang="en")
                             |of woman
                         .text
                             p felt skin looks younger in the second week of use.
-            section.inspire(uk-scrollspy="cls: uk-animation-fade; target: .scroll-spy; delay: 300; repeat: false")
+            section.inspire(uk-scrollspy="cls: uk-animation-fade; target: .scroll-spy; delay: 150; repeat: false")
                 .container
                     .title__primary-title.scroll-spy
                         h2 Inspire
@@ -520,7 +521,7 @@ html(lang="en")
                                         p.
                                             “I’ve been using it for 3 months, not regularly, but I’m satisfied with the result. Frown lines disappeared, and nasolabial folds have retracted”
                                         img.review-image(src="images/review_img_4.jpg", alt="")
-            section.its_easy(uk-scrollspy="cls: uk-animation-fade; target: .scroll-spy; delay: 300; repeat: false")
+            section.its_easy(uk-scrollspy="cls: uk-animation-fade; target: .scroll-spy; delay: 150; repeat: false")
                 .container
                     .title__primary-title.scroll-spy
                         h2 It’s easy
@@ -548,7 +549,7 @@ html(lang="en")
                                 |step
                             .text
                                 p Receive delivery and start your skin's transformation
-                    .steps-images
+                    .steps-images.desktop
                         .__1.scroll-spy
                             img(src="images/order-step-img-1.jpg", alt="")
                         .__2.scroll-spy
@@ -558,7 +559,7 @@ html(lang="en")
                         .__4.scroll-spy
                             img(src="images/order-step-img-4.jpg", alt="")
             .container
-                section.order(uk-scrollspy="cls: uk-animation-fade; target: .scroll-spy; delay: 300; repeat: false")
+                section.order(uk-scrollspy="cls: uk-animation-fade; target: .scroll-spy; delay: 150; repeat: false")
                     .order-image__layout
                         .woman-image
                     .title__primary-title.scroll-spy
