@@ -1,9 +1,11 @@
 const { src, dest, parallel, watch, series } = require('gulp');
 const pug = require('gulp-pug'),
       scss = require('gulp-sass'),
+      plumber = require('gulp-plumber'),
       imagemin = require('gulp-imagemin'),
       pngquant = require('imagemin-pngquant'),
       cache = require('gulp-cache'),
+      deleteUnusedImages = require('gulp-delete-unused-images'),
       concat = require('gulp-concat');
 
 function mkdir(){
@@ -38,7 +40,7 @@ function img() {
       .pipe(dest('dist/images'));
 }
 
-  function js() {
+function js() {
     return src('src/js/*.js', js)
       .pipe(concat('app.min.js'))
       .pipe(dest('dist/js', { sourcemaps: true }))

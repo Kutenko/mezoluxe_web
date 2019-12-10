@@ -26,7 +26,11 @@ body {
 .wrapper {
   position: relative;
   max-width: 100%;
-  overflow: hidden; }
+  overflow: hidden;
+  min-width: 320px; }
+  @media screen and (max-width: 319px) {
+    .wrapper {
+      zoom: .8; } }
 
 .container {
   width: 100%;
@@ -140,22 +144,71 @@ div[class*=__card], section[class*=__card] {
   overflow: hidden; }
 
 div[class*=__price], section[class*=__price] {
-  text-align: right; }
+  text-align: left;
+  clear: both;
+  overflow: hidden;
+  max-width: 270px;
+  width: 100%;
+  margin: 0 auto; }
   div[class*=__price] .old-price, section[class*=__price] .old-price {
-    font-size: 34px;
-    line-height: 30px;
+    font-size: 19px;
+    line-height: 29px;
     font-weight: 100;
-    color: #000000;
-    text-decoration: line-through; }
-  div[class*=__price] .new-price, section[class*=__price] .new-price {
-    font-size: 34px;
+    color: #000000; }
+    div[class*=__price] .old-price span, section[class*=__price] .old-price span {
+      text-decoration: line-through; }
+  div[class*=__price] .price-text, section[class*=__price] .price-text {
+    float: left;
+    font-size: 24px;
     font-weight: 700;
-    line-height: 30px;
+    padding: 24px 0 0; }
+  div[class*=__price] .new-price, section[class*=__price] .new-price {
+    float: right;
+    font-size: 72px;
+    font-weight: 700;
     color: #000000; }
     div[class*=__price] .new-price span, section[class*=__price] .new-price span {
       font-size: 74px;
       font-weight: 700;
       line-height: 94px; }
+
+div .sale, section .sale {
+  max-width: 300px;
+  padding: 30px 10px;
+  margin: 0 auto;
+  border: 2px solid #50DEF6;
+  border-radius: 15px;
+  position: relative;
+  text-align: left;
+  margin-bottom: 20px; }
+  div .sale .text-1, section .sale .text-1 {
+    font-size: 24px;
+    font-weight: 100;
+    line-height: 30px;
+    color: #000000; }
+  div .sale .text-2, section .sale .text-2 {
+    font-size: 59px;
+    font-weight: 900;
+    line-height: 59px;
+    color: #FF4444; }
+  div .sale .save, section .sale .save {
+    position: absolute;
+    width: 135px;
+    height: 135px;
+    right: 10px;
+    top: 10px;
+    padding: 25px 0;
+    border-radius: 150px;
+    background: #50DEF6;
+    color: #F9F9F9;
+    font-weight: 500;
+    font-size: 24px;
+    text-align: center; }
+    div .sale .save span, section .sale .save span {
+      font-weight: 900;
+      font-size: 43px;
+      line-height: 30px;
+      letter-spacing: -3px; }
 
 .order-button {
   display: block;
@@ -170,19 +223,22 @@ div[class*=__price], section[class*=__price] {
   max-width: 280px;
   height: 60px;
   padding: 15px;
-  margin: 30px auto 0;
-  cursor: pointer; }
+  margin: 0 auto 0;
+  cursor: pointer;
+  clear: both; }
 
 .background-image {
   position: fixed;
   top: 0px;
   left: 0;
   width: 100%;
+  min-width: 1920px;
   height: 100vh;
   min-height: 1921px;
   background: url(../images/background_image.jpg);
-  background-position: center;
+  background-position: -50px center;
   background-repeat: no-repeat;
+  background-size: contain;
   background-size: 100%;
   z-index: -1; }
 
@@ -436,8 +492,8 @@ div[class*=__price], section[class*=__price] {
     margin-top: 160px; }
     @media screen and (max-width: 800px) {
       .hero .hero-subtitle {
-        margin-top: 60px;
-        margin-bottom: 280px; } }
+        margin-top: 10px;
+        margin-bottom: 370px; } }
     .hero .hero-subtitle h2 {
       font-size: 58px;
       font-weight: 700;
@@ -457,14 +513,14 @@ div[class*=__price], section[class*=__price] {
         width: 100%;
         max-height: 450px;
         top: auto;
-        bottom: -310px; } }
+        bottom: -340px; } }
     .hero .hero-image__layout .woman-image {
       position: relative;
       top: 0;
       right: -300px;
       width: 810px;
       height: 898px;
-      background: url(../images/hero_image.svg);
+      background: url(../images/hero_image.png);
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain; }
@@ -476,7 +532,8 @@ div[class*=__price], section[class*=__price] {
           margin: 0 auto; } }
       @media screen and (max-width: 680px) {
         .hero .hero-image__layout .woman-image {
-          width: 100%; } }
+          width: 100%;
+          background-size: 360px; } }
 
 /* 2.   Section product */
 .product {
@@ -493,28 +550,23 @@ div[class*=__price], section[class*=__price] {
       .product .product-price__left__card {
         max-width: 100%;
         width: 100%;
-        float: left; } }
+        float: left;
+        padding: 30px; } }
     .product .product-price__left__card .product-image {
-      max-width: 420px; }
+      width: 420px;
+      margin: 0 auto;
+      margin-left: -40px; }
       @media screen and (max-width: 1152px) {
         .product .product-price__left__card .product-image {
-          width: 300px;
-          float: right; } }
+          width: 340px;
+          margin: 0 auto;
+          padding-right: 40px; } }
       @media screen and (max-width: 800px) {
         .product .product-price__left__card .product-image {
           width: 100%;
           float: left; } }
       .product .product-price__left__card .product-image img {
         width: 100%; }
-    .product .product-price__left__card .product-price__price {
-      clear: both; }
-      @media screen and (max-width: 800px) {
-        .product .product-price__left__card .product-price__price {
-          width: 280px;
-          margin: 0 auto; } }
-      @media screen and (max-width: 1024px) {
-        .product .product-price__left__card .product-price__price .new-price {
-          font-size: 24px; } }
   .product .product-info__right {
     padding-top: 30px;
     padding-bottom: 30px;
@@ -529,12 +581,14 @@ div[class*=__price], section[class*=__price] {
         max-width: 100%;
         width: 100%;
         padding-left: 30px;
-        padding-right: 30px; } }
+        padding-right: 30px;
+        padding-top: 60px;
+        padding-bottom: 0; } }
     .product .product-info__right .product-info__item {
       margin-top: 160px; }
       @media screen and (max-width: 800px) {
         .product .product-info__right .product-info__item {
-          margin-top: 90px; } }
+          margin-top: 30px; } }
       .product .product-info__right .product-info__item:first-child {
         margin: 0; }
       .product .product-info__right .product-info__item .title h2 {
@@ -564,7 +618,7 @@ div[class*=__price], section[class*=__price] {
   @media screen and (max-width: 640px) {
     .wrinkles,
     .stimulate {
-      margin-top: 60px; } }
+      margin-top: 0px; } }
   .wrinkles .container,
   .stimulate .container {
     position: relative;
@@ -579,6 +633,10 @@ div[class*=__price], section[class*=__price] {
   .stimulate .desc__left {
     max-width: 310px;
     padding: 150px 0 0 0; }
+    @media screen and (max-width: 640px) {
+      .wrinkles .desc__left,
+      .stimulate .desc__left {
+        padding-top: 120px; } }
     .wrinkles .desc__left h3,
     .stimulate .desc__left h3 {
       font-size: 24px;
@@ -675,8 +733,14 @@ div[class*=__price], section[class*=__price] {
 .nourishes {
   margin-top: 90px;
   overflow: hidden; }
+  @media screen and (max-width: 640px) {
+    .nourishes {
+      margin-top: 30px; } }
   .nourishes .nourishes-items {
     padding-top: 60px; }
+    @media screen and (max-width: 640px) {
+      .nourishes .nourishes-items {
+        padding: 0; } }
     .nourishes .nourishes-items > div {
       width: 33.333%;
       padding-left: 30px; }
@@ -710,111 +774,139 @@ div[class*=__price], section[class*=__price] {
         color: #000000; }
         .nourishes .nourishes-items .skin-image .desc ._1.uk-active > .dot {
           transform: rotate(0deg); }
-    .nourishes .nourishes-items .switcher {
+    @media screen and (max-width: 640px) {
+      .nourishes .nourishes-items .switcher {
+        padding-left: 0; } }
+    .nourishes .nourishes-items .switcher ul {
       list-style: none; }
-      .nourishes .nourishes-items .switcher li {
-        padding-bottom: 30px;
-        opacity: 0.35;
-        transition: ease-in-out .5s; }
-        @media screen and (max-width: 640px) {
-          .nourishes .nourishes-items .switcher li {
-            width: 100%;
-            float: left;
-            opacity: 1; } }
-        .nourishes .nourishes-items .switcher li.uk-active {
-          opacity: 1; }
-        .nourishes .nourishes-items .switcher li:hover {
-          opacity: 1; }
-        .nourishes .nourishes-items .switcher li a {
-          color: #000000;
-          text-decoration: none; }
-        @media screen and (nax-width: 640px) {
-          .nourishes .nourishes-items .switcher li .item-title {
-            margin-top: 30px;
-            margin-bottom: 10px; } }
-        .nourishes .nourishes-items .switcher li .item-title h3 {
-          font-size: 24px;
-          font-weight: 700;
-          line-height: 30px;
-          color: #000000; }
-        .nourishes .nourishes-items .switcher li .item-title .mark {
-          display: block;
-          width: 0%;
-          overflow: hidden;
-          transition: ease-in-out .5s; }
-        .nourishes .nourishes-items .switcher li .item-title .pin {
-          display: none;
-          transition: ease-in-out .5s; }
-        @media screen and (nax-width: 640px) {
-          .nourishes .nourishes-items .switcher li .desc {
-            margin-top: 30px; } }
-        .nourishes .nourishes-items .switcher li p {
-          clear: both;
-          font-size: 18px;
-          font-weight: 500;
-          line-height: 26px;
-          color: #000000; }
-        .nourishes .nourishes-items .switcher li[class*=active] .item-title {
-          position: relative;
-          float: left; }
-          .nourishes .nourishes-items .switcher li[class*=active] .item-title .mark {
-            display: block;
-            width: 100%;
-            height: 15px;
-            z-index: -1;
-            position: absolute;
-            left: 0;
-            top: 15px;
-            background: #50DEF6; }
-          .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin {
+    .nourishes .nourishes-items .switcher li {
+      padding-bottom: 30px;
+      opacity: 0.35;
+      transition: ease-in-out .5s; }
+      @media screen and (max-width: 640px) {
+        .nourishes .nourishes-items .switcher li {
+          width: 100%;
+          float: left;
+          opacity: 1;
+          padding-left: 100px;
+          position: relative; }
+          .nourishes .nourishes-items .switcher li::before {
+            content: '';
             display: block;
             position: absolute;
             top: 0;
-            left: -245px;
-            width: 180px;
-            height: 100%; }
-            .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin.__1 {
-              top: 150px; }
+            left: 0;
+            width: 90px;
+            height: 90px; }
+          .nourishes .nourishes-items .switcher li.lecithin::before {
+            background: url(../images/lecithin-icon.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain; }
+          .nourishes .nourishes-items .switcher li.nicotinamide::before {
+            background: url(../images/nicotinamide-icon.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain; }
+          .nourishes .nourishes-items .switcher li.hyaluronic::before {
+            background: url(../images/hyaluronic-icon.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain; } }
+      .nourishes .nourishes-items .switcher li.uk-active {
+        opacity: 1; }
+      .nourishes .nourishes-items .switcher li:hover {
+        opacity: 1; }
+      .nourishes .nourishes-items .switcher li a {
+        color: #000000;
+        text-decoration: none; }
+      @media screen and (nax-width: 640px) {
+        .nourishes .nourishes-items .switcher li .item-title {
+          margin-top: 30px;
+          margin-bottom: 10px; } }
+      .nourishes .nourishes-items .switcher li .item-title h3 {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 30px;
+        color: #000000; }
+      .nourishes .nourishes-items .switcher li .item-title .mark {
+        display: block;
+        width: 0%;
+        overflow: hidden;
+        transition: ease-in-out .5s; }
+      .nourishes .nourishes-items .switcher li .item-title .pin {
+        display: none;
+        transition: ease-in-out .5s; }
+      @media screen and (nax-width: 640px) {
+        .nourishes .nourishes-items .switcher li .desc {
+          margin-top: 30px; } }
+      .nourishes .nourishes-items .switcher li p {
+        clear: both;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 26px;
+        color: #000000; }
+      .nourishes .nourishes-items .switcher li[class*=active] .item-title {
+        position: relative;
+        float: left; }
+        .nourishes .nourishes-items .switcher li[class*=active] .item-title .mark {
+          display: block;
+          width: 100%;
+          height: 15px;
+          z-index: -1;
+          position: absolute;
+          left: 0;
+          top: 15px;
+          background: #50DEF6; }
+        .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin {
+          display: block;
+          position: absolute;
+          top: 0;
+          left: -245px;
+          width: 180px;
+          height: 100%; }
+          .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin.__1 {
+            top: 150px; }
+            @media screen and (max-width: 640px) {
+              .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin.__1 {
+                top: -135px;
+                left: 147px; } }
+            .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin.__1 .dot {
+              transform: rotate(-29deg); }
               @media screen and (max-width: 640px) {
-                .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin.__1 {
-                  top: -135px;
-                  left: 147px; } }
-              .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin.__1 .dot {
-                transform: rotate(-29deg); }
+                .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin.__1 .dot {
+                  transform: rotate(112deg); } }
+              .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin.__1 .dot::before {
+                width: 275px; }
                 @media screen and (max-width: 640px) {
-                  .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin.__1 .dot {
-                    transform: rotate(112deg); } }
-                .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin.__1 .dot::before {
-                  width: 275px; }
-                  @media screen and (max-width: 640px) {
-                    .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin.__1 .dot::before {
-                      width: 165px; } }
-            .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin.__2 {
-              top: -80px; }
-              .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin.__2 .dot {
-                transform: rotate(22.8deg); }
-                .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin.__2 .dot::before {
-                  width: 260px; }
-            .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin.__3 {
-              top: -86px; }
-              .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin.__3 .dot {
-                transform: rotate(24deg); }
-                .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin.__3 .dot::before {
-                  width: 260px; }
-            .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin .dot {
-              position: relative;
-              width: 18px;
-              height: 18px;
-              background: #50DEF6;
-              border-radius: 100%; }
-              .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin .dot::before {
-                content: '';
-                position: absolute;
-                top: 8px;
-                left: 8px;
-                width: 240px;
-                height: 2px;
-                background: #50DEF6; }
+                  .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin.__1 .dot::before {
+                    width: 165px; } }
+          .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin.__2 {
+            top: -80px; }
+            .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin.__2 .dot {
+              transform: rotate(22.8deg); }
+              .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin.__2 .dot::before {
+                width: 260px; }
+          .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin.__3 {
+            top: -86px; }
+            .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin.__3 .dot {
+              transform: rotate(24deg); }
+              .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin.__3 .dot::before {
+                width: 260px; }
+          .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin .dot {
+            position: relative;
+            width: 18px;
+            height: 18px;
+            background: #50DEF6;
+            border-radius: 100%; }
+            .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin .dot::before {
+              content: '';
+              position: absolute;
+              top: 8px;
+              left: 8px;
+              width: 240px;
+              height: 2px;
+              background: #50DEF6; }
 
 /* 5.   Section Effect */
 section.effect {
@@ -883,7 +975,7 @@ section.effect {
           margin: 0 auto; } }
       @media screen and (max-width: 640px) {
         section.effect .slideshow-effect__right .uk-slideshow-items {
-          min-height: 275px !important; } }
+          min-height: 285px !important; } }
       section.effect .slideshow-effect__right .uk-slideshow-items > div .slide__title {
         color: #E385CA; }
         section.effect .slideshow-effect__right .uk-slideshow-items > div .slide__title h4 {
@@ -925,47 +1017,54 @@ section.effect {
         @media screen and (max-width: 640px) {
           section.effect .slideshow-effect__right .uk-slideshow-items > div .item .content-item__text {
             font-size: 12px; } }
-    @media screen and (max-width: 860px) {
-      section.effect .slideshow-effect__right .slideshow-nav {
-        text-align: center; } }
-    section.effect .slideshow-effect__right .slideshow-nav > div {
-      width: 70px;
-      height: 70px;
-      border-radius: 100%;
-      overflow: hidden;
-      margin: 21px 15px; }
-      @media screen and (max-width: 1024px) {
-        section.effect .slideshow-effect__right .slideshow-nav > div {
-          width: 60px;
-          height: 60px;
-          margin: 21px 10px; } }
-      @media screen and (max-width: 920px) {
-        section.effect .slideshow-effect__right .slideshow-nav > div {
-          width: 45px;
-          height: 45px;
-          margin: 21px 10px; } }
+    section.effect .slideshow-effect__right .slideshow-nav {
+      overflow: hidden; }
       @media screen and (max-width: 860px) {
-        section.effect .slideshow-effect__right .slideshow-nav > div {
-          float: none;
-          display: inline-block; } }
-      @media screen and (max-width: 480px) {
-        section.effect .slideshow-effect__right .slideshow-nav > div {
-          float: none;
-          display: inline-block;
-          width: 30px;
-          height: 30px;
-          margin: 21px 5px; } }
-      section.effect .slideshow-effect__right .slideshow-nav > div.uk-active {
-        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.16);
-        transform: scale(1.1);
-        border: 2px solid #E385CA; }
-    section.effect .slideshow-effect__right .slideshow-nav img {
-      width: 100%; }
+        section.effect .slideshow-effect__right .slideshow-nav {
+          text-align: center;
+          vertical-align: top; } }
+      section.effect .slideshow-effect__right .slideshow-nav > div {
+        width: 70px;
+        height: 70px;
+        border-radius: 100%;
+        overflow: hidden;
+        margin: 21px 15px;
+        vertical-align: top; }
+        @media screen and (max-width: 1024px) {
+          section.effect .slideshow-effect__right .slideshow-nav > div {
+            width: 60px;
+            height: 60px;
+            margin: 21px 10px; } }
+        @media screen and (max-width: 920px) {
+          section.effect .slideshow-effect__right .slideshow-nav > div {
+            width: 45px;
+            height: 45px;
+            margin: 21px 10px; } }
+        @media screen and (max-width: 860px) {
+          section.effect .slideshow-effect__right .slideshow-nav > div {
+            float: none;
+            display: inline-block; } }
+        @media screen and (max-width: 480px) {
+          section.effect .slideshow-effect__right .slideshow-nav > div {
+            float: none;
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            margin: 21px 5px; } }
+        section.effect .slideshow-effect__right .slideshow-nav > div.uk-active {
+          box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.16);
+          transform: scale(1.1);
+          border: 2px solid #E385CA; }
+      section.effect .slideshow-effect__right .slideshow-nav img {
+        width: 100%; }
 
 /* end Section Effect */
 section.go_ahead {
   margin-top: 90px;
   overflow: hidden; }
+  @media screen and (max-width: 640px) {
+    section.go_ahead {
+      margin-top: 60px; } }
   section.go_ahead .subtitle h3 {
     font-size: 24px;
     color: #000000;
@@ -1083,7 +1182,7 @@ section.the_result {
   clear: both; }
   @media screen and (max-width: 640px) {
     section.the_result {
-      margin-top: 90px; } }
+      margin-top: 60px; } }
   section.the_result .container {
     padding: 0; }
     @media screen and (max-width: 840px) {
@@ -1111,12 +1210,12 @@ section.the_result {
     section.the_result .box__card .uk-slider-container {
       outline: none; }
   section.the_result .slideshow-image {
-    width: 680px;
-    height: 755px;
+    width: 600px;
+    height: 94%;
     position: absolute;
-    top: -40px;
+    top: 3%;
     right: 10px;
-    background: url(../images/result_slideshow_image.svg);
+    background: url(../images/result_slideshow_image.png);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat; }
@@ -1202,9 +1301,9 @@ section.the_result {
       border: 5px solid #FFFFFF; }
   section.the_result .slider-nav {
     position: absolute;
-    top: 150px;
-    right: 160px;
-    width: 320px;
+    top: 131px;
+    right: 150px;
+    width: 200px;
     height: 480px;
     z-index: 9; }
     @media screen and (max-width: 850px) {
@@ -1226,38 +1325,41 @@ section.the_result {
         right: 20px;
         top: 175px; }
       section.the_result .slider-nav .image-navigation.__3 {
-        right: 150px;
+        right: 95px;
         top: 242px; }
       section.the_result .slider-nav .image-navigation.__4 {
-        right: 70px;
+        right: 30px;
         top: 232px; }
   section.the_result .slider-text-nav {
     position: absolute;
     bottom: 0;
     left: 0;
-    padding: 0 60px 45px;
-    width: 100%;
+    padding: 0 0 45px;
+    margin: 0 60px;
+    width: calc(100% - 120px);
+    text-align: center;
     z-index: 9; }
     @media screen and (max-width: 840px) {
       section.the_result .slider-text-nav {
         overflow: hidden;
-        width: 100%;
-        padding-bottom: 25px; } }
+        width: calc(100% - 60px);
+        padding-bottom: 25px;
+        margin: 0 30px; } }
     section.the_result .slider-text-nav .uk-slidenav-previous {
       position: absolute;
       left: 10px;
-      top: 0; }
+      top: 6px; }
     section.the_result .slider-text-nav .uk-slidenav-next {
       position: absolute;
       right: 10px;
-      top: 0; }
+      top: 6px; }
     @media screen and (max-width: 840px) {
       section.the_result .slider-text-nav > div {
         width: auto;
         margin: 0 auto; } }
     section.the_result .slider-text-nav > div > div {
-      float: left;
-      margin-right: 80px;
+      display: inline-block;
+      margin-right: 50px;
       cursor: pointer; }
       @media screen and (max-width: 840px) {
         section.the_result .slider-text-nav > div > div {
@@ -1332,15 +1434,20 @@ section.inspire {
   section.inspire .desc {
     max-width: 310px;
     padding: 23px 0 90px 0; }
+    @media screen and (max-width: 640px) {
+      section.inspire .desc {
+        padding-bottom: 0px; } }
     section.inspire .desc p {
       font-size: 24px;
       font-weight: 500;
       line-height: 30px;
       color: #000000; }
   section.inspire .review {
-    max-width: 1640px;
     padding: 0 15px;
     margin: 0 auto; }
+    @media screen and (max-width: 640px) {
+      section.inspire .review.static {
+        display: none; } }
     section.inspire .review > div {
       width: 33.333%;
       float: left; }
@@ -1353,26 +1460,12 @@ section.inspire {
               max-width: 50%; } }
       @media screen and (max-width: 640px) {
         section.inspire .review > div {
-          width: 100%;
+          width: auto;
           margin: 0 auto;
-          float: none;
-          position: relative;
-          overflow: hidden;
-          width: 100%;
-          max-width: 320px; }
-          section.inspire .review > div:last-child {
-            width: 100%; }
-            section.inspire .review > div:last-child .item__left {
-              max-width: 100%; } }
-      @media screen and (max-width: 640px) {
-        section.inspire .review > div {
-          width: 100%;
-          margin: 0 auto;
-          float: none;
-          position: relative;
-          overflow: hidden;
-          width: 100%;
-          max-width: 320px; } }
+          float: auto;
+          overflow: hidden; }
+          section.inspire .review > div:last-child .item__left {
+            max-width: 100%; } }
     section.inspire .review .item__left {
       max-width: 481px;
       padding-right: 30px;
@@ -1407,13 +1500,32 @@ section.inspire {
       section.inspire .review .item__left .__card {
         max-width: 365px;
         padding: 30px;
-        margin-top: 20px;
+        margin: 20px;
         border-top-left-radius: 0;
         border: 1px solid rgba(0, 0, 0, 0.15); }
+  section.inspire ul.revslider-nav {
+    text-align: center;
+    width: 320px;
+    margin: 0 auto; }
+    section.inspire ul.revslider-nav li {
+      display: inline-block; }
+      section.inspire ul.revslider-nav li a {
+        display: block;
+        width: 15px;
+        height: 15px;
+        background: #50DEF6;
+        border-radius: 100px;
+        margin-right: 10px;
+        transition: ease-in-out .3s; }
+      section.inspire ul.revslider-nav li.uk-active a {
+        transform: scale(1.4); }
 
 section.its_easy {
   margin-top: 90px;
   overflow: hidden; }
+  @media screen and (max-width: 640px) {
+    section.its_easy {
+      margin-top: 60px; } }
   section.its_easy .subtitle h3 {
     font-size: 24px;
     color: #000000;
@@ -1506,32 +1618,34 @@ section.order {
     @media screen and (max-width: 640px) {
       section.order .order-image__layout {
         width: 100%;
-        height: 220px; } }
+        height: 500px; } }
     section.order .order-image__layout .woman-image {
       position: absolute;
       top: 0;
       right: -300px;
       width: 810px;
       height: 898px;
-      background: url(../images/order_image.svg);
+      background: url(../images/order_image.png);
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain; }
       @media screen and (max-width: 640px) {
         section.order .order-image__layout .woman-image {
           position: relative;
-          max-width: 100%;
-          max-height: 480px;
+          width: 100%;
+          max-height: 410px;
           margin: 0 auto;
           left: auto;
           right: auto;
-          top: 135px; } }
+          top: 160px;
+          background-size: 360px; } }
   section.order .desc {
     max-width: 310px;
     padding: 23px 0 90px 0; }
     @media screen and (max-width: 640px) {
       section.order .desc {
-        padding-bottom: 260px; } }
+        padding-bottom: 380px;
+        padding-top: 0; } }
     section.order .desc p {
       font-size: 24px;
       font-weight: 500;
@@ -1550,12 +1664,13 @@ section.order {
       position: absolute;
       bottom: 115px;
       right: 20px;
-      z-index: -1; }
+      z-index: 1; }
       @media screen and (max-width: 640px) {
         section.order .order__card .product-image {
           width: 100%;
           left: 0;
-          top: 70px;
+          top: auto;
+          bottom: 15px;
           height: 200px; } }
       section.order .order__card .product-image img {
         width: auto;
@@ -1570,41 +1685,18 @@ section.order {
       right: 40px; }
       @media screen and (max-width: 640px) {
         section.order .order__card .product-price__price {
-          top: 265px;
           width: 100%;
-          bottom: 0;
+          top: auto;
+          bottom: 340px;
           left: 0;
           right: 0;
           z-index: -1; } }
-      section.order .order__card .product-price__price .old-price {
-        font-size: 24px;
-        font-weight: 300;
-        text-decoration: line-through;
-        color: #000000; }
-        @media screen and (max-width: 640px) {
-          section.order .order__card .product-price__price .old-price {
-            max-width: 235px;
-            margin: 0 auto; } }
-      section.order .order__card .product-price__price .new-price {
-        font-size: 24px;
-        font-weight: 900; }
-        @media screen and (max-width: 640px) {
-          section.order .order__card .product-price__price .new-price {
-            width: 235px;
-            margin: 0 auto; } }
-        section.order .order__card .product-price__price .new-price span {
-          font-size: 44px;
-          line-height: 44px;
-          padding-left: 70px; }
-          @media screen and (max-width: 640px) {
-            section.order .order__card .product-price__price .new-price span {
-              padding-left: 20px; } }
     section.order .order__card .title {
       text-transform: uppercase;
       max-width: 310px; }
       @media screen and (max-width: 640px) {
         section.order .order__card .title {
-          margin-bottom: 285px;
+          margin-bottom: 30px;
           margin-left: auto;
           margin-right: auto; } }
       section.order .order__card .title h3 {
@@ -1614,20 +1706,45 @@ section.order {
         color: #E385CA; }
     section.order .order__card form {
       margin-top: 45px;
-      max-width: 310px; }
+      max-width: 310px;
+      position: relative;
+      z-index: 2; }
+      @media screen and (max-width: 640px) {
+        section.order .order__card form .order-button {
+          margin-top: 130px; } }
       @media screen and (max-width: 640px) {
         section.order .order__card form {
-          margin: 0 auto; } }
+          margin: 0 auto 235px; } }
       section.order .order__card form select,
       section.order .order__card form input {
         display: block;
         border: none;
-        background: rgba(0, 0, 0, 0.15);
+        background: rgba(0, 0, 0, 0.055);
         border-radius: 35px;
         padding: 15px 30px;
         width: 100%;
         font-size: 18px;
         margin-bottom: 10px; }
+        section.order .order__card form select:focus,
+        section.order .order__card form input:focus {
+          outline: none; }
+      section.order .order__card form select, section.order .order__card form option {
+        -webkit-appearance: none;
+        width: 100%; }
+      section.order .order__card form .select-wrapper {
+        width: 100%;
+        position: relative;
+        display: inline-block; }
+      section.order .order__card form .select-wrapper::after {
+        content: '';
+        position: absolute;
+        pointer-events: none;
+        right: 0;
+        top: calc(50% - 10px);
+        right: 20px;
+        border-style: solid;
+        border-width: 10px 10px 0 10px;
+        border-color: #333 transparent transparent transparent; }
       section.order .order__card form ::placeholder {
         color: #000000;
         font-size: 18px;

@@ -11,7 +11,7 @@ html(lang="en")
         link(rel="stylesheet", href="css/main.css")
     body
         .wrapper#wrapper
-            .background-image(uk-parallax="target: #wrapper; y:-200, -1000; hue: 320;")
+            .background-image(uk-parallax="target: #wrapper; y:-200, -1000; easing: -1")
             .bubbles
                 .container
                     .bubble__1(uk-parallax="target: #wrapper;y: 200px, -1300px")
@@ -57,15 +57,25 @@ html(lang="en")
             section.product(uk-scrollspy="cls: uk-animation-fade; target: .scroll-spy; delay: 150; repeat: false")
                 .container
                     .product-price__left__card.scroll-spy
+                        .sale
+                            .text-1 Only now
+                            .text-2 Sale
+                            .save
+                                |save
+                                br
+                                span -50%
                         .product-image
                             img(src="images/pack.png", alt="")
                         .product-price__price
-                            .old-price 80$
+                            .price-text
+                                .old-price  
+                                    |Old price 
+                                    span 80$
+                                |New price
                             .new-price
-                                |new price 
                                 span 45$
-                            a.order-button(href="#order-form" uk-scroll)
-                                span Order now
+                        a.order-button(href="#order-form" uk-scroll)
+                            span Order now
                     .product-info__right
                         .product-info__item.scroll-spy
                             .title
@@ -150,7 +160,8 @@ html(lang="en")
                                     ANTIAGE serum immediately gets into deep layers of the skin through holes made by a mezoroller. It acts directly in cells, stimulating collagen synthesis and smoothing wrinkles from inside.
                         
                         div.mobile.switcher
-                                li.switcher-item
+                            ul
+                                li.switcher-item.lecithin
                                     .item-title
                                         h3 Lecithin
                                     p.
@@ -159,7 +170,7 @@ html(lang="en")
                                         ._1
                                             p.
                                                 Restores damaged cells, helps nutrients and vitamins to penetrate the skin better.
-                                li.switcher-item
+                                li.switcher-item.nicotinamide
                                     .item-title
                                         h3 Nicotinamide
                                     p.
@@ -168,7 +179,7 @@ html(lang="en")
                                         ._2
                                             p.
                                                 Text item 2. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est blanditiis nihil illum porro eum optio eos earum aliquam nam id?
-                                li.switcher-item
+                                li.switcher-item.hyaluronic
                                     .item-title
                                         h3 Hyaluronic acid
                                     p.
@@ -237,7 +248,7 @@ html(lang="en")
                         .product-image__img.scroll-spy
                             img(src="images/pack.png", alt="")
                     .slideshow-effect__right.scroll-spy
-                        div(uk-slideshow="animation: fade")
+                        div(uk-slideshow="animation: fade; autoplay: true; autoplay-interval: 4500 ; ")
                             .uk-slideshow-items
                                 div
                                     .slide__title
@@ -250,7 +261,7 @@ html(lang="en")
                                     div.item
                                         .content-item__image
                                             img(src="images/slide_img_2.jpg", alt="")
-                                        .content-item__image                                            
+                                        .content-item__text                                            
                                             p 2 After 1 week using Mezoluxe
                                     div.item
                                         .content-item__image
@@ -400,41 +411,45 @@ html(lang="en")
                     .subtitle.scroll-spy
                         h3 Effect after first use
                     .box__card.scroll-spy
-                        div(uk-slider="clsActivated: uk-transition-active;"  tabindex="-1" )
+                        div(uk-slider="clsActivated: uk-transition-active; autoplay: true; autoplay-interval: 4500"  tabindex="-1" )
                             .slideshow-image
                             .uk-slider-items
                                 div
-                                    .info-block__left
-                                        .title.uk-transition-slide-top(uk-slider-parallax="x: 100,-100")
-                                            h2 Pigmentation
-                                        .text.uk-transition-fade
-                                            p Complexion evens out, skin becomes radiant, pigmentation spots gradually fade.
-                                    .info-image__left.uk-transition-slide-bottom(uk-slider-parallax="x: 200,-200")
-                                        img(src="images/image_after_1.jpg", alt="")
-                                div 
-                                    .info-block__left
-                                        .title.uk-transition-slide-top(uk-slider-parallax="x: 100,-100")
-                                            h2 Wrinkles
-                                        .text.uk-transition-fade
-                                            p Mezoluxe affects all face wrinkles, smoothes forehead wrinkles, nasolabial folds, and crow’s feet.
-                                    .info-image__left.uk-transition-slide-bottom(uk-slider-parallax="x: 200,-200")
-                                        img(src="images/image_after_wrinkles.jpg", alt="")
-                                div 
-                                    .info-block__left
-                                        .title.uk-transition-slide-top(uk-slider-parallax="x: 100,-100")
-                                            h2 Enlarged pores
-                                        .text.uk-transition-fade
-                                            p With regular use, Mezoluxe helps shrink pores and make skin smoother and more resilient.
-                                    .info-image__left.uk-transition-slide-bottom(uk-slider-parallax="x: 200,-200")
-                                        img(src="images/image_after_pores.jpg", alt="")
-                                div 
-                                    .info-block__left
-                                        .title.uk-transition-slide-top(uk-slider-parallax="x: 100,-100")
-                                            h2 Acne Scars
-                                        .text.uk-transition-fade
-                                            p Red marks and pimple scars fade after the third use. 
-                                    .info-image__left.uk-transition-slide-bottom(uk-slider-parallax="x: 200,-200")
-                                        img(src="images/image_after_acne.jpg", alt="")
+                                    .uk-transition-fade
+                                        .info-block__left
+                                            .title.uk-transition-slide-top(uk-slider-parallax="x: 100,-100")
+                                                h2 Pigmentation
+                                            .text.uk-transition-fade
+                                                p Complexion evens out, skin becomes radiant, pigmentation spots gradually fade.
+                                        .info-image__left.uk-transition-slide-bottom(uk-slider-parallax="x: 200,-200")
+                                            img(src="images/image_after_1.jpg", alt="")
+                                div
+                                    .uk-transition-fade 
+                                        .info-block__left
+                                            .title.uk-transition-slide-top(uk-slider-parallax="x: 100,-100")
+                                                h2 Wrinkles
+                                            .text.uk-transition-fade
+                                                p Mezoluxe affects all face wrinkles, smoothes forehead wrinkles, nasolabial folds, and crow’s feet.
+                                        .info-image__left.uk-transition-slide-bottom(uk-slider-parallax="x: 200,-200")
+                                            img(src="images/image_after_wrinkles.jpg", alt="")
+                                div
+                                    .uk-transition-fade 
+                                        .info-block__left
+                                            .title.uk-transition-slide-top(uk-slider-parallax="x: 100,-100")
+                                                h2 Enlarged pores
+                                            .text.uk-transition-fade
+                                                p With regular use, Mezoluxe helps shrink pores and make skin smoother and more resilient.
+                                        .info-image__left.uk-transition-slide-bottom(uk-slider-parallax="x: 200,-200")
+                                            img(src="images/image_after_pores.jpg", alt="")
+                                div
+                                    .uk-transition-fade
+                                        .info-block__left
+                                            .title.uk-transition-slide-top(uk-slider-parallax="x: 100,-100")
+                                                h2 Acne Scars
+                                            .text.uk-transition-fade
+                                                p Red marks and pimple scars fade after the third use. 
+                                        .info-image__left.uk-transition-slide-bottom(uk-slider-parallax="x: 200,-200")
+                                            img(src="images/image_after_acne.jpg", alt="")
                             .slider-nav
                                 .image-navigation.__1(uk-slider-item="0")
                                 .image-navigation.__2(uk-slider-item="1")
@@ -483,7 +498,7 @@ html(lang="en")
                         h3 Leave your review on Mezoluxe*
                     .desc.scroll-spy
                         p You can leave a review after you have bought the product
-                .review
+                .review.static
                     div
                         .item__left.scroll-spy
                             .__left
@@ -559,6 +574,86 @@ html(lang="en")
                                         p.
                                             “I’ve been using it for 3 months, not regularly, but I’m satisfied with the result. Frown lines disappeared, and nasolabial folds have retracted”
                                         img.review-image(src="images/review_img_4.jpg", alt="")
+                div(tabindex="-1" uk-slider="clsActivated: uk-transition-active; center: true")
+                    .review.revslider.uk-slider-items
+                        div
+                            .item__left
+                                .__left
+                                    .avatar
+                                        img(src="images/avatar_1.jpg", alt="")
+                                .__right
+                                    .name Amelia Taylor
+                                    .job Head of a financial company
+                                    .__card
+                                        .text
+                                            p.
+                                                This is the best mesotherapy set that I’ve ever used. Facial skin doesn’t bleed. You can see the effect the next day – skin becomes radiant and resilient.”
+                                            img.review-image(src="images/review_img_1.jpg", alt="")
+                        div
+                            .item__left
+                                .__left
+                                    .avatar
+                                        img(src="images/avatar_2.jpg", alt="")
+                                .__right
+                                    .name Sophia Ball
+                                    .job Nurse
+                                    .__card
+                                        .text
+                                            p.
+                                                “Mezoluxe is perfect against wrinkles. No injections could produce such an effect. And perfect for home use.”                         
+                        div
+                            .item__left
+                                .__left
+                                    .avatar
+                                        img(src="images/avatar_3.jpg", alt="")
+                                .__right
+                                    .name Charlotte Clarke
+                                    .job Manager
+                                    .__card
+                                        .text
+                                            p.
+                                                “5 stars. Completely painless and completely effective. My husband says I look much better now.”
+                                            img.review-image(src="images/review_img_2.jpg", alt="")
+                        div
+                            .item__left
+                                .__left
+                                    .avatar
+                                        img(src="images/avatar_4.jpg", alt="")
+                                .__right
+                                    .name Stacy Adwell
+                                    .job Medical consultant
+                                    .__card
+                                        .text
+                                            p.
+                                                “My beautician advised Mezoluxe and I’m absolutely satisfied. It works like botox: no wrinkles at all!”
+                                            img.review-image(src="images/review_img_3.jpg", alt="")
+                        div
+                            .item__left
+                                .__left
+                                    .avatar
+                                        img(src="images/avatar_5.jpg", alt="")
+                                .__right
+                                    .name Sarah Williams
+                                    .job Teacher
+                                    .__card
+                                        .text
+                                            p.
+                                                “This is my first experience with a mezoroller, and now I won't use anything else. It worked miracles even though my skin condition was poor.”
+                        div
+                            .item__left
+                                .__left
+                                    .avatar
+                                        img(src="images/avatar_6.jpg", alt="")
+                                .__right
+                                    .name Julia Barnes
+                                    .job Programmer
+                                    .__card
+                                        .text
+                                            p.
+                                                “I’ve been using it for 3 months, not regularly, but I’m satisfied with the result. Frown lines disappeared, and nasolabial folds have retracted”
+                                            img.review-image(src="images/review_img_4.jpg", alt="")
+                    ul.revslider-nav.uk-slider-nav.uk-dotnav
+
             section.its_easy(uk-scrollspy="cls: uk-animation-fade; target: .scroll-spy; delay: 150; repeat: false")
                 .container
                     .title__primary-title.scroll-spy
@@ -605,19 +700,30 @@ html(lang="en")
                     .desc.scroll-spy
                         p Would you love to look incredibly younger ?
                     .order__card.scroll-spy
+                        .sale
+                            .text-1 Only now
+                            .text-2 Sale
+                            .save
+                                |save
+                                br
+                                span -50%
                         .product-image
                             img(src="images/pack.png", alt="")
                         .product-price__price
-                            .old-price 80$
+                            .price-text
+                                .old-price  
+                                    |Old price 
+                                    span 80$
+                                |New price
                             .new-price
-                                |new price 
-                                span 45$
+                                |45$
 
                         .title
                             h3 place an order
                         form#order-form(action="")
-                            select(name="country")
-                                option(value="RU") Russia
+                            .select-wrapper
+                                select(name="country")
+                                    option(value="RU") Russia
                             input(type="text" placeholder="Your name")
                             input(type="text" placeholder="Your phone")
                             .order-button.js-submit
