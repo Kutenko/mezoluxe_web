@@ -234,13 +234,20 @@ div,section{
     }
     .sale{
         max-width: 300px;
+        min-width: 280px;
+        width: 100%;
         padding:30px 10px;
-        margin: 0 auto;
+        // margin: 0 auto;
+        float: right;
         border: 2px solid $light-blue;
         border-radius: 15px;
         position: relative;
         text-align: left;
         margin-bottom: 20px ;
+        @media screen and (max-width: 640px) {
+            margin: 0 auto;
+            float: auto;
+        }
         .text-1{
             font-size: 24px;
             font-weight: 100;
@@ -642,6 +649,10 @@ div,section{
         margin-top: $margin-top-large;
         padding-bottom: $padding-medium;
         overflow: hidden;
+    .sale{
+        margin: 0 auto 20px;
+        float: none;
+    }
     .product-price__left__card{
         width: 510px;
         text-align: center;
@@ -666,6 +677,7 @@ div,section{
             @media screen and (max-width: 800px){
                 width: 100%;
                 float: left;
+                margin-top: 20px;
             }                        
             img{
                 width: 100%;
@@ -911,11 +923,9 @@ div,section{
             }
         }
         .switcher{
+            list-style: none;
             @media screen and (max-width: 640px) {
                 padding-left: 0;
-            }
-            ul{
-                list-style: none;
             }
             li{
                 padding-bottom: $padding-medium;
@@ -1538,6 +1548,7 @@ section.the_result{
             margin-top: 30px;
             margin-bottom: 90px;
             overflow: hidden;
+            border: 5px solid $white;
             @media screen and (max-width:840px) {
                 position: absolute;
                 right: 0;
@@ -1557,7 +1568,6 @@ section.the_result{
             img{
                 width: 100%;
                 height: auto;
-                border: 5px solid $white;
             }
         }
     }
@@ -1742,15 +1752,17 @@ section.inspire{
         // max-width: 1640px;
         padding: 0 15px;
         margin: 0 auto;
-        &.revslider{
-            // display: none;
+        &.static{
+            max-width: 1366px;
+            display: block;
+            @media screen and (max-width: 640px) {
+                display: none;                
+            }            
         }
-        @media screen and (max-width: 640px) {
-            &.static{
-                display: none;
-            }
-            &.revslider{
-                // display: block;                
+        &.revslider{
+            display: none;
+            @media screen and (max-width: 640px) {
+                display: flex;          
             }
         }
         > div{
@@ -1804,7 +1816,7 @@ section.inspire{
                 }
             }
             .__right{
-                max-width: 365px;
+                max-width: 330px;
                 padding-left:20px;
             }
             .name{
@@ -1832,6 +1844,10 @@ section.inspire{
         text-align: center;
         width: 320px;
         margin: 0 auto;
+        display: none;
+        @media screen and (max-width:640px) {
+            display: block;
+        }
         li{
             display: inline-block;
             a{
@@ -2010,6 +2026,7 @@ section.order{
         max-width: 710px;
         margin-bottom: 220px;
         position: relative;
+        padding-right: 30px ;
         @media screen and (max-width: 640px) {
             padding: 15px;
         }
@@ -2022,7 +2039,7 @@ section.order{
             width: 360px;
             height: 270px;
             position: absolute;
-            bottom: 115px;
+            bottom: 0px;
             right: 20px;
             z-index: 1;
             @media screen and (max-width: 640px) {
@@ -2043,8 +2060,8 @@ section.order{
         }
         .product-price__price{
             position: absolute;
-            bottom: 60px;
-            right: 40px;
+            bottom: 110px;
+            left: 80px;
             @media screen and (max-width:640px) {
                 width: 100%;
                 top: auto;
@@ -2111,6 +2128,7 @@ section.order{
             position: relative;
             z-index: 2;
             .order-button{
+                margin-top: 90px;
                 @media screen and (max-width: 640px) {
                     margin-top: 130px;
     

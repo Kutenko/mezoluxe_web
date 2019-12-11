@@ -174,13 +174,19 @@ div[class*=__price], section[class*=__price] {
 
 div .sale, section .sale {
   max-width: 300px;
+  min-width: 280px;
+  width: 100%;
   padding: 30px 10px;
-  margin: 0 auto;
+  float: right;
   border: 2px solid #50DEF6;
   border-radius: 15px;
   position: relative;
   text-align: left;
   margin-bottom: 20px; }
+  @media screen and (max-width: 640px) {
+    div .sale, section .sale {
+      margin: 0 auto;
+      float: auto; } }
   div .sale .text-1, section .sale .text-1 {
     font-size: 24px;
     font-weight: 100;
@@ -540,6 +546,9 @@ div .sale, section .sale {
   margin-top: 160px;
   padding-bottom: 30px;
   overflow: hidden; }
+  .product .sale {
+    margin: 0 auto 20px;
+    float: none; }
   .product .product-price__left__card {
     width: 510px;
     text-align: center; }
@@ -564,7 +573,8 @@ div .sale, section .sale {
       @media screen and (max-width: 800px) {
         .product .product-price__left__card .product-image {
           width: 100%;
-          float: left; } }
+          float: left;
+          margin-top: 20px; } }
       .product .product-price__left__card .product-image img {
         width: 100%; }
   .product .product-info__right {
@@ -774,139 +784,139 @@ div .sale, section .sale {
         color: #000000; }
         .nourishes .nourishes-items .skin-image .desc ._1.uk-active > .dot {
           transform: rotate(0deg); }
-    @media screen and (max-width: 640px) {
-      .nourishes .nourishes-items .switcher {
-        padding-left: 0; } }
-    .nourishes .nourishes-items .switcher ul {
+    .nourishes .nourishes-items .switcher {
       list-style: none; }
-    .nourishes .nourishes-items .switcher li {
-      padding-bottom: 30px;
-      opacity: 0.35;
-      transition: ease-in-out .5s; }
       @media screen and (max-width: 640px) {
-        .nourishes .nourishes-items .switcher li {
-          width: 100%;
-          float: left;
-          opacity: 1;
-          padding-left: 100px;
-          position: relative; }
-          .nourishes .nourishes-items .switcher li::before {
-            content: '';
+        .nourishes .nourishes-items .switcher {
+          padding-left: 0; } }
+      .nourishes .nourishes-items .switcher li {
+        padding-bottom: 30px;
+        opacity: 0.35;
+        transition: ease-in-out .5s; }
+        @media screen and (max-width: 640px) {
+          .nourishes .nourishes-items .switcher li {
+            width: 100%;
+            float: left;
+            opacity: 1;
+            padding-left: 100px;
+            position: relative; }
+            .nourishes .nourishes-items .switcher li::before {
+              content: '';
+              display: block;
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 90px;
+              height: 90px; }
+            .nourishes .nourishes-items .switcher li.lecithin::before {
+              background: url(../images/lecithin-icon.png);
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: contain; }
+            .nourishes .nourishes-items .switcher li.nicotinamide::before {
+              background: url(../images/nicotinamide-icon.png);
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: contain; }
+            .nourishes .nourishes-items .switcher li.hyaluronic::before {
+              background: url(../images/hyaluronic-icon.png);
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: contain; } }
+        .nourishes .nourishes-items .switcher li.uk-active {
+          opacity: 1; }
+        .nourishes .nourishes-items .switcher li:hover {
+          opacity: 1; }
+        .nourishes .nourishes-items .switcher li a {
+          color: #000000;
+          text-decoration: none; }
+        @media screen and (nax-width: 640px) {
+          .nourishes .nourishes-items .switcher li .item-title {
+            margin-top: 30px;
+            margin-bottom: 10px; } }
+        .nourishes .nourishes-items .switcher li .item-title h3 {
+          font-size: 24px;
+          font-weight: 700;
+          line-height: 30px;
+          color: #000000; }
+        .nourishes .nourishes-items .switcher li .item-title .mark {
+          display: block;
+          width: 0%;
+          overflow: hidden;
+          transition: ease-in-out .5s; }
+        .nourishes .nourishes-items .switcher li .item-title .pin {
+          display: none;
+          transition: ease-in-out .5s; }
+        @media screen and (nax-width: 640px) {
+          .nourishes .nourishes-items .switcher li .desc {
+            margin-top: 30px; } }
+        .nourishes .nourishes-items .switcher li p {
+          clear: both;
+          font-size: 18px;
+          font-weight: 500;
+          line-height: 26px;
+          color: #000000; }
+        .nourishes .nourishes-items .switcher li[class*=active] .item-title {
+          position: relative;
+          float: left; }
+          .nourishes .nourishes-items .switcher li[class*=active] .item-title .mark {
+            display: block;
+            width: 100%;
+            height: 15px;
+            z-index: -1;
+            position: absolute;
+            left: 0;
+            top: 15px;
+            background: #50DEF6; }
+          .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin {
             display: block;
             position: absolute;
             top: 0;
-            left: 0;
-            width: 90px;
-            height: 90px; }
-          .nourishes .nourishes-items .switcher li.lecithin::before {
-            background: url(../images/lecithin-icon.png);
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: contain; }
-          .nourishes .nourishes-items .switcher li.nicotinamide::before {
-            background: url(../images/nicotinamide-icon.png);
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: contain; }
-          .nourishes .nourishes-items .switcher li.hyaluronic::before {
-            background: url(../images/hyaluronic-icon.png);
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: contain; } }
-      .nourishes .nourishes-items .switcher li.uk-active {
-        opacity: 1; }
-      .nourishes .nourishes-items .switcher li:hover {
-        opacity: 1; }
-      .nourishes .nourishes-items .switcher li a {
-        color: #000000;
-        text-decoration: none; }
-      @media screen and (nax-width: 640px) {
-        .nourishes .nourishes-items .switcher li .item-title {
-          margin-top: 30px;
-          margin-bottom: 10px; } }
-      .nourishes .nourishes-items .switcher li .item-title h3 {
-        font-size: 24px;
-        font-weight: 700;
-        line-height: 30px;
-        color: #000000; }
-      .nourishes .nourishes-items .switcher li .item-title .mark {
-        display: block;
-        width: 0%;
-        overflow: hidden;
-        transition: ease-in-out .5s; }
-      .nourishes .nourishes-items .switcher li .item-title .pin {
-        display: none;
-        transition: ease-in-out .5s; }
-      @media screen and (nax-width: 640px) {
-        .nourishes .nourishes-items .switcher li .desc {
-          margin-top: 30px; } }
-      .nourishes .nourishes-items .switcher li p {
-        clear: both;
-        font-size: 18px;
-        font-weight: 500;
-        line-height: 26px;
-        color: #000000; }
-      .nourishes .nourishes-items .switcher li[class*=active] .item-title {
-        position: relative;
-        float: left; }
-        .nourishes .nourishes-items .switcher li[class*=active] .item-title .mark {
-          display: block;
-          width: 100%;
-          height: 15px;
-          z-index: -1;
-          position: absolute;
-          left: 0;
-          top: 15px;
-          background: #50DEF6; }
-        .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin {
-          display: block;
-          position: absolute;
-          top: 0;
-          left: -245px;
-          width: 180px;
-          height: 100%; }
-          .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin.__1 {
-            top: 150px; }
-            @media screen and (max-width: 640px) {
-              .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin.__1 {
-                top: -135px;
-                left: 147px; } }
-            .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin.__1 .dot {
-              transform: rotate(-29deg); }
+            left: -245px;
+            width: 180px;
+            height: 100%; }
+            .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin.__1 {
+              top: 150px; }
               @media screen and (max-width: 640px) {
-                .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin.__1 .dot {
-                  transform: rotate(112deg); } }
-              .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin.__1 .dot::before {
-                width: 275px; }
+                .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin.__1 {
+                  top: -135px;
+                  left: 147px; } }
+              .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin.__1 .dot {
+                transform: rotate(-29deg); }
                 @media screen and (max-width: 640px) {
-                  .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin.__1 .dot::before {
-                    width: 165px; } }
-          .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin.__2 {
-            top: -80px; }
-            .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin.__2 .dot {
-              transform: rotate(22.8deg); }
-              .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin.__2 .dot::before {
-                width: 260px; }
-          .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin.__3 {
-            top: -86px; }
-            .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin.__3 .dot {
-              transform: rotate(24deg); }
-              .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin.__3 .dot::before {
-                width: 260px; }
-          .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin .dot {
-            position: relative;
-            width: 18px;
-            height: 18px;
-            background: #50DEF6;
-            border-radius: 100%; }
-            .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin .dot::before {
-              content: '';
-              position: absolute;
-              top: 8px;
-              left: 8px;
-              width: 240px;
-              height: 2px;
-              background: #50DEF6; }
+                  .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin.__1 .dot {
+                    transform: rotate(112deg); } }
+                .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin.__1 .dot::before {
+                  width: 275px; }
+                  @media screen and (max-width: 640px) {
+                    .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin.__1 .dot::before {
+                      width: 165px; } }
+            .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin.__2 {
+              top: -80px; }
+              .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin.__2 .dot {
+                transform: rotate(22.8deg); }
+                .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin.__2 .dot::before {
+                  width: 260px; }
+            .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin.__3 {
+              top: -86px; }
+              .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin.__3 .dot {
+                transform: rotate(24deg); }
+                .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin.__3 .dot::before {
+                  width: 260px; }
+            .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin .dot {
+              position: relative;
+              width: 18px;
+              height: 18px;
+              background: #50DEF6;
+              border-radius: 100%; }
+              .nourishes .nourishes-items .switcher li[class*=active] .item-title .pin .dot::before {
+                content: '';
+                position: absolute;
+                top: 8px;
+                left: 8px;
+                width: 240px;
+                height: 2px;
+                background: #50DEF6; }
 
 /* 5.   Section Effect */
 section.effect {
@@ -1278,7 +1288,8 @@ section.the_result {
     height: 285px;
     margin-top: 30px;
     margin-bottom: 90px;
-    overflow: hidden; }
+    overflow: hidden;
+    border: 5px solid #FFFFFF; }
     @media screen and (max-width: 840px) {
       section.the_result .uk-slider-items .info-image__left {
         position: absolute;
@@ -1297,8 +1308,7 @@ section.the_result {
         margin-bottom: 50px; } }
     section.the_result .uk-slider-items .info-image__left img {
       width: 100%;
-      height: auto;
-      border: 5px solid #FFFFFF; }
+      height: auto; }
   section.the_result .slider-nav {
     position: absolute;
     top: 131px;
@@ -1445,9 +1455,17 @@ section.inspire {
   section.inspire .review {
     padding: 0 15px;
     margin: 0 auto; }
-    @media screen and (max-width: 640px) {
-      section.inspire .review.static {
-        display: none; } }
+    section.inspire .review.static {
+      max-width: 1366px;
+      display: block; }
+      @media screen and (max-width: 640px) {
+        section.inspire .review.static {
+          display: none; } }
+    section.inspire .review.revslider {
+      display: none; }
+      @media screen and (max-width: 640px) {
+        section.inspire .review.revslider {
+          display: flex; } }
     section.inspire .review > div {
       width: 33.333%;
       float: left; }
@@ -1486,7 +1504,7 @@ section.inspire {
           width: 100%;
           height: auto; }
       section.inspire .review .item__left .__right {
-        max-width: 365px;
+        max-width: 330px;
         padding-left: 20px; }
       section.inspire .review .item__left .name {
         font-size: 22px;
@@ -1506,7 +1524,11 @@ section.inspire {
   section.inspire ul.revslider-nav {
     text-align: center;
     width: 320px;
-    margin: 0 auto; }
+    margin: 0 auto;
+    display: none; }
+    @media screen and (max-width: 640px) {
+      section.inspire ul.revslider-nav {
+        display: block; } }
     section.inspire ul.revslider-nav li {
       display: inline-block; }
       section.inspire ul.revslider-nav li a {
@@ -1654,7 +1676,8 @@ section.order {
   section.order .order__card {
     max-width: 710px;
     margin-bottom: 220px;
-    position: relative; }
+    position: relative;
+    padding-right: 30px; }
     @media screen and (max-width: 640px) {
       section.order .order__card {
         padding: 15px; } }
@@ -1662,7 +1685,7 @@ section.order {
       width: 360px;
       height: 270px;
       position: absolute;
-      bottom: 115px;
+      bottom: 0px;
       right: 20px;
       z-index: 1; }
       @media screen and (max-width: 640px) {
@@ -1681,8 +1704,8 @@ section.order {
             display: block; } }
     section.order .order__card .product-price__price {
       position: absolute;
-      bottom: 60px;
-      right: 40px; }
+      bottom: 110px;
+      left: 80px; }
       @media screen and (max-width: 640px) {
         section.order .order__card .product-price__price {
           width: 100%;
@@ -1709,9 +1732,11 @@ section.order {
       max-width: 310px;
       position: relative;
       z-index: 2; }
-      @media screen and (max-width: 640px) {
-        section.order .order__card form .order-button {
-          margin-top: 130px; } }
+      section.order .order__card form .order-button {
+        margin-top: 90px; }
+        @media screen and (max-width: 640px) {
+          section.order .order__card form .order-button {
+            margin-top: 130px; } }
       @media screen and (max-width: 640px) {
         section.order .order__card form {
           margin: 0 auto 235px; } }
